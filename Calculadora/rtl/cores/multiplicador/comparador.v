@@ -1,4 +1,4 @@
-module comparador_multiplicador #(
+module comparador #(
     parameter width = 4
 ) (
     input clk,

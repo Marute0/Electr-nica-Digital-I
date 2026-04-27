@@ -1,10 +1,10 @@
-module acumulador_multiplicador (
+module acumulador (
     input clk,
     input LD,
     input ADDB,
-    input signed [31:0] in_sh_B,
+    input [31:0] in_sh_B,
 
-    output reg signed [31:0] resultado
+    output reg [31:0] resultado
 );
     always @(posedge clk) begin
         if (LD) begin

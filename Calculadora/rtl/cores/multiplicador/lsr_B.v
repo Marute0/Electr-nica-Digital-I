@@ -1,8 +1,8 @@
-module lsr_B_multiplicador (
+module lsr_B (
     input clk,
     input SH,
     input LD,
-    input signed [15:0] B,
+    input [15:0] B,
     output reg [31:0] out_sh_B
     
 );

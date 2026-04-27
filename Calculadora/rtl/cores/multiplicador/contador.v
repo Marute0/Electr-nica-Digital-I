@@ -1,4 +1,4 @@
-module contador_multiplicador #(
+module contador #(
     parameter width = 4
 ) (
 

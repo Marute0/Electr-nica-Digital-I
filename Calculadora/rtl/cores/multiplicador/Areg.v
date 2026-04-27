@@ -1,7 +1,7 @@
-module Areg_multiplicador (
+module Areg (
     input clk,
     input LD,
-    input signed [15:0] A,
+    input [15:0] A,
     output reg [15:0] out_A
 
 );
