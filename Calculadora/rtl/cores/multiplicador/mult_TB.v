@@ -1,5 +1,4 @@
 `timescale 10ns / 10ns
-// Para qué funciona el define?
 
 
 module mult_TB;
@@ -51,8 +50,8 @@ always #1 clk = ~clk;
 
 
 initial begin
-    $dumpfile("TB_multiplicador.vcd");
-    $dumpvars(-1, TB_multiplicador);
+    $dumpfile("mult_TB.vcd");
+    $dumpvars(-1, mult_TB);
 
     $monitor("t=%0t A=0x%h B=0x%h resultado=0x%h done=%b", $time, A, B, resultado, done);
 end
