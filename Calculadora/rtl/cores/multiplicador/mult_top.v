@@ -1,4 +1,5 @@
-module topMod_multiplicador #(
+module mult_top
+ #(
     parameter width = 4
 ) (
     input clk,
@@ -66,7 +67,7 @@ comparador comp0 (
     
     );
 
-control_multiplicador control ( 
+mult_control control ( 
     .clk (clk), .init (init), .A_i (w_A_i), .z (w_z), .rst (rst), // Entradas
     .done (done), .LD (load), .SH (shift), .ADDI (inc_I), .ADDB (inc_B) //Salidas
     

@@ -1,4 +1,4 @@
-module control_multiplicador #(
+module mult_control #(
 
 // Establecimiento de los estados como parámetros
 

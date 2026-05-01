@@ -1,14 +1,14 @@
-TOP = topMod_multiplicador
-TB = TB_multiplicador
+TOP = mult_top
+TB = mult_TB
 
 OBJS = acumulador.v \
        Areg.v \
        comparador.v \
        contador.v \
-       control_multiplicador.v \
+       mult_control.v \
        lsr_B.v \
        multiplex.v \
-       topMod_multiplicador.v
+       mult_top.v
 
 ICE40_SIM_CELLS=./lattice_sim/cells_sim_ecp5.v
 

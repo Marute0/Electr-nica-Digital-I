@@ -2,7 +2,7 @@
 // Para qué funciona el define?
 
 
-module TB_multiplicador;
+module mult_TB;
 
 
 reg clk;
@@ -19,7 +19,7 @@ wire done;
 
 // Inicialización del modulo
 
-topMod_multiplicador uut ( //Unit under test
+mult_top uut ( //Unit under test
     .clk (clk), .init (init), .rst (rst), .A (A), .B (B), // Entradas
 
     .resultado (resultado), .done (done) // Salidas
