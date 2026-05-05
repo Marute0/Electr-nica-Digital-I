@@ -10,7 +10,7 @@ module contador #(
 
 );
 
-    always @(posedge clk) begin
+    always @(negedge clk) begin
         if (LD) begin
             out_i <= 0;
         end else if (ADDI) begin

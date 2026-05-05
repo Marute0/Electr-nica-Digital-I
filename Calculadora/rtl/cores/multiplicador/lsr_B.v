@@ -7,7 +7,7 @@ module lsr_B (
     
 );
 
-always @(posedge clk) begin
+always @(negedge clk) begin
     if(LD) begin
         out_sh_B = B;
     end else if (SH) begin

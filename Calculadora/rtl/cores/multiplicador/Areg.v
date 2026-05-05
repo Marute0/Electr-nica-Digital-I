@@ -5,7 +5,7 @@ module Areg (
     output reg [15:0] out_A
 
 );
-    always @(posedge clk) begin
+    always @(negedge clk) begin
         if (LD) begin
             out_A = A;
         end
