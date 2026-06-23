@@ -1,29 +1,25 @@
 `timescale 10ns / 10ns
 `define SIMULATION
 
-module mult_TB;
+module root_TB;
 
 
 reg clk;
 reg init; 
 reg rst;
-reg [15:0] B; // Multiplicador
-reg [15:0] A; // Multiplicando
+reg [7:0] A; 
 
-wire [31:0] resultado;
+wire [7:0] raiz;
 wire done;
 
 // Inicialización del modulo
 
-mult_top uut ( //Unit under test
-    .clk (clk), .init (init), .rst (rst), .A (A), .B (B), // Entradas
+root_top uut ( //Unit under test
+    .clk (clk), .init (init), .rst (rst), .A (A), // Entradas
 
-    .resultado (resultado), .done (done) // Salidas
+    .raiz (raiz), .done (done) // Salidas
     
     );
-
-
-
 
 
 initial clk = 0; 
@@ -31,10 +27,10 @@ always #1 clk = ~clk;
 
 
 initial begin
-    $dumpfile("mult_TB.vcd");
-    $dumpvars(-1, mult_TB);
+    $dumpfile("root_TB.vcd");
+    $dumpvars(-1, root_TB);
 
-    $monitor("t=%0t A=0x%h B=0x%h resultado=0x%h done=%b", $time, A, B, resultado, done);
+    $monitor("t=%0t A=0x%h raiz=0x%h done=%b", $time, A, raiz, done);
 end
 
 
@@ -44,15 +40,13 @@ initial begin
     @(posedge clk);
 
     A = 0;
-    B = 0;
     init = 0;
     rst = 0;
 
     @(negedge clk);
     @(posedge clk);
 
-    A = $random;
-    B = $random;
+    A = 8'b10101001;
 
     @(negedge clk);
     @(posedge clk);
@@ -75,7 +69,7 @@ initial begin
     init = 0;
 
     wait(done == 1);
-    #1000;
+    #500;
 
     $finish;
 end

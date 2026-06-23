@@ -1,0 +1,63 @@
+[*]
+[*] GTKWave Analyzer v3.3.117 (w)1999-2023 BSI
+[*] Mon Jun  8 04:23:39 2026
+[*]
+[dumpfile] "/home/marute/Electr-nica-Digital-I/Proyecto/LEDS/send_N_LEDS/timer_TB.vcd"
+[dumpfile_mtime] "Mon Jun  8 04:10:34 2026"
+[dumpfile_size] 81511
+[savefile] "/home/marute/Electr-nica-Digital-I/Proyecto/LEDS/send_N_LEDS/timer_TB.vcd.gtkw"
+[timestart] 0
+[size] 1920 1052
+[pos] -1 -1
+*-8.000000 175 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] timer_TB.
+[treeopen] timer_TB.uut.
+[sst_width] 209
+[signals_width] 349
+[sst_expanded] 1
+[sst_vpaned_height] 309
+@200
+-
+-Comportamiento general
+-
+@28
+timer_TB.clk
+@820
+timer_TB.uut.timer_control.state_name[95:1]
+@28
+timer_TB.INIT_T
+timer_TB.MSB
+timer_TB.RST_CMD
+timer_TB.DOUT
+timer_TB.DONE_T
+@200
+-
+-MUX
+-
+@28
+timer_TB.uut.mux0.SEL_TIM[1:0]
+@22
+timer_TB.uut.mux0.data2transfer[12:0]
+@200
+-
+-Count_out
+-
+@24
+timer_TB.uut.count_out.count_out[12:0]
+@200
+-
+-Comp_timer
+-
+@28
+timer_TB.uut.comp_timer.Z
+@200
+-
+-Señales de control
+-
+@28
+timer_TB.uut.timer_control.INC
+timer_TB.uut.timer_control.RST
+timer_TB.uut.timer_control.DOUT
+timer_TB.uut.timer_control.DONE_T
+[pattern_trace] 1
+[pattern_trace] 0

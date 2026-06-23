@@ -1,29 +1,27 @@
 `timescale 10ns / 10ns
 `define SIMULATION
 
-module mult_TB;
+module div_TB;
 
 
 reg clk;
 reg init; 
 reg rst;
-reg [15:0] B; // Multiplicador
-reg [15:0] A; // Multiplicando
+reg [7:0] A; 
+reg [7:0] B; 
 
-wire [31:0] resultado;
+wire [7:0] cociente;
+wire [7:0] residuo;
 wire done;
 
 // Inicialización del modulo
 
-mult_top uut ( //Unit under test
+div_top uut ( //Unit under test
     .clk (clk), .init (init), .rst (rst), .A (A), .B (B), // Entradas
 
-    .resultado (resultado), .done (done) // Salidas
+    .residuo (residuo), .cociente (cociente), .done (done) // Salidas
     
     );
-
-
-
 
 
 initial clk = 0; 
@@ -31,10 +29,10 @@ always #1 clk = ~clk;
 
 
 initial begin
-    $dumpfile("mult_TB.vcd");
-    $dumpvars(-1, mult_TB);
+    $dumpfile("div_TB.vcd");
+    $dumpvars(-1, div_TB);
 
-    $monitor("t=%0t A=0x%h B=0x%h resultado=0x%h done=%b", $time, A, B, resultado, done);
+    $monitor("t=%0t A=0x%h B=0x%h cociente=0x%h residuo=0x%h done=%b", $time, A, B, cociente, residuo, done);
 end
 
 
@@ -51,8 +49,8 @@ initial begin
     @(negedge clk);
     @(posedge clk);
 
-    A = $random;
-    B = $random;
+    A = 8'b01000011;
+    B = 8'b00001001;
 
     @(negedge clk);
     @(posedge clk);

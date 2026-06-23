@@ -1,0 +1,70 @@
+[*]
+[*] GTKWave Analyzer v3.3.117 (w)1999-2023 BSI
+[*] Mon Jun  8 05:13:48 2026
+[*]
+[dumpfile] "/home/marute/Electr-nica-Digital-I/Proyecto/LEDS/send_N_LEDS/ws2812_TB.vcd"
+[dumpfile_mtime] "Mon Jun  8 05:03:57 2026"
+[dumpfile_size] 63030
+[savefile] "/home/marute/Electr-nica-Digital-I/Proyecto/LEDS/send_N_LEDS/ws2812.gtkw"
+[timestart] 0
+[size] 1920 1052
+[pos] -101 -101
+*-9.000000 14370 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] ws2812_TB.
+[treeopen] ws2812_TB.uut.
+[sst_width] 209
+[signals_width] 201
+[sst_expanded] 1
+[sst_vpaned_height] 309
+@200
+-WS2812
+-
+@28
+ws2812_TB.clk
+@820
+ws2812_TB.uut.ws2812_control.state_name[95:1]
+@28
+ws2812_TB.INIT
+ws2812_TB.RST_CMD
+ws2812_TB.DOUT
+ws2812_TB.GRB[23:0]
+ws2812_TB.DONE
+@200
+-
+-Señales de control
+-
+@28
+ws2812_TB.uut.ws2812_control.LD
+ws2812_TB.uut.ws2812_control.SH
+ws2812_TB.uut.ws2812_control.DEC
+@200
+-
+-timer
+-
+@28
+ws2812_TB.uut.timer.INIT_T
+ws2812_TB.uut.timer.SEL_TIM[1:0]
+@24
+ws2812_TB.uut.timer.w_count_out[12:0]
+@28
+ws2812_TB.uut.timer.DONE_T
+@200
+-
+-GRB_lsr
+-
+@22
+ws2812_TB.uut.grb_lsr.GRB_aux[23:0]
+@28
+ws2812_TB.uut.grb_lsr.MSB
+@200
+-
+-count_ws2812
+-
+@22
+ws2812_TB.uut.count_ws2812.out[4:0]
+@28
+ws2812_TB.uut.count_ws2812.Z
+@200
+-
+[pattern_trace] 1
+[pattern_trace] 0

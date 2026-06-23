@@ -1,0 +1,2119 @@
+
+ /----------------------------------------------------------------------------\
+ |                                                                            |
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |                                                                            |
+ |  Copyright (C) 2012 - 2020  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |                                                                            |
+ |  Permission to use, copy, modify, and/or distribute this software for any  |
+ |  purpose with or without fee is hereby granted, provided that the above    |
+ |  copyright notice and this permission notice appear in all copies.         |
+ |                                                                            |
+ |  THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES  |
+ |  WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF          |
+ |  MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR   |
+ |  ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES    |
+ |  WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN     |
+ |  ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF   |
+ |  OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.            |
+ |                                                                            |
+ \----------------------------------------------------------------------------/
+
+ Yosys 0.33+6 (git sha1 41b34a193, x86_64-conda-linux-gnu-cc 11.2.0 -fvisibility-inlines-hidden -fmessage-length=0 -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -fdebug-prefix-map=/root/conda-eda/conda-eda/workdir/conda-env/conda-bld/yosys_1694128612374/work=/usr/local/src/conda/yosys-0.33_7_g41b34a193 -fdebug-prefix-map=/home/marute/miniconda3/envs/digital=/usr/local/src/conda-prefix -fPIC -Os -fno-merge-constants)
+
+
+-- Parsing `timer.v' using frontend ` -vlog2k' --
+
+1. Executing Verilog-2005 frontend: timer.v
+Parsing Verilog input from `timer.v' to AST representation.
+Storing AST representation for module `$abstract\timer'.
+Successfully finished Verilog frontend.
+
+-- Parsing `count_out.v' using frontend ` -vlog2k' --
+
+2. Executing Verilog-2005 frontend: count_out.v
+Parsing Verilog input from `count_out.v' to AST representation.
+Storing AST representation for module `$abstract\count_out'.
+Successfully finished Verilog frontend.
+
+-- Parsing `mux.v' using frontend ` -vlog2k' --
+
+3. Executing Verilog-2005 frontend: mux.v
+Parsing Verilog input from `mux.v' to AST representation.
+Storing AST representation for module `$abstract\mux'.
+Successfully finished Verilog frontend.
+
+-- Parsing `timer_control.v' using frontend ` -vlog2k' --
+
+4. Executing Verilog-2005 frontend: timer_control.v
+Parsing Verilog input from `timer_control.v' to AST representation.
+Storing AST representation for module `$abstract\timer_control'.
+Successfully finished Verilog frontend.
+
+-- Parsing `comp_timer.v' using frontend ` -vlog2k' --
+
+5. Executing Verilog-2005 frontend: comp_timer.v
+Parsing Verilog input from `comp_timer.v' to AST representation.
+Storing AST representation for module `$abstract\comp_timer'.
+Successfully finished Verilog frontend.
+
+-- Parsing `send_LEDS.v' using frontend ` -vlog2k' --
+
+6. Executing Verilog-2005 frontend: send_LEDS.v
+Parsing Verilog input from `send_LEDS.v' to AST representation.
+Storing AST representation for module `$abstract\send_LEDS'.
+Successfully finished Verilog frontend.
+
+-- Parsing `led_mem.v' using frontend ` -vlog2k' --
+
+7. Executing Verilog-2005 frontend: led_mem.v
+Parsing Verilog input from `led_mem.v' to AST representation.
+Storing AST representation for module `$abstract\led_mem'.
+Successfully finished Verilog frontend.
+
+-- Parsing `count_addr.v' using frontend ` -vlog2k' --
+
+8. Executing Verilog-2005 frontend: count_addr.v
+Parsing Verilog input from `count_addr.v' to AST representation.
+Storing AST representation for module `$abstract\count_addr'.
+Successfully finished Verilog frontend.
+
+-- Parsing `ws2812.v' using frontend ` -vlog2k' --
+
+9. Executing Verilog-2005 frontend: ws2812.v
+Parsing Verilog input from `ws2812.v' to AST representation.
+Storing AST representation for module `$abstract\ws2812'.
+Successfully finished Verilog frontend.
+
+-- Parsing `send_LEDS_control.v' using frontend ` -vlog2k' --
+
+10. Executing Verilog-2005 frontend: send_LEDS_control.v
+Parsing Verilog input from `send_LEDS_control.v' to AST representation.
+Storing AST representation for module `$abstract\send_LEDS_control'.
+Successfully finished Verilog frontend.
+
+-- Parsing `GRB_lsr.v' using frontend ` -vlog2k' --
+
+11. Executing Verilog-2005 frontend: GRB_lsr.v
+Parsing Verilog input from `GRB_lsr.v' to AST representation.
+Storing AST representation for module `$abstract\GRB_lsr'.
+Successfully finished Verilog frontend.
+
+-- Parsing `count_ws2812.v' using frontend ` -vlog2k' --
+
+12. Executing Verilog-2005 frontend: count_ws2812.v
+Parsing Verilog input from `count_ws2812.v' to AST representation.
+Storing AST representation for module `$abstract\count_ws2812'.
+Successfully finished Verilog frontend.
+
+-- Parsing `ws2812_control.v' using frontend ` -vlog2k' --
+
+13. Executing Verilog-2005 frontend: ws2812_control.v
+Parsing Verilog input from `ws2812_control.v' to AST representation.
+Storing AST representation for module `$abstract\ws2812_control'.
+Successfully finished Verilog frontend.
+
+-- Parsing `comp_send_LEDS.v' using frontend ` -vlog2k' --
+
+14. Executing Verilog-2005 frontend: comp_send_LEDS.v
+Parsing Verilog input from `comp_send_LEDS.v' to AST representation.
+Storing AST representation for module `$abstract\comp_send_LEDS'.
+Successfully finished Verilog frontend.
+
+-- Running command `synth_ecp5 -top send_LEDS; write_json build/send_LEDS.json' --
+
+15. Executing SYNTH_ECP5 pass.
+
+15.1. Executing Verilog-2005 frontend: /home/marute/miniconda3/envs/digital/bin/../share/yosys/ecp5/cells_sim.v
+Parsing Verilog input from `/home/marute/miniconda3/envs/digital/bin/../share/yosys/ecp5/cells_sim.v' to AST representation.
+Generating RTLIL representation for module `\LUT4'.
+Generating RTLIL representation for module `\$__ABC9_LUT5'.
+Generating RTLIL representation for module `\$__ABC9_LUT6'.
+Generating RTLIL representation for module `\$__ABC9_LUT7'.
+Generating RTLIL representation for module `\L6MUX21'.
+Generating RTLIL representation for module `\CCU2C'.
+Generating RTLIL representation for module `\TRELLIS_RAM16X2'.
+Generating RTLIL representation for module `\PFUMX'.
+Generating RTLIL representation for module `\TRELLIS_DPR16X4'.
+Generating RTLIL representation for module `\DPR16X4C'.
+Generating RTLIL representation for module `\LUT2'.
+Generating RTLIL representation for module `\TRELLIS_FF'.
+Generating RTLIL representation for module `\TRELLIS_IO'.
+Generating RTLIL representation for module `\INV'.
+Generating RTLIL representation for module `\TRELLIS_COMB'.
+Generating RTLIL representation for module `\DP16KD'.
+Generating RTLIL representation for module `\FD1P3AX'.
+Generating RTLIL representation for module `\FD1P3AY'.
+Generating RTLIL representation for module `\FD1P3BX'.
+Generating RTLIL representation for module `\FD1P3DX'.
+Generating RTLIL representation for module `\FD1P3IX'.
+Generating RTLIL representation for module `\FD1P3JX'.
+Generating RTLIL representation for module `\FD1S3AX'.
+Generating RTLIL representation for module `\FD1S3AY'.
+Generating RTLIL representation for module `\FD1S3BX'.
+Generating RTLIL representation for module `\FD1S3DX'.
+Generating RTLIL representation for module `\FD1S3IX'.
+Generating RTLIL representation for module `\FD1S3JX'.
+Generating RTLIL representation for module `\IFS1P3BX'.
+Generating RTLIL representation for module `\IFS1P3DX'.
+Generating RTLIL representation for module `\IFS1P3IX'.
+Generating RTLIL representation for module `\IFS1P3JX'.
+Generating RTLIL representation for module `\OFS1P3BX'.
+Generating RTLIL representation for module `\OFS1P3DX'.
+Generating RTLIL representation for module `\OFS1P3IX'.
+Generating RTLIL representation for module `\OFS1P3JX'.
+Generating RTLIL representation for module `\IB'.
+Generating RTLIL representation for module `\IBPU'.
+Generating RTLIL representation for module `\IBPD'.
+Generating RTLIL representation for module `\OB'.
+Generating RTLIL representation for module `\OBZ'.
+Generating RTLIL representation for module `\OBZPU'.
+Generating RTLIL representation for module `\OBZPD'.
+Generating RTLIL representation for module `\OBCO'.
+Generating RTLIL representation for module `\BB'.
+Generating RTLIL representation for module `\BBPU'.
+Generating RTLIL representation for module `\BBPD'.
+Generating RTLIL representation for module `\ILVDS'.
+Generating RTLIL representation for module `\OLVDS'.
+Successfully finished Verilog frontend.
+
+15.2. Executing Verilog-2005 frontend: /home/marute/miniconda3/envs/digital/bin/../share/yosys/ecp5/cells_bb.v
+Parsing Verilog input from `/home/marute/miniconda3/envs/digital/bin/../share/yosys/ecp5/cells_bb.v' to AST representation.
+Generating RTLIL representation for module `\MULT18X18D'.
+Generating RTLIL representation for module `\ALU54B'.
+Generating RTLIL representation for module `\EHXPLLL'.
+Generating RTLIL representation for module `\DTR'.
+Generating RTLIL representation for module `\OSCG'.
+Generating RTLIL representation for module `\USRMCLK'.
+Generating RTLIL representation for module `\JTAGG'.
+Generating RTLIL representation for module `\DELAYF'.
+Generating RTLIL representation for module `\DELAYG'.
+Generating RTLIL representation for module `\IDDRX1F'.
+Generating RTLIL representation for module `\IDDRX2F'.
+Generating RTLIL representation for module `\IDDR71B'.
+Generating RTLIL representation for module `\IDDRX2DQA'.
+Generating RTLIL representation for module `\ODDRX1F'.
+Generating RTLIL representation for module `\ODDRX2F'.
+Generating RTLIL representation for module `\ODDR71B'.
+Generating RTLIL representation for module `\OSHX2A'.
+Generating RTLIL representation for module `\ODDRX2DQA'.
+Generating RTLIL representation for module `\ODDRX2DQSB'.
+Generating RTLIL representation for module `\TSHX2DQA'.
+Generating RTLIL representation for module `\TSHX2DQSA'.
+Generating RTLIL representation for module `\DQSBUFM'.
+Generating RTLIL representation for module `\DDRDLLA'.
+Generating RTLIL representation for module `\DLLDELD'.
+Generating RTLIL representation for module `\CLKDIVF'.
+Generating RTLIL representation for module `\ECLKSYNCB'.
+Generating RTLIL representation for module `\ECLKBRIDGECS'.
+Generating RTLIL representation for module `\DCCA'.
+Generating RTLIL representation for module `\DCSC'.
+Generating RTLIL representation for module `\DCUA'.
+Generating RTLIL representation for module `\EXTREFB'.
+Generating RTLIL representation for module `\PCSCLKDIV'.
+Generating RTLIL representation for module `\PUR'.
+Generating RTLIL representation for module `\GSR'.
+Generating RTLIL representation for module `\SGSR'.
+Generating RTLIL representation for module `\PDPW16KD'.
+Successfully finished Verilog frontend.
+
+15.3. Executing HIERARCHY pass (managing design hierarchy).
+
+15.4. Executing AST frontend in derive mode using pre-parsed AST for module `\send_LEDS'.
+Generating RTLIL representation for module `\send_LEDS'.
+
+15.4.1. Analyzing design hierarchy..
+Top module:  \send_LEDS
+
+15.4.2. Executing AST frontend in derive mode using pre-parsed AST for module `\send_LEDS_control'.
+Generating RTLIL representation for module `\send_LEDS_control'.
+
+15.4.3. Executing AST frontend in derive mode using pre-parsed AST for module `\ws2812'.
+Generating RTLIL representation for module `\ws2812'.
+
+15.4.4. Executing AST frontend in derive mode using pre-parsed AST for module `\comp_send_LEDS'.
+Generating RTLIL representation for module `\comp_send_LEDS'.
+
+15.4.5. Executing AST frontend in derive mode using pre-parsed AST for module `\count_addr'.
+Generating RTLIL representation for module `\count_addr'.
+
+15.4.6. Executing AST frontend in derive mode using pre-parsed AST for module `\led_mem'.
+Generating RTLIL representation for module `\led_mem'.
+
+15.4.7. Analyzing design hierarchy..
+Top module:  \send_LEDS
+Used module:     \send_LEDS_control
+Used module:     \ws2812
+Used module:     \comp_send_LEDS
+Used module:     \count_addr
+Used module:     \led_mem
+
+15.4.8. Executing AST frontend in derive mode using pre-parsed AST for module `\ws2812_control'.
+Generating RTLIL representation for module `\ws2812_control'.
+
+15.4.9. Executing AST frontend in derive mode using pre-parsed AST for module `\timer'.
+Generating RTLIL representation for module `\timer'.
+
+15.4.10. Executing AST frontend in derive mode using pre-parsed AST for module `\count_ws2812'.
+Generating RTLIL representation for module `\count_ws2812'.
+
+15.4.11. Executing AST frontend in derive mode using pre-parsed AST for module `\GRB_lsr'.
+Generating RTLIL representation for module `\GRB_lsr'.
+
+15.4.12. Analyzing design hierarchy..
+Top module:  \send_LEDS
+Used module:     \send_LEDS_control
+Used module:     \ws2812
+Used module:         \ws2812_control
+Used module:         \timer
+Used module:         \count_ws2812
+Used module:         \GRB_lsr
+Used module:     \comp_send_LEDS
+Used module:     \count_addr
+Used module:     \led_mem
+
+15.4.13. Executing AST frontend in derive mode using pre-parsed AST for module `\timer_control'.
+Generating RTLIL representation for module `\timer_control'.
+
+15.4.14. Executing AST frontend in derive mode using pre-parsed AST for module `\comp_timer'.
+Generating RTLIL representation for module `\comp_timer'.
+
+15.4.15. Executing AST frontend in derive mode using pre-parsed AST for module `\mux'.
+Generating RTLIL representation for module `\mux'.
+
+15.4.16. Executing AST frontend in derive mode using pre-parsed AST for module `\count_out'.
+Generating RTLIL representation for module `\count_out'.
+
+15.4.17. Analyzing design hierarchy..
+Top module:  \send_LEDS
+Used module:     \send_LEDS_control
+Used module:     \ws2812
+Used module:         \ws2812_control
+Used module:         \timer
+Used module:             \timer_control
+Used module:             \comp_timer
+Used module:             \mux
+Used module:             \count_out
+Used module:         \count_ws2812
+Used module:         \GRB_lsr
+Used module:     \comp_send_LEDS
+Used module:     \count_addr
+Used module:     \led_mem
+
+15.4.18. Analyzing design hierarchy..
+Top module:  \send_LEDS
+Used module:     \send_LEDS_control
+Used module:     \ws2812
+Used module:         \ws2812_control
+Used module:         \timer
+Used module:             \timer_control
+Used module:             \comp_timer
+Used module:             \mux
+Used module:             \count_out
+Used module:         \count_ws2812
+Used module:         \GRB_lsr
+Used module:     \comp_send_LEDS
+Used module:     \count_addr
+Used module:     \led_mem
+Removing unused module `$abstract\comp_send_LEDS'.
+Removing unused module `$abstract\ws2812_control'.
+Removing unused module `$abstract\count_ws2812'.
+Removing unused module `$abstract\GRB_lsr'.
+Removing unused module `$abstract\send_LEDS_control'.
+Removing unused module `$abstract\ws2812'.
+Removing unused module `$abstract\count_addr'.
+Removing unused module `$abstract\led_mem'.
+Removing unused module `$abstract\send_LEDS'.
+Removing unused module `$abstract\comp_timer'.
+Removing unused module `$abstract\timer_control'.
+Removing unused module `$abstract\mux'.
+Removing unused module `$abstract\count_out'.
+Removing unused module `$abstract\timer'.
+Removed 14 unused modules.
+
+15.5. Executing PROC pass (convert processes to netlists).
+
+15.5.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Found and cleaned up 1 empty switch in `\TRELLIS_DPR16X4.$proc$/home/marute/miniconda3/envs/digital/bin/../share/yosys/ecp5/cells_sim.v:213$117'.
+Removing empty process `led_mem.$proc$led_mem.v:0$239'.
+Cleaned up 1 empty switch.
+
+15.5.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Marked 1 switch rules as full_case in process $proc$/home/marute/miniconda3/envs/digital/bin/../share/yosys/ecp5/cells_sim.v:350$224 in module TRELLIS_FF.
+Marked 1 switch rules as full_case in process $proc$/home/marute/miniconda3/envs/digital/bin/../share/yosys/ecp5/cells_sim.v:285$176 in module DPR16X4C.
+Marked 1 switch rules as full_case in process $proc$/home/marute/miniconda3/envs/digital/bin/../share/yosys/ecp5/cells_sim.v:221$118 in module TRELLIS_DPR16X4.
+Marked 2 switch rules as full_case in process $proc$count_out.v:9$258 in module count_out.
+Marked 1 switch rules as full_case in process $proc$mux.v:12$257 in module mux.
+Marked 1 switch rules as full_case in process $proc$comp_timer.v:8$255 in module comp_timer.
+Removed 1 dead cases from process $proc$timer_control.v:116$254 in module timer_control.
+Marked 1 switch rules as full_case in process $proc$timer_control.v:116$254 in module timer_control.
+Removed 1 dead cases from process $proc$timer_control.v:38$250 in module timer_control.
+Marked 9 switch rules as full_case in process $proc$timer_control.v:38$250 in module timer_control.
+Marked 2 switch rules as full_case in process $proc$GRB_lsr.v:12$248 in module GRB_lsr.
+Marked 2 switch rules as full_case in process $proc$count_ws2812.v:11$245 in module count_ws2812.
+Marked 1 switch rules as full_case in process $proc$ws2812_control.v:96$244 in module ws2812_control.
+Marked 5 switch rules as full_case in process $proc$ws2812_control.v:36$240 in module ws2812_control.
+Marked 2 switch rules as full_case in process $proc$count_addr.v:9$234 in module count_addr.
+Marked 1 switch rules as full_case in process $proc$comp_send_LEDS.v:9$232 in module comp_send_LEDS.
+Removed 1 dead cases from process $proc$send_LEDS_control.v:97$231 in module send_LEDS_control.
+Marked 1 switch rules as full_case in process $proc$send_LEDS_control.v:97$231 in module send_LEDS_control.
+Removed 1 dead cases from process $proc$send_LEDS_control.v:36$227 in module send_LEDS_control.
+Marked 5 switch rules as full_case in process $proc$send_LEDS_control.v:36$227 in module send_LEDS_control.
+Removed a total of 4 dead cases.
+
+15.5.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 2 redundant assignments.
+Promoted 70 assignments to connections.
+
+15.5.4. Executing PROC_INIT pass (extract init attributes).
+Found init rule in `\TRELLIS_FF.$proc$/home/marute/miniconda3/envs/digital/bin/../share/yosys/ecp5/cells_sim.v:0$225'.
+  Set init value: \Q = 1'0
+
+15.5.5. Executing PROC_ARST pass (detect async resets in processes).
+
+15.5.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 2 switches.
+
+15.5.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\TRELLIS_FF.$proc$/home/marute/miniconda3/envs/digital/bin/../share/yosys/ecp5/cells_sim.v:0$225'.
+Creating decoders for process `\TRELLIS_FF.$proc$/home/marute/miniconda3/envs/digital/bin/../share/yosys/ecp5/cells_sim.v:350$224'.
+     1/1: $0\Q[0:0]
+Creating decoders for process `\DPR16X4C.$proc$/home/marute/miniconda3/envs/digital/bin/../share/yosys/ecp5/cells_sim.v:0$199'.
+Creating decoders for process `\DPR16X4C.$proc$/home/marute/miniconda3/envs/digital/bin/../share/yosys/ecp5/cells_sim.v:285$176'.
+     1/3: $1$memwr$\ram$/home/marute/miniconda3/envs/digital/bin/../share/yosys/ecp5/cells_sim.v:287$175_EN[3:0]$182
+     2/3: $1$memwr$\ram$/home/marute/miniconda3/envs/digital/bin/../share/yosys/ecp5/cells_sim.v:287$175_DATA[3:0]$181
+     3/3: $1$memwr$\ram$/home/marute/miniconda3/envs/digital/bin/../share/yosys/ecp5/cells_sim.v:287$175_ADDR[3:0]$180
+Creating decoders for process `\TRELLIS_DPR16X4.$proc$/home/marute/miniconda3/envs/digital/bin/../share/yosys/ecp5/cells_sim.v:0$142'.
+Creating decoders for process `\TRELLIS_DPR16X4.$proc$/home/marute/miniconda3/envs/digital/bin/../share/yosys/ecp5/cells_sim.v:221$118'.
+     1/3: $1$memwr$\mem$/home/marute/miniconda3/envs/digital/bin/../share/yosys/ecp5/cells_sim.v:223$116_EN[3:0]$124
+     2/3: $1$memwr$\mem$/home/marute/miniconda3/envs/digital/bin/../share/yosys/ecp5/cells_sim.v:223$116_DATA[3:0]$123
+     3/3: $1$memwr$\mem$/home/marute/miniconda3/envs/digital/bin/../share/yosys/ecp5/cells_sim.v:223$116_ADDR[3:0]$122
+Creating decoders for process `\TRELLIS_DPR16X4.$proc$/home/marute/miniconda3/envs/digital/bin/../share/yosys/ecp5/cells_sim.v:213$117'.
+Creating decoders for process `\count_out.$proc$count_out.v:9$258'.
+     1/2: $2\count_out[12:0]
+     2/2: $1\count_out[12:0]
+Creating decoders for process `\mux.$proc$mux.v:12$257'.
+     1/1: $0\data2transfer[12:0]
+Creating decoders for process `\comp_timer.$proc$comp_timer.v:8$255'.
+     1/1: $0\Z[0:0]
+Creating decoders for process `\timer_control.$proc$timer_control.v:116$254'.
+     1/1: { $1\DONE_T[0:0] $1\SEL_TIM[1:0] $1\INC[0:0] $1\RST[0:0] $1\DOUT[0:0] }
+Creating decoders for process `\timer_control.$proc$timer_control.v:38$250'.
+     1/12: $9\current_state[2:0]
+     2/12: $8\current_state[2:0]
+     3/12: $7\current_state[2:0]
+     4/12: $6\current_state[2:0]
+     5/12: $5\current_state[2:0]
+     6/12: $4\current_state[2:0]
+     7/12: $3\count[4:0]
+     8/12: $3\current_state[2:0]
+     9/12: $2\count[4:0]
+    10/12: $2\current_state[2:0]
+    11/12: $1\current_state[2:0]
+    12/12: $1\count[4:0]
+Creating decoders for process `\GRB_lsr.$proc$GRB_lsr.v:12$248'.
+     1/2: $2\GRB_aux[23:0]
+     2/2: $1\GRB_aux[23:0]
+Creating decoders for process `\count_ws2812.$proc$count_ws2812.v:11$245'.
+     1/2: $2\out[4:0]
+     2/2: $1\out[4:0]
+Creating decoders for process `\ws2812_control.$proc$ws2812_control.v:96$244'.
+     1/5: $1\DONE[0:0]
+     2/5: $1\SH[0:0]
+     3/5: $1\DEC[0:0]
+     4/5: $1\INIT_T[0:0]
+     5/5: $1\LD[0:0]
+Creating decoders for process `\ws2812_control.$proc$ws2812_control.v:36$240'.
+     1/8: $5\current_state[2:0]
+     2/8: $4\current_state[2:0]
+     3/8: $3\count[4:0]
+     4/8: $3\current_state[2:0]
+     5/8: $2\count[4:0]
+     6/8: $2\current_state[2:0]
+     7/8: $1\current_state[2:0]
+     8/8: $1\count[4:0]
+Creating decoders for process `\led_mem.$proc$led_mem.v:14$236'.
+Creating decoders for process `\count_addr.$proc$count_addr.v:9$234'.
+     1/2: $2\addr[9:0]
+     2/2: $1\addr[9:0]
+Creating decoders for process `\comp_send_LEDS.$proc$comp_send_LEDS.v:9$232'.
+     1/1: $1\Z[0:0]
+Creating decoders for process `\send_LEDS_control.$proc$send_LEDS_control.v:97$231'.
+     1/1: { $1\DONE_M[0:0] $1\INC[0:0] $1\RST[0:0] $1\INIT_LED[0:0] }
+Creating decoders for process `\send_LEDS_control.$proc$send_LEDS_control.v:36$227'.
+     1/8: $5\current_state[2:0]
+     2/8: $4\current_state[2:0]
+     3/8: $3\count[4:0]
+     4/8: $3\current_state[2:0]
+     5/8: $2\current_state[2:0]
+     6/8: $2\count[4:0]
+     7/8: $1\current_state[2:0]
+     8/8: $1\count[4:0]
+
+15.5.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+No latch inferred for signal `\mux.\data2transfer' from process `\mux.$proc$mux.v:12$257'.
+No latch inferred for signal `\comp_timer.\Z' from process `\comp_timer.$proc$comp_timer.v:8$255'.
+No latch inferred for signal `\timer_control.\RST' from process `\timer_control.$proc$timer_control.v:116$254'.
+No latch inferred for signal `\timer_control.\DOUT' from process `\timer_control.$proc$timer_control.v:116$254'.
+No latch inferred for signal `\timer_control.\INC' from process `\timer_control.$proc$timer_control.v:116$254'.
+No latch inferred for signal `\timer_control.\DONE_T' from process `\timer_control.$proc$timer_control.v:116$254'.
+No latch inferred for signal `\timer_control.\SEL_TIM' from process `\timer_control.$proc$timer_control.v:116$254'.
+No latch inferred for signal `\ws2812_control.\DONE' from process `\ws2812_control.$proc$ws2812_control.v:96$244'.
+No latch inferred for signal `\ws2812_control.\INIT_T' from process `\ws2812_control.$proc$ws2812_control.v:96$244'.
+No latch inferred for signal `\ws2812_control.\LD' from process `\ws2812_control.$proc$ws2812_control.v:96$244'.
+No latch inferred for signal `\ws2812_control.\SH' from process `\ws2812_control.$proc$ws2812_control.v:96$244'.
+No latch inferred for signal `\ws2812_control.\DEC' from process `\ws2812_control.$proc$ws2812_control.v:96$244'.
+No latch inferred for signal `\comp_send_LEDS.\Z' from process `\comp_send_LEDS.$proc$comp_send_LEDS.v:9$232'.
+No latch inferred for signal `\send_LEDS_control.\RST' from process `\send_LEDS_control.$proc$send_LEDS_control.v:97$231'.
+No latch inferred for signal `\send_LEDS_control.\DONE_M' from process `\send_LEDS_control.$proc$send_LEDS_control.v:97$231'.
+No latch inferred for signal `\send_LEDS_control.\INIT_LED' from process `\send_LEDS_control.$proc$send_LEDS_control.v:97$231'.
+No latch inferred for signal `\send_LEDS_control.\INC' from process `\send_LEDS_control.$proc$send_LEDS_control.v:97$231'.
+
+15.5.9. Executing PROC_DFF pass (convert process syncs to FFs).
+Creating register for signal `\TRELLIS_FF.\Q' using process `\TRELLIS_FF.$proc$/home/marute/miniconda3/envs/digital/bin/../share/yosys/ecp5/cells_sim.v:350$224'.
+  created $dff cell `$procdff$654' with positive edge clock.
+Creating register for signal `\DPR16X4C.\i' using process `\DPR16X4C.$proc$/home/marute/miniconda3/envs/digital/bin/../share/yosys/ecp5/cells_sim.v:0$199'.
+  created direct connection (no actual register cell created).
+Creating register for signal `\DPR16X4C.$memwr$\ram$/home/marute/miniconda3/envs/digital/bin/../share/yosys/ecp5/cells_sim.v:281$160_EN' using process `\DPR16X4C.$proc$/home/marute/miniconda3/envs/digital/bin/../share/yosys/ecp5/cells_sim.v:0$199'.
+  created direct connection (no actual register cell created).
+Creating register for signal `\DPR16X4C.$memwr$\ram$/home/marute/miniconda3/envs/digital/bin/../share/yosys/ecp5/cells_sim.v:281$161_EN' using process `\DPR16X4C.$proc$/home/marute/miniconda3/envs/digital/bin/../share/yosys/ecp5/cells_sim.v:0$199'.
+  created direct connection (no actual register cell created).
+Creating register for signal `\DPR16X4C.$memwr$\ram$/home/marute/miniconda3/envs/digital/bin/../share/yosys/ecp5/cells_sim.v:281$162_EN' using process `\DPR16X4C.$proc$/home/marute/miniconda3/envs/digital/bin/../share/yosys/ecp5/cells_sim.v:0$199'.
+  created direct connection (no actual register cell created).
+Creating register for signal `\DPR16X4C.$memwr$\ram$/home/marute/miniconda3/envs/digital/bin/../share/yosys/ecp5/cells_sim.v:281$163_EN' using process `\DPR16X4C.$proc$/home/marute/miniconda3/envs/digital/bin/../share/yosys/ecp5/cells_sim.v:0$199'.
+  created direct connection (no actual register cell created).
+Creating register for signal `\DPR16X4C.$memwr$\ram$/home/marute/miniconda3/envs/digital/bin/../share/yosys/ecp5/cells_sim.v:281$164_EN' using process `\DPR16X4C.$proc$/home/marute/miniconda3/envs/digital/bin/../share/yosys/ecp5/cells_sim.v:0$199'.
+  created direct connection (no actual register cell created).
+Creating register for signal `\DPR16X4C.$memwr$\ram$/home/marute/miniconda3/envs/digital/bin/../share/yosys/ecp5/cells_sim.v:281$165_EN' using process `\DPR16X4C.$proc$/home/marute/miniconda3/envs/digital/bin/../share/yosys/ecp5/cells_sim.v:0$199'.
+  created direct connection (no actual register cell created).
+Creating register for signal `\DPR16X4C.$memwr$\ram$/home/marute/miniconda3/envs/digital/bin/../share/yosys/ecp5/cells_sim.v:281$166_EN' using process `\DPR16X4C.$proc$/home/marute/miniconda3/envs/digital/bin/../share/yosys/ecp5/cells_sim.v:0$199'.
+  created direct connection (no actual register cell created).
+Creating register for signal `\DPR16X4C.$memwr$\ram$/home/marute/miniconda3/envs/digital/bin/../share/yosys/ecp5/cells_sim.v:281$167_EN' using process `\DPR16X4C.$proc$/home/marute/miniconda3/envs/digital/bin/../share/yosys/ecp5/cells_sim.v:0$199'.
+  created direct connection (no actual register cell created).
+Creating register for signal `\DPR16X4C.$memwr$\ram$/home/marute/miniconda3/envs/digital/bin/../share/yosys/ecp5/cells_sim.v:281$168_EN' using process `\DPR16X4C.$proc$/home/marute/miniconda3/envs/digital/bin/../share/yosys/ecp5/cells_sim.v:0$199'.
+  created direct connection (no actual register cell created).
+Creating register for signal `\DPR16X4C.$memwr$\ram$/home/marute/miniconda3/envs/digital/bin/../share/yosys/ecp5/cells_sim.v:281$169_EN' using process `\DPR16X4C.$proc$/home/marute/miniconda3/envs/digital/bin/../share/yosys/ecp5/cells_sim.v:0$199'.
+  created direct connection (no actual register cell created).
+Creating register for signal `\DPR16X4C.$memwr$\ram$/home/marute/miniconda3/envs/digital/bin/../share/yosys/ecp5/cells_sim.v:281$170_EN' using process `\DPR16X4C.$proc$/home/marute/miniconda3/envs/digital/bin/../share/yosys/ecp5/cells_sim.v:0$199'.
+  created direct connection (no actual register cell created).
+Creating register for signal `\DPR16X4C.$memwr$\ram$/home/marute/miniconda3/envs/digital/bin/../share/yosys/ecp5/cells_sim.v:281$171_EN' using process `\DPR16X4C.$proc$/home/marute/miniconda3/envs/digital/bin/../share/yosys/ecp5/cells_sim.v:0$199'.
+  created direct connection (no actual register cell created).
+Creating register for signal `\DPR16X4C.$memwr$\ram$/home/marute/miniconda3/envs/digital/bin/../share/yosys/ecp5/cells_sim.v:281$172_EN' using process `\DPR16X4C.$proc$/home/marute/miniconda3/envs/digital/bin/../share/yosys/ecp5/cells_sim.v:0$199'.
+  created direct connection (no actual register cell created).
+Creating register for signal `\DPR16X4C.$memwr$\ram$/home/marute/miniconda3/envs/digital/bin/../share/yosys/ecp5/cells_sim.v:281$173_EN' using process `\DPR16X4C.$proc$/home/marute/miniconda3/envs/digital/bin/../share/yosys/ecp5/cells_sim.v:0$199'.
+  created direct connection (no actual register cell created).
+Creating register for signal `\DPR16X4C.$memwr$\ram$/home/marute/miniconda3/envs/digital/bin/../share/yosys/ecp5/cells_sim.v:281$174_EN' using process `\DPR16X4C.$proc$/home/marute/miniconda3/envs/digital/bin/../share/yosys/ecp5/cells_sim.v:0$199'.
+  created direct connection (no actual register cell created).
+Creating register for signal `\DPR16X4C.$memwr$\ram$/home/marute/miniconda3/envs/digital/bin/../share/yosys/ecp5/cells_sim.v:287$175_ADDR' using process `\DPR16X4C.$proc$/home/marute/miniconda3/envs/digital/bin/../share/yosys/ecp5/cells_sim.v:285$176'.
+  created $dff cell `$procdff$655' with positive edge clock.
+Creating register for signal `\DPR16X4C.$memwr$\ram$/home/marute/miniconda3/envs/digital/bin/../share/yosys/ecp5/cells_sim.v:287$175_DATA' using process `\DPR16X4C.$proc$/home/marute/miniconda3/envs/digital/bin/../share/yosys/ecp5/cells_sim.v:285$176'.
+  created $dff cell `$procdff$656' with positive edge clock.
+Creating register for signal `\DPR16X4C.$memwr$\ram$/home/marute/miniconda3/envs/digital/bin/../share/yosys/ecp5/cells_sim.v:287$175_EN' using process `\DPR16X4C.$proc$/home/marute/miniconda3/envs/digital/bin/../share/yosys/ecp5/cells_sim.v:285$176'.
+  created $dff cell `$procdff$657' with positive edge clock.
+Creating register for signal `\TRELLIS_DPR16X4.\i' using process `\TRELLIS_DPR16X4.$proc$/home/marute/miniconda3/envs/digital/bin/../share/yosys/ecp5/cells_sim.v:0$142'.
+  created direct connection (no actual register cell created).
+Creating register for signal `\TRELLIS_DPR16X4.$memwr$\mem$/home/marute/miniconda3/envs/digital/bin/../share/yosys/ecp5/cells_sim.v:207$100_EN' using process `\TRELLIS_DPR16X4.$proc$/home/marute/miniconda3/envs/digital/bin/../share/yosys/ecp5/cells_sim.v:0$142'.
+  created direct connection (no actual register cell created).
+Creating register for signal `\TRELLIS_DPR16X4.$memwr$\mem$/home/marute/miniconda3/envs/digital/bin/../share/yosys/ecp5/cells_sim.v:207$101_EN' using process `\TRELLIS_DPR16X4.$proc$/home/marute/miniconda3/envs/digital/bin/../share/yosys/ecp5/cells_sim.v:0$142'.
+  created direct connection (no actual register cell created).
+Creating register for signal `\TRELLIS_DPR16X4.$memwr$\mem$/home/marute/miniconda3/envs/digital/bin/../share/yosys/ecp5/cells_sim.v:207$102_EN' using process `\TRELLIS_DPR16X4.$proc$/home/marute/miniconda3/envs/digital/bin/../share/yosys/ecp5/cells_sim.v:0$142'.
+  created direct connection (no actual register cell created).
+Creating register for signal `\TRELLIS_DPR16X4.$memwr$\mem$/home/marute/miniconda3/envs/digital/bin/../share/yosys/ecp5/cells_sim.v:207$103_EN' using process `\TRELLIS_DPR16X4.$proc$/home/marute/miniconda3/envs/digital/bin/../share/yosys/ecp5/cells_sim.v:0$142'.
+  created direct connection (no actual register cell created).
+Creating register for signal `\TRELLIS_DPR16X4.$memwr$\mem$/home/marute/miniconda3/envs/digital/bin/../share/yosys/ecp5/cells_sim.v:207$104_EN' using process `\TRELLIS_DPR16X4.$proc$/home/marute/miniconda3/envs/digital/bin/../share/yosys/ecp5/cells_sim.v:0$142'.
+  created direct connection (no actual register cell created).
+Creating register for signal `\TRELLIS_DPR16X4.$memwr$\mem$/home/marute/miniconda3/envs/digital/bin/../share/yosys/ecp5/cells_sim.v:207$105_EN' using process `\TRELLIS_DPR16X4.$proc$/home/marute/miniconda3/envs/digital/bin/../share/yosys/ecp5/cells_sim.v:0$142'.
+  created direct connection (no actual register cell created).
+Creating register for signal `\TRELLIS_DPR16X4.$memwr$\mem$/home/marute/miniconda3/envs/digital/bin/../share/yosys/ecp5/cells_sim.v:207$106_EN' using process `\TRELLIS_DPR16X4.$proc$/home/marute/miniconda3/envs/digital/bin/../share/yosys/ecp5/cells_sim.v:0$142'.
+  created direct connection (no actual register cell created).
+Creating register for signal `\TRELLIS_DPR16X4.$memwr$\mem$/home/marute/miniconda3/envs/digital/bin/../share/yosys/ecp5/cells_sim.v:207$107_EN' using process `\TRELLIS_DPR16X4.$proc$/home/marute/miniconda3/envs/digital/bin/../share/yosys/ecp5/cells_sim.v:0$142'.
+  created direct connection (no actual register cell created).
+Creating register for signal `\TRELLIS_DPR16X4.$memwr$\mem$/home/marute/miniconda3/envs/digital/bin/../share/yosys/ecp5/cells_sim.v:207$108_EN' using process `\TRELLIS_DPR16X4.$proc$/home/marute/miniconda3/envs/digital/bin/../share/yosys/ecp5/cells_sim.v:0$142'.
+  created direct connection (no actual register cell created).
+Creating register for signal `\TRELLIS_DPR16X4.$memwr$\mem$/home/marute/miniconda3/envs/digital/bin/../share/yosys/ecp5/cells_sim.v:207$109_EN' using process `\TRELLIS_DPR16X4.$proc$/home/marute/miniconda3/envs/digital/bin/../share/yosys/ecp5/cells_sim.v:0$142'.
+  created direct connection (no actual register cell created).
+Creating register for signal `\TRELLIS_DPR16X4.$memwr$\mem$/home/marute/miniconda3/envs/digital/bin/../share/yosys/ecp5/cells_sim.v:207$110_EN' using process `\TRELLIS_DPR16X4.$proc$/home/marute/miniconda3/envs/digital/bin/../share/yosys/ecp5/cells_sim.v:0$142'.
+  created direct connection (no actual register cell created).
+Creating register for signal `\TRELLIS_DPR16X4.$memwr$\mem$/home/marute/miniconda3/envs/digital/bin/../share/yosys/ecp5/cells_sim.v:207$111_EN' using process `\TRELLIS_DPR16X4.$proc$/home/marute/miniconda3/envs/digital/bin/../share/yosys/ecp5/cells_sim.v:0$142'.
+  created direct connection (no actual register cell created).
+Creating register for signal `\TRELLIS_DPR16X4.$memwr$\mem$/home/marute/miniconda3/envs/digital/bin/../share/yosys/ecp5/cells_sim.v:207$112_EN' using process `\TRELLIS_DPR16X4.$proc$/home/marute/miniconda3/envs/digital/bin/../share/yosys/ecp5/cells_sim.v:0$142'.
+  created direct connection (no actual register cell created).
+Creating register for signal `\TRELLIS_DPR16X4.$memwr$\mem$/home/marute/miniconda3/envs/digital/bin/../share/yosys/ecp5/cells_sim.v:207$113_EN' using process `\TRELLIS_DPR16X4.$proc$/home/marute/miniconda3/envs/digital/bin/../share/yosys/ecp5/cells_sim.v:0$142'.
+  created direct connection (no actual register cell created).
+Creating register for signal `\TRELLIS_DPR16X4.$memwr$\mem$/home/marute/miniconda3/envs/digital/bin/../share/yosys/ecp5/cells_sim.v:207$114_EN' using process `\TRELLIS_DPR16X4.$proc$/home/marute/miniconda3/envs/digital/bin/../share/yosys/ecp5/cells_sim.v:0$142'.
+  created direct connection (no actual register cell created).
+Creating register for signal `\TRELLIS_DPR16X4.$memwr$\mem$/home/marute/miniconda3/envs/digital/bin/../share/yosys/ecp5/cells_sim.v:207$115_EN' using process `\TRELLIS_DPR16X4.$proc$/home/marute/miniconda3/envs/digital/bin/../share/yosys/ecp5/cells_sim.v:0$142'.
+  created direct connection (no actual register cell created).
+Creating register for signal `\TRELLIS_DPR16X4.$memwr$\mem$/home/marute/miniconda3/envs/digital/bin/../share/yosys/ecp5/cells_sim.v:223$116_ADDR' using process `\TRELLIS_DPR16X4.$proc$/home/marute/miniconda3/envs/digital/bin/../share/yosys/ecp5/cells_sim.v:221$118'.
+  created $dff cell `$procdff$658' with positive edge clock.
+Creating register for signal `\TRELLIS_DPR16X4.$memwr$\mem$/home/marute/miniconda3/envs/digital/bin/../share/yosys/ecp5/cells_sim.v:223$116_DATA' using process `\TRELLIS_DPR16X4.$proc$/home/marute/miniconda3/envs/digital/bin/../share/yosys/ecp5/cells_sim.v:221$118'.
+  created $dff cell `$procdff$659' with positive edge clock.
+Creating register for signal `\TRELLIS_DPR16X4.$memwr$\mem$/home/marute/miniconda3/envs/digital/bin/../share/yosys/ecp5/cells_sim.v:223$116_EN' using process `\TRELLIS_DPR16X4.$proc$/home/marute/miniconda3/envs/digital/bin/../share/yosys/ecp5/cells_sim.v:221$118'.
+  created $dff cell `$procdff$660' with positive edge clock.
+Creating register for signal `\TRELLIS_DPR16X4.\muxwre' using process `\TRELLIS_DPR16X4.$proc$/home/marute/miniconda3/envs/digital/bin/../share/yosys/ecp5/cells_sim.v:213$117'.
+  created direct connection (no actual register cell created).
+Creating register for signal `\count_out.\count_out' using process `\count_out.$proc$count_out.v:9$258'.
+  created $dff cell `$procdff$661' with negative edge clock.
+Creating register for signal `\timer_control.\current_state' using process `\timer_control.$proc$timer_control.v:38$250'.
+  created $dff cell `$procdff$662' with positive edge clock.
+Creating register for signal `\timer_control.\count' using process `\timer_control.$proc$timer_control.v:38$250'.
+  created $dff cell `$procdff$663' with positive edge clock.
+Creating register for signal `\GRB_lsr.\MSB' using process `\GRB_lsr.$proc$GRB_lsr.v:12$248'.
+  created $dff cell `$procdff$664' with negative edge clock.
+Creating register for signal `\GRB_lsr.\GRB_aux' using process `\GRB_lsr.$proc$GRB_lsr.v:12$248'.
+  created $dff cell `$procdff$665' with negative edge clock.
+Creating register for signal `\count_ws2812.\Z' using process `\count_ws2812.$proc$count_ws2812.v:11$245'.
+  created $dff cell `$procdff$666' with negative edge clock.
+Creating register for signal `\count_ws2812.\out' using process `\count_ws2812.$proc$count_ws2812.v:11$245'.
+  created $dff cell `$procdff$667' with negative edge clock.
+Creating register for signal `\ws2812_control.\current_state' using process `\ws2812_control.$proc$ws2812_control.v:36$240'.
+  created $dff cell `$procdff$668' with positive edge clock.
+Creating register for signal `\ws2812_control.\count' using process `\ws2812_control.$proc$ws2812_control.v:36$240'.
+  created $dff cell `$procdff$669' with positive edge clock.
+Creating register for signal `\led_mem.\GRB' using process `\led_mem.$proc$led_mem.v:14$236'.
+  created $dff cell `$procdff$670' with negative edge clock.
+Creating register for signal `\count_addr.\addr' using process `\count_addr.$proc$count_addr.v:9$234'.
+  created $dff cell `$procdff$671' with negative edge clock.
+Creating register for signal `\send_LEDS_control.\current_state' using process `\send_LEDS_control.$proc$send_LEDS_control.v:36$227'.
+  created $dff cell `$procdff$672' with positive edge clock.
+Creating register for signal `\send_LEDS_control.\count' using process `\send_LEDS_control.$proc$send_LEDS_control.v:36$227'.
+  created $dff cell `$procdff$673' with positive edge clock.
+
+15.5.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+15.5.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Removing empty process `TRELLIS_FF.$proc$/home/marute/miniconda3/envs/digital/bin/../share/yosys/ecp5/cells_sim.v:0$225'.
+Found and cleaned up 2 empty switches in `\TRELLIS_FF.$proc$/home/marute/miniconda3/envs/digital/bin/../share/yosys/ecp5/cells_sim.v:350$224'.
+Removing empty process `TRELLIS_FF.$proc$/home/marute/miniconda3/envs/digital/bin/../share/yosys/ecp5/cells_sim.v:350$224'.
+Removing empty process `DPR16X4C.$proc$/home/marute/miniconda3/envs/digital/bin/../share/yosys/ecp5/cells_sim.v:0$199'.
+Found and cleaned up 1 empty switch in `\DPR16X4C.$proc$/home/marute/miniconda3/envs/digital/bin/../share/yosys/ecp5/cells_sim.v:285$176'.
+Removing empty process `TRELLIS_DPR16X4.$proc$/home/marute/miniconda3/envs/digital/bin/../share/yosys/ecp5/cells_sim.v:0$142'.
+Found and cleaned up 1 empty switch in `\TRELLIS_DPR16X4.$proc$/home/marute/miniconda3/envs/digital/bin/../share/yosys/ecp5/cells_sim.v:221$118'.
+Removing empty process `TRELLIS_DPR16X4.$proc$/home/marute/miniconda3/envs/digital/bin/../share/yosys/ecp5/cells_sim.v:213$117'.
+Found and cleaned up 2 empty switches in `\count_out.$proc$count_out.v:9$258'.
+Removing empty process `count_out.$proc$count_out.v:9$258'.
+Found and cleaned up 1 empty switch in `\mux.$proc$mux.v:12$257'.
+Removing empty process `mux.$proc$mux.v:12$257'.
+Found and cleaned up 1 empty switch in `\comp_timer.$proc$comp_timer.v:8$255'.
+Removing empty process `comp_timer.$proc$comp_timer.v:8$255'.
+Found and cleaned up 1 empty switch in `\timer_control.$proc$timer_control.v:116$254'.
+Removing empty process `timer_control.$proc$timer_control.v:116$254'.
+Found and cleaned up 9 empty switches in `\timer_control.$proc$timer_control.v:38$250'.
+Removing empty process `timer_control.$proc$timer_control.v:38$250'.
+Found and cleaned up 2 empty switches in `\GRB_lsr.$proc$GRB_lsr.v:12$248'.
+Removing empty process `GRB_lsr.$proc$GRB_lsr.v:12$248'.
+Found and cleaned up 2 empty switches in `\count_ws2812.$proc$count_ws2812.v:11$245'.
+Removing empty process `count_ws2812.$proc$count_ws2812.v:11$245'.
+Found and cleaned up 1 empty switch in `\ws2812_control.$proc$ws2812_control.v:96$244'.
+Removing empty process `ws2812_control.$proc$ws2812_control.v:96$244'.
+Found and cleaned up 5 empty switches in `\ws2812_control.$proc$ws2812_control.v:36$240'.
+Removing empty process `ws2812_control.$proc$ws2812_control.v:36$240'.
+Removing empty process `led_mem.$proc$led_mem.v:14$236'.
+Found and cleaned up 2 empty switches in `\count_addr.$proc$count_addr.v:9$234'.
+Removing empty process `count_addr.$proc$count_addr.v:9$234'.
+Found and cleaned up 1 empty switch in `\comp_send_LEDS.$proc$comp_send_LEDS.v:9$232'.
+Removing empty process `comp_send_LEDS.$proc$comp_send_LEDS.v:9$232'.
+Found and cleaned up 1 empty switch in `\send_LEDS_control.$proc$send_LEDS_control.v:97$231'.
+Removing empty process `send_LEDS_control.$proc$send_LEDS_control.v:97$231'.
+Found and cleaned up 5 empty switches in `\send_LEDS_control.$proc$send_LEDS_control.v:36$227'.
+Removing empty process `send_LEDS_control.$proc$send_LEDS_control.v:36$227'.
+Cleaned up 37 empty switches.
+
+15.5.12. Executing OPT_EXPR pass (perform const folding).
+Optimizing module count_out.
+Optimizing module mux.
+Optimizing module comp_timer.
+Optimizing module timer_control.
+Optimizing module GRB_lsr.
+Optimizing module count_ws2812.
+Optimizing module timer.
+Optimizing module ws2812_control.
+Optimizing module led_mem.
+Optimizing module count_addr.
+Optimizing module comp_send_LEDS.
+Optimizing module ws2812.
+Optimizing module send_LEDS_control.
+Optimizing module send_LEDS.
+
+15.6. Executing FLATTEN pass (flatten design).
+Deleting now unused module count_out.
+Deleting now unused module mux.
+Deleting now unused module comp_timer.
+Deleting now unused module timer_control.
+Deleting now unused module GRB_lsr.
+Deleting now unused module count_ws2812.
+Deleting now unused module timer.
+Deleting now unused module ws2812_control.
+Deleting now unused module led_mem.
+Deleting now unused module count_addr.
+Deleting now unused module comp_send_LEDS.
+Deleting now unused module ws2812.
+Deleting now unused module send_LEDS_control.
+
+15.7. Executing TRIBUF pass.
+
+15.8. Executing DEMINOUT pass (demote inout ports to input or output).
+
+15.9. Executing OPT_EXPR pass (perform const folding).
+Optimizing module send_LEDS.
+
+15.10. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \send_LEDS..
+Removed 1 unused cells and 156 unused wires.
+
+15.11. Executing CHECK pass (checking for obvious problems).
+Checking module send_LEDS...
+Found and reported 0 problems.
+
+15.12. Executing OPT pass (performing simple optimizations).
+
+15.12.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module send_LEDS.
+
+15.12.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\send_LEDS'.
+Removed a total of 39 cells.
+
+15.12.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \send_LEDS..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+    dead port 1/2 on $mux $flatten\send_LEDS_control.$procmux$634.
+    dead port 1/2 on $mux $flatten\count_addr0.$procmux$567.
+    dead port 1/2 on $mux $flatten\send_LEDS_control.$procmux$646.
+    dead port 1/2 on $mux $flatten\ws2812.\count_ws2812.$procmux$453.
+    dead port 1/2 on $mux $flatten\ws2812.\grb_lsr.$procmux$444.
+    dead port 1/2 on $mux $flatten\ws2812.\timer.\count_out.$procmux$295.
+    dead port 2/2 on $mux $flatten\ws2812.\timer.\timer_control.$procmux$313.
+    dead port 1/2 on $mux $flatten\ws2812.\timer.\timer_control.$procmux$316.
+    dead port 2/2 on $mux $flatten\ws2812.\timer.\timer_control.$procmux$323.
+    dead port 1/2 on $mux $flatten\ws2812.\timer.\timer_control.$procmux$326.
+    dead port 2/2 on $mux $flatten\ws2812.\timer.\timer_control.$procmux$334.
+    dead port 1/2 on $mux $flatten\ws2812.\timer.\timer_control.$procmux$337.
+    dead port 2/2 on $mux $flatten\ws2812.\timer.\timer_control.$procmux$346.
+    dead port 1/2 on $mux $flatten\ws2812.\timer.\timer_control.$procmux$349.
+    dead port 2/2 on $mux $flatten\ws2812.\timer.\timer_control.$procmux$362.
+    dead port 1/2 on $mux $flatten\ws2812.\timer.\timer_control.$procmux$365.
+    dead port 2/2 on $mux $flatten\ws2812.\timer.\timer_control.$procmux$375.
+    dead port 1/2 on $mux $flatten\ws2812.\timer.\timer_control.$procmux$378.
+    dead port 2/2 on $mux $flatten\ws2812.\timer.\timer_control.$procmux$390.
+    dead port 1/2 on $mux $flatten\ws2812.\timer.\timer_control.$procmux$393.
+    dead port 2/2 on $mux $flatten\ws2812.\timer.\timer_control.$procmux$405.
+    dead port 1/2 on $mux $flatten\ws2812.\timer.\timer_control.$procmux$408.
+    dead port 2/2 on $mux $flatten\send_LEDS_control.$procmux$580.
+    dead port 1/2 on $mux $flatten\send_LEDS_control.$procmux$583.
+    dead port 1/2 on $mux $flatten\ws2812.\timer.\timer_control.$procmux$420.
+    dead port 2/2 on $mux $flatten\send_LEDS_control.$procmux$591.
+    dead port 1/2 on $mux $flatten\send_LEDS_control.$procmux$594.
+    dead port 2/2 on $mux $flatten\send_LEDS_control.$procmux$605.
+    dead port 1/2 on $mux $flatten\send_LEDS_control.$procmux$608.
+    dead port 1/2 on $mux $flatten\ws2812.\timer.\timer_control.$procmux$432.
+    dead port 2/2 on $mux $flatten\ws2812.\ws2812_control.$procmux$491.
+    dead port 1/2 on $mux $flatten\ws2812.\ws2812_control.$procmux$494.
+    dead port 2/2 on $mux $flatten\ws2812.\ws2812_control.$procmux$503.
+    dead port 1/2 on $mux $flatten\ws2812.\ws2812_control.$procmux$506.
+    dead port 2/2 on $mux $flatten\ws2812.\ws2812_control.$procmux$518.
+    dead port 1/2 on $mux $flatten\ws2812.\ws2812_control.$procmux$521.
+    dead port 2/2 on $mux $flatten\ws2812.\ws2812_control.$procmux$533.
+    dead port 2/2 on $mux $flatten\send_LEDS_control.$procmux$619.
+    dead port 1/2 on $mux $flatten\ws2812.\ws2812_control.$procmux$536.
+    dead port 1/2 on $mux $flatten\send_LEDS_control.$procmux$622.
+    dead port 1/2 on $mux $flatten\ws2812.\ws2812_control.$procmux$543.
+    dead port 1/2 on $mux $flatten\ws2812.\ws2812_control.$procmux$555.
+Removed 42 multiplexer ports.
+
+15.12.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \send_LEDS.
+    New ctrl vector for $pmux cell $flatten\send_LEDS_control.$procmux$636: { $flatten\send_LEDS_control.$procmux$606_CMP $auto$opt_reduce.cc:134:opt_pmux$675 $flatten\send_LEDS_control.$procmux$625_CMP }
+    New ctrl vector for $pmux cell $flatten\ws2812.\timer.\timer_control.$procmux$410: { $flatten\ws2812.\timer.\timer_control.$procmux$391_CMP $auto$opt_reduce.cc:134:opt_pmux$677 $flatten\ws2812.\timer.\timer_control.$procmux$411_CMP }
+  Optimizing cells in module \send_LEDS.
+Performed a total of 2 changes.
+
+15.12.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\send_LEDS'.
+Removed a total of 1 cells.
+
+15.12.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+15.12.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \send_LEDS..
+Removed 0 unused cells and 81 unused wires.
+
+15.12.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module send_LEDS.
+
+15.12.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+15.12.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \send_LEDS..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+
+15.12.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \send_LEDS.
+Performed a total of 0 changes.
+
+15.12.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\send_LEDS'.
+Removed a total of 0 cells.
+
+15.12.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+15.12.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \send_LEDS..
+
+15.12.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module send_LEDS.
+
+15.12.16. Finished OPT passes. (There is nothing left to do.)
+
+15.13. Executing FSM pass (extract and optimize FSM).
+
+15.13.1. Executing FSM_DETECT pass (finding FSMs in design).
+Not marking send_LEDS.send_LEDS_control.current_state as FSM state register:
+    Users of register don't seem to benefit from recoding.
+Not marking send_LEDS.ws2812.timer.timer_control.current_state as FSM state register:
+    Users of register don't seem to benefit from recoding.
+Found FSM state register send_LEDS.ws2812.ws2812_control.current_state.
+
+15.13.2. Executing FSM_EXTRACT pass (extracting FSM from design).
+Extracting FSM `\ws2812.ws2812_control.current_state' from module `\send_LEDS'.
+  found $dff cell for state register: $flatten\ws2812.\ws2812_control.$procdff$668
+  root of input selection tree: $flatten\ws2812.\ws2812_control.$0\current_state[2:0]
+  found reset state: 3'000 (guessed from mux tree)
+  found ctrl input: \rst
+  found ctrl input: $flatten\ws2812.\ws2812_control.$procmux$460_CMP
+  found ctrl input: $flatten\ws2812.\ws2812_control.$procmux$492_CMP
+  found ctrl input: $flatten\ws2812.\ws2812_control.$procmux$465_CMP
+  found ctrl input: $flatten\ws2812.\ws2812_control.$procmux$504_CMP
+  found ctrl input: $flatten\ws2812.\ws2812_control.$procmux$477_CMP
+  found ctrl input: $flatten\ws2812.\ws2812_control.$procmux$485_CMP
+  found ctrl input: $flatten\ws2812.\ws2812_control.$procmux$519_CMP
+  found state code: 3'000
+  found ctrl input: $flatten\ws2812.\ws2812_control.$gt$ws2812_control.v:84$242_Y
+  found state code: 3'110
+  found ctrl input: \ws2812.count_ws2812.Z
+  found state code: 3'010
+  found state code: 3'101
+  found ctrl input: \ws2812.DONE_T
+  found state code: 3'011
+  found state code: 3'100
+  found ctrl input: \send_LEDS_control.INIT_LED
+  found state code: 3'001
+  found ctrl output: $flatten\ws2812.\ws2812_control.$procmux$460_CMP
+  found ctrl output: $flatten\ws2812.\ws2812_control.$procmux$465_CMP
+  found ctrl output: $flatten\ws2812.\ws2812_control.$procmux$477_CMP
+  found ctrl output: $flatten\ws2812.\ws2812_control.$procmux$485_CMP
+  found ctrl output: $flatten\ws2812.\ws2812_control.$procmux$492_CMP
+  found ctrl output: $flatten\ws2812.\ws2812_control.$procmux$504_CMP
+  found ctrl output: $flatten\ws2812.\ws2812_control.$procmux$519_CMP
+  ctrl inputs: { \send_LEDS_control.INIT_LED \ws2812.DONE_T \ws2812.count_ws2812.Z $flatten\ws2812.\ws2812_control.$gt$ws2812_control.v:84$242_Y \rst }
+  ctrl outputs: { $flatten\ws2812.\ws2812_control.$procmux$519_CMP $flatten\ws2812.\ws2812_control.$procmux$504_CMP $flatten\ws2812.\ws2812_control.$procmux$492_CMP $flatten\ws2812.\ws2812_control.$procmux$485_CMP $flatten\ws2812.\ws2812_control.$procmux$477_CMP $flatten\ws2812.\ws2812_control.$procmux$465_CMP $flatten\ws2812.\ws2812_control.$procmux$460_CMP $flatten\ws2812.\ws2812_control.$0\current_state[2:0] }
+  transition:      3'000 5'0---0 ->      3'000 10'1000000000
+  transition:      3'000 5'1---0 ->      3'001 10'1000000001
+  transition:      3'000 5'----1 ->      3'000 10'1000000000
+  transition:      3'100 5'----0 ->      3'101 10'0000010101
+  transition:      3'100 5'----1 ->      3'000 10'0000010000
+  transition:      3'010 5'----0 ->      3'011 10'0000100011
+  transition:      3'010 5'----1 ->      3'000 10'0000100000
+  transition:      3'110 5'---00 ->      3'110 10'0000001110
+  transition:      3'110 5'---10 ->      3'000 10'0000001000
+  transition:      3'110 5'----1 ->      3'000 10'0000001000
+  transition:      3'001 5'----0 ->      3'010 10'0001000010
+  transition:      3'001 5'----1 ->      3'000 10'0001000000
+  transition:      3'101 5'--0-0 ->      3'010 10'0010000010
+  transition:      3'101 5'--1-0 ->      3'110 10'0010000110
+  transition:      3'101 5'----1 ->      3'000 10'0010000000
+  transition:      3'011 5'-0--0 ->      3'011 10'0100000011
+  transition:      3'011 5'-1--0 ->      3'100 10'0100000100
+  transition:      3'011 5'----1 ->      3'000 10'0100000000
+
+15.13.3. Executing FSM_OPT pass (simple optimizations of FSMs).
+Optimizing FSM `$fsm$\ws2812.ws2812_control.current_state$678' from module `\send_LEDS'.
+
+15.13.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \send_LEDS..
+Removed 14 unused cells and 14 unused wires.
+
+15.13.5. Executing FSM_OPT pass (simple optimizations of FSMs).
+Optimizing FSM `$fsm$\ws2812.ws2812_control.current_state$678' from module `\send_LEDS'.
+  Removing unused output signal $flatten\ws2812.\ws2812_control.$0\current_state[2:0] [0].
+  Removing unused output signal $flatten\ws2812.\ws2812_control.$0\current_state[2:0] [1].
+  Removing unused output signal $flatten\ws2812.\ws2812_control.$0\current_state[2:0] [2].
+  Removing unused output signal $flatten\ws2812.\ws2812_control.$procmux$492_CMP.
+  Removing unused output signal $flatten\ws2812.\ws2812_control.$procmux$504_CMP.
+
+15.13.6. Executing FSM_RECODE pass (re-assigning FSM state encoding).
+Recoding FSM `$fsm$\ws2812.ws2812_control.current_state$678' from module `\send_LEDS' using `auto' encoding:
+  mapping auto encoding to `one-hot` for this FSM.
+  000 -> ------1
+  100 -> -----1-
+  010 -> ----1--
+  110 -> ---1---
+  001 -> --1----
+  101 -> -1-----
+  011 -> 1------
+
+15.13.7. Executing FSM_INFO pass (dumping all available information on FSM cells).
+
+FSM `$fsm$\ws2812.ws2812_control.current_state$678' from module `send_LEDS':
+-------------------------------------
+
+  Information on FSM $fsm$\ws2812.ws2812_control.current_state$678 (\ws2812.ws2812_control.current_state):
+
+  Number of input signals:    5
+  Number of output signals:   5
+  Number of state bits:       7
+
+  Input signals:
+    0: \rst
+    1: $flatten\ws2812.\ws2812_control.$gt$ws2812_control.v:84$242_Y
+    2: \ws2812.count_ws2812.Z
+    3: \ws2812.DONE_T
+    4: \send_LEDS_control.INIT_LED
+
+  Output signals:
+    0: $flatten\ws2812.\ws2812_control.$procmux$460_CMP
+    1: $flatten\ws2812.\ws2812_control.$procmux$465_CMP
+    2: $flatten\ws2812.\ws2812_control.$procmux$477_CMP
+    3: $flatten\ws2812.\ws2812_control.$procmux$485_CMP
+    4: $flatten\ws2812.\ws2812_control.$procmux$519_CMP
+
+  State encoding:
+    0:  7'------1  <RESET STATE>
+    1:  7'-----1-
+    2:  7'----1--
+    3:  7'---1---
+    4:  7'--1----
+    5:  7'-1-----
+    6:  7'1------
+
+  Transition Table (state_in, ctrl_in, state_out, ctrl_out):
+      0:     0 5'0---0   ->     0 5'10000
+      1:     0 5'----1   ->     0 5'10000
+      2:     0 5'1---0   ->     4 5'10000
+      3:     1 5'----1   ->     0 5'00010
+      4:     1 5'----0   ->     5 5'00010
+      5:     2 5'----1   ->     0 5'00100
+      6:     2 5'----0   ->     6 5'00100
+      7:     3 5'---10   ->     0 5'00001
+      8:     3 5'----1   ->     0 5'00001
+      9:     3 5'---00   ->     3 5'00001
+     10:     4 5'----1   ->     0 5'01000
+     11:     4 5'----0   ->     2 5'01000
+     12:     5 5'----1   ->     0 5'00000
+     13:     5 5'--0-0   ->     2 5'00000
+     14:     5 5'--1-0   ->     3 5'00000
+     15:     6 5'----1   ->     0 5'00000
+     16:     6 5'-1--0   ->     1 5'00000
+     17:     6 5'-0--0   ->     6 5'00000
+
+-------------------------------------
+
+15.13.8. Executing FSM_MAP pass (mapping FSMs to basic logic).
+Mapping FSM `$fsm$\ws2812.ws2812_control.current_state$678' from module `\send_LEDS'.
+
+15.14. Executing OPT pass (performing simple optimizations).
+
+15.14.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module send_LEDS.
+
+15.14.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\send_LEDS'.
+Removed a total of 2 cells.
+
+15.14.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \send_LEDS..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+
+15.14.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \send_LEDS.
+Performed a total of 0 changes.
+
+15.14.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\send_LEDS'.
+Removed a total of 0 cells.
+
+15.14.6. Executing OPT_DFF pass (perform DFF optimizations).
+Adding EN signal on $flatten\ws2812.\ws2812_control.$procdff$669 ($dff) from module send_LEDS (D = $flatten\ws2812.\ws2812_control.$2\count[4:0], Q = \ws2812.ws2812_control.count).
+Adding EN signal on $flatten\ws2812.\timer.\timer_control.$procdff$663 ($dff) from module send_LEDS (D = $flatten\ws2812.\timer.\timer_control.$2\count[4:0], Q = \ws2812.timer.timer_control.count).
+Adding SRST signal on $flatten\ws2812.\timer.\timer_control.$procdff$662 ($dff) from module send_LEDS (D = $flatten\ws2812.\timer.\timer_control.$2\current_state[2:0], Q = \ws2812.timer.timer_control.current_state, rval = 3'000).
+Adding SRST signal on $flatten\ws2812.\timer.\count_out.$procdff$661 ($dff) from module send_LEDS (D = $flatten\ws2812.\timer.\count_out.$2\count_out[12:0], Q = \ws2812.timer.count_out.count_out, rval = 13'0000000000000).
+Adding EN signal on $auto$ff.cc:266:slice$760 ($sdff) from module send_LEDS (D = $flatten\ws2812.\timer.\count_out.$add$count_out.v:13$259_Y [12:0], Q = \ws2812.timer.count_out.count_out).
+Adding EN signal on $flatten\ws2812.\grb_lsr.$procdff$665 ($dff) from module send_LEDS (D = $flatten\ws2812.\grb_lsr.$0\GRB_aux[23:0] [22:0], Q = \ws2812.grb_lsr.GRB_aux [22:0]).
+Adding EN signal on $flatten\send_LEDS_control.$procdff$673 ($dff) from module send_LEDS (D = $flatten\send_LEDS_control.$2\count[4:0], Q = \send_LEDS_control.count).
+Adding SRST signal on $flatten\send_LEDS_control.$procdff$672 ($dff) from module send_LEDS (D = $flatten\send_LEDS_control.$2\current_state[2:0], Q = \send_LEDS_control.current_state, rval = 3'000).
+Adding SRST signal on $flatten\count_addr0.$procdff$671 ($dff) from module send_LEDS (D = $flatten\count_addr0.$2\addr[9:0], Q = \count_addr0.addr, rval = 10'0000000000).
+Adding EN signal on $auto$ff.cc:266:slice$776 ($sdff) from module send_LEDS (D = $flatten\count_addr0.$add$count_addr.v:13$235_Y [9:0], Q = \count_addr0.addr).
+
+15.14.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \send_LEDS..
+Removed 9 unused cells and 22 unused wires.
+
+15.14.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module send_LEDS.
+
+15.14.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+15.14.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \send_LEDS..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+
+15.14.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \send_LEDS.
+    New ctrl vector for $pmux cell $flatten\send_LEDS_control.$procmux$636: { $flatten\send_LEDS_control.$procmux$606_CMP $flatten\send_LEDS_control.$procmux$625_CMP }
+    New ctrl vector for $pmux cell $flatten\ws2812.\timer.\timer_control.$procmux$410: { $flatten\ws2812.\timer.\timer_control.$procmux$391_CMP $flatten\ws2812.\timer.\timer_control.$procmux$411_CMP }
+  Optimizing cells in module \send_LEDS.
+Performed a total of 2 changes.
+
+15.14.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\send_LEDS'.
+Removed a total of 3 cells.
+
+15.14.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+15.14.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \send_LEDS..
+Removed 0 unused cells and 3 unused wires.
+
+15.14.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module send_LEDS.
+
+15.14.16. Rerunning OPT passes. (Maybe there is more to do..)
+
+15.14.17. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \send_LEDS..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+
+15.14.18. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \send_LEDS.
+Performed a total of 0 changes.
+
+15.14.19. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\send_LEDS'.
+Removed a total of 0 cells.
+
+15.14.20. Executing OPT_DFF pass (perform DFF optimizations).
+
+15.14.21. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \send_LEDS..
+
+15.14.22. Executing OPT_EXPR pass (perform const folding).
+Optimizing module send_LEDS.
+
+15.14.23. Finished OPT passes. (There is nothing left to do.)
+
+15.15. Executing WREDUCE pass (reducing word size of cells).
+Removed top 26 address bits (of 32) from memory init port send_LEDS.$flatten\led_mem0.$meminit$\LED_MEM$led_mem.v:0$238 (led_mem0.LED_MEM).
+Removed top 4 address bits (of 10) from memory read port send_LEDS.$flatten\led_mem0.$memrd$\LED_MEM$led_mem.v:15$237 (led_mem0.LED_MEM).
+Removed top 29 address bits (of 32) from memory init port send_LEDS.$flatten\send_LEDS_control.$auto$mem.cc:319:emit$267 ($flatten\send_LEDS_control.$auto$proc_rom.cc:150:do_switch$265).
+Removed top 29 address bits (of 32) from memory init port send_LEDS.$flatten\ws2812.\timer.\timer_control.$auto$mem.cc:319:emit$263 ($flatten\ws2812.\timer.\timer_control.$auto$proc_rom.cc:150:do_switch$261).
+Removed top 31 bits (of 32) from port B of cell send_LEDS.$flatten\count_addr0.$add$count_addr.v:13$235 ($add).
+Removed top 22 bits (of 32) from port Y of cell send_LEDS.$flatten\count_addr0.$add$count_addr.v:13$235 ($add).
+Removed top 1 bits (of 10) from port B of cell send_LEDS.$flatten\comp0.$eq$comp_send_LEDS.v:10$233 ($eq).
+Removed top 1 bits (of 2) from port B of cell send_LEDS.$auto$opt_dff.cc:195:make_patterns_logic$752 ($ne).
+Removed top 1 bits (of 2) from port B of cell send_LEDS.$auto$opt_dff.cc:195:make_patterns_logic$745 ($ne).
+Removed top 31 bits (of 32) from port B of cell send_LEDS.$flatten\ws2812.\ws2812_control.$gt$ws2812_control.v:84$242 ($gt).
+Removed top 31 bits (of 32) from port B of cell send_LEDS.$flatten\ws2812.\timer.\timer_control.$add$timer_control.v:104$251 ($add).
+Removed top 27 bits (of 32) from port Y of cell send_LEDS.$flatten\ws2812.\timer.\timer_control.$add$timer_control.v:104$251 ($add).
+Removed top 1 bits (of 2) from port B of cell send_LEDS.$flatten\ws2812.\timer.\mux0.$procmux$303_CMP0 ($eq).
+Removed top 2 bits (of 3) from port B of cell send_LEDS.$flatten\ws2812.\timer.\timer_control.$procmux$417_CMP0 ($eq).
+Removed top 2 bits (of 3) from mux cell send_LEDS.$flatten\ws2812.\timer.\timer_control.$procmux$403 ($mux).
+Removed top 1 bits (of 3) from port B of cell send_LEDS.$flatten\ws2812.\timer.\timer_control.$procmux$363_CMP0 ($eq).
+Removed top 1 bits (of 3) from mux cell send_LEDS.$flatten\ws2812.\timer.\timer_control.$procmux$344 ($mux).
+Removed top 1 bits (of 3) from port B of cell send_LEDS.$flatten\ws2812.\timer.\timer_control.$procmux$335_CMP0 ($eq).
+Removed top 1 bits (of 3) from mux cell send_LEDS.$flatten\ws2812.\timer.\timer_control.$procmux$321 ($mux).
+Removed top 2 bits (of 3) from mux cell send_LEDS.$flatten\ws2812.\timer.\timer_control.$procmux$311 ($mux).
+Removed top 4 bits (of 5) from port B of cell send_LEDS.$flatten\ws2812.\timer.\timer_control.$eq$timer_control.v:105$252 ($eq).
+Removed top 31 bits (of 32) from port B of cell send_LEDS.$flatten\ws2812.\ws2812_control.$add$ws2812_control.v:83$241 ($add).
+Removed top 27 bits (of 32) from port Y of cell send_LEDS.$flatten\ws2812.\ws2812_control.$add$ws2812_control.v:83$241 ($add).
+Removed top 31 bits (of 32) from port B of cell send_LEDS.$flatten\ws2812.\timer.\count_out.$add$count_out.v:13$259 ($add).
+Removed top 19 bits (of 32) from port Y of cell send_LEDS.$flatten\ws2812.\timer.\count_out.$add$count_out.v:13$259 ($add).
+Removed top 31 bits (of 32) from port B of cell send_LEDS.$flatten\ws2812.\count_ws2812.$sub$count_ws2812.v:15$246 ($sub).
+Removed top 27 bits (of 32) from port Y of cell send_LEDS.$flatten\ws2812.\count_ws2812.$sub$count_ws2812.v:15$246 ($sub).
+Removed top 1 bits (of 3) from port B of cell send_LEDS.$flatten\send_LEDS_control.$procmux$630_CMP0 ($eq).
+Removed top 1 bits (of 3) from port B of cell send_LEDS.$flatten\send_LEDS_control.$procmux$629_CMP0 ($eq).
+Removed top 1 bits (of 3) from mux cell send_LEDS.$flatten\send_LEDS_control.$procmux$617 ($mux).
+Removed top 2 bits (of 3) from port B of cell send_LEDS.$flatten\send_LEDS_control.$procmux$606_CMP0 ($eq).
+Removed top 2 bits (of 3) from mux cell send_LEDS.$flatten\send_LEDS_control.$procmux$589 ($mux).
+Removed top 27 bits (of 32) from port B of cell send_LEDS.$flatten\send_LEDS_control.$gt$send_LEDS_control.v:86$229 ($gt).
+Removed top 31 bits (of 32) from port B of cell send_LEDS.$flatten\send_LEDS_control.$add$send_LEDS_control.v:85$228 ($add).
+Removed top 27 bits (of 32) from port Y of cell send_LEDS.$flatten\send_LEDS_control.$add$send_LEDS_control.v:85$228 ($add).
+Removed top 22 bits (of 32) from wire send_LEDS.$flatten\count_addr0.$add$count_addr.v:13$235_Y.
+Removed top 1 bits (of 3) from wire send_LEDS.$flatten\send_LEDS_control.$3\current_state[2:0].
+Removed top 2 bits (of 3) from wire send_LEDS.$flatten\send_LEDS_control.$4\current_state[2:0].
+Removed top 27 bits (of 32) from wire send_LEDS.$flatten\send_LEDS_control.$add$send_LEDS_control.v:85$228_Y.
+Removed top 27 bits (of 32) from wire send_LEDS.$flatten\ws2812.\count_ws2812.$sub$count_ws2812.v:15$246_Y.
+Removed top 19 bits (of 32) from wire send_LEDS.$flatten\ws2812.\timer.\count_out.$add$count_out.v:13$259_Y.
+Removed top 2 bits (of 3) from wire send_LEDS.$flatten\ws2812.\timer.\timer_control.$3\current_state[2:0].
+Removed top 1 bits (of 3) from wire send_LEDS.$flatten\ws2812.\timer.\timer_control.$6\current_state[2:0].
+Removed top 1 bits (of 3) from wire send_LEDS.$flatten\ws2812.\timer.\timer_control.$8\current_state[2:0].
+Removed top 27 bits (of 32) from wire send_LEDS.$flatten\ws2812.\timer.\timer_control.$add$timer_control.v:104$251_Y.
+Removed top 27 bits (of 32) from wire send_LEDS.$flatten\ws2812.\ws2812_control.$add$ws2812_control.v:83$241_Y.
+
+15.16. Executing PEEPOPT pass (run peephole optimizers).
+
+15.17. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \send_LEDS..
+Removed 0 unused cells and 11 unused wires.
+
+15.18. Executing SHARE pass (SAT-based resource sharing).
+
+15.19. Executing TECHMAP pass (map to technology primitives).
+
+15.19.1. Executing Verilog-2005 frontend: /home/marute/miniconda3/envs/digital/bin/../share/yosys/cmp2lut.v
+Parsing Verilog input from `/home/marute/miniconda3/envs/digital/bin/../share/yosys/cmp2lut.v' to AST representation.
+Generating RTLIL representation for module `\_90_lut_cmp_'.
+Successfully finished Verilog frontend.
+
+15.19.2. Continuing TECHMAP pass.
+No more expansions possible.
+
+15.20. Executing OPT_EXPR pass (perform const folding).
+Optimizing module send_LEDS.
+
+15.21. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \send_LEDS..
+
+15.22. Executing TECHMAP pass (map to technology primitives).
+
+15.22.1. Executing Verilog-2005 frontend: /home/marute/miniconda3/envs/digital/bin/../share/yosys/mul2dsp.v
+Parsing Verilog input from `/home/marute/miniconda3/envs/digital/bin/../share/yosys/mul2dsp.v' to AST representation.
+Generating RTLIL representation for module `\_80_mul'.
+Generating RTLIL representation for module `\_90_soft_mul'.
+Successfully finished Verilog frontend.
+
+15.22.2. Executing Verilog-2005 frontend: /home/marute/miniconda3/envs/digital/bin/../share/yosys/ecp5/dsp_map.v
+Parsing Verilog input from `/home/marute/miniconda3/envs/digital/bin/../share/yosys/ecp5/dsp_map.v' to AST representation.
+Generating RTLIL representation for module `\$__MUL18X18'.
+Successfully finished Verilog frontend.
+
+15.22.3. Continuing TECHMAP pass.
+No more expansions possible.
+
+15.23. Executing ALUMACC pass (create $alu and $macc cells).
+Extracting $alu and $macc cells in module send_LEDS:
+  creating $macc model for $flatten\count_addr0.$add$count_addr.v:13$235 ($add).
+  creating $macc model for $flatten\send_LEDS_control.$add$send_LEDS_control.v:85$228 ($add).
+  creating $macc model for $flatten\ws2812.\count_ws2812.$sub$count_ws2812.v:15$246 ($sub).
+  creating $macc model for $flatten\ws2812.\timer.\count_out.$add$count_out.v:13$259 ($add).
+  creating $macc model for $flatten\ws2812.\timer.\timer_control.$add$timer_control.v:104$251 ($add).
+  creating $macc model for $flatten\ws2812.\ws2812_control.$add$ws2812_control.v:83$241 ($add).
+  creating $alu model for $macc $flatten\ws2812.\ws2812_control.$add$ws2812_control.v:83$241.
+  creating $alu model for $macc $flatten\ws2812.\timer.\timer_control.$add$timer_control.v:104$251.
+  creating $alu model for $macc $flatten\ws2812.\timer.\count_out.$add$count_out.v:13$259.
+  creating $alu model for $macc $flatten\ws2812.\count_ws2812.$sub$count_ws2812.v:15$246.
+  creating $alu model for $macc $flatten\send_LEDS_control.$add$send_LEDS_control.v:85$228.
+  creating $alu model for $macc $flatten\count_addr0.$add$count_addr.v:13$235.
+  creating $alu model for $flatten\send_LEDS_control.$gt$send_LEDS_control.v:86$229 ($gt): new $alu
+  creating $alu model for $flatten\ws2812.\ws2812_control.$gt$ws2812_control.v:84$242 ($gt): new $alu
+  creating $alu cell for $flatten\ws2812.\ws2812_control.$gt$ws2812_control.v:84$242: $auto$alumacc.cc:485:replace_alu$792
+  creating $alu cell for $flatten\send_LEDS_control.$gt$send_LEDS_control.v:86$229: $auto$alumacc.cc:485:replace_alu$797
+  creating $alu cell for $flatten\count_addr0.$add$count_addr.v:13$235: $auto$alumacc.cc:485:replace_alu$802
+  creating $alu cell for $flatten\send_LEDS_control.$add$send_LEDS_control.v:85$228: $auto$alumacc.cc:485:replace_alu$805
+  creating $alu cell for $flatten\ws2812.\count_ws2812.$sub$count_ws2812.v:15$246: $auto$alumacc.cc:485:replace_alu$808
+  creating $alu cell for $flatten\ws2812.\timer.\count_out.$add$count_out.v:13$259: $auto$alumacc.cc:485:replace_alu$811
+  creating $alu cell for $flatten\ws2812.\timer.\timer_control.$add$timer_control.v:104$251: $auto$alumacc.cc:485:replace_alu$814
+  creating $alu cell for $flatten\ws2812.\ws2812_control.$add$ws2812_control.v:83$241: $auto$alumacc.cc:485:replace_alu$817
+  created 8 $alu and 0 $macc cells.
+
+15.24. Executing OPT pass (performing simple optimizations).
+
+15.24.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module send_LEDS.
+
+15.24.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\send_LEDS'.
+Removed a total of 0 cells.
+
+15.24.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \send_LEDS..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+
+15.24.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \send_LEDS.
+Performed a total of 0 changes.
+
+15.24.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\send_LEDS'.
+Removed a total of 0 cells.
+
+15.24.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+15.24.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \send_LEDS..
+Removed 1 unused cells and 3 unused wires.
+
+15.24.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module send_LEDS.
+
+15.24.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+15.24.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \send_LEDS..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+
+15.24.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \send_LEDS.
+Performed a total of 0 changes.
+
+15.24.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\send_LEDS'.
+Removed a total of 0 cells.
+
+15.24.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+15.24.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \send_LEDS..
+
+15.24.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module send_LEDS.
+
+15.24.16. Finished OPT passes. (There is nothing left to do.)
+
+15.25. Executing MEMORY pass.
+
+15.25.1. Executing OPT_MEM pass (optimize memories).
+send_LEDS.led_mem0.LED_MEM: removing const-0 lane 0
+send_LEDS.led_mem0.LED_MEM: removing const-0 lane 1
+send_LEDS.led_mem0.LED_MEM: removing const-0 lane 2
+send_LEDS.led_mem0.LED_MEM: removing const-0 lane 3
+send_LEDS.led_mem0.LED_MEM: removing const-0 lane 4
+send_LEDS.led_mem0.LED_MEM: removing const-0 lane 5
+send_LEDS.led_mem0.LED_MEM: removing const-0 lane 6
+send_LEDS.led_mem0.LED_MEM: removing const-0 lane 7
+send_LEDS.led_mem0.LED_MEM: removing const-1 lane 8
+send_LEDS.led_mem0.LED_MEM: removing const-1 lane 9
+send_LEDS.led_mem0.LED_MEM: removing const-1 lane 10
+send_LEDS.led_mem0.LED_MEM: removing const-1 lane 11
+send_LEDS.led_mem0.LED_MEM: removing const-1 lane 12
+send_LEDS.led_mem0.LED_MEM: removing const-1 lane 13
+send_LEDS.led_mem0.LED_MEM: removing const-1 lane 14
+send_LEDS.led_mem0.LED_MEM: removing const-1 lane 15
+send_LEDS.led_mem0.LED_MEM: removing const-0 lane 16
+send_LEDS.led_mem0.LED_MEM: removing const-0 lane 17
+send_LEDS.led_mem0.LED_MEM: removing const-0 lane 18
+send_LEDS.led_mem0.LED_MEM: removing const-0 lane 19
+send_LEDS.led_mem0.LED_MEM: removing const-0 lane 20
+send_LEDS.led_mem0.LED_MEM: removing const-0 lane 21
+send_LEDS.led_mem0.LED_MEM: removing const-0 lane 22
+send_LEDS.led_mem0.LED_MEM: removing const-0 lane 23
+Performed a total of 1 transformations.
+
+15.25.2. Executing OPT_MEM_PRIORITY pass (removing unnecessary memory write priority relations).
+Performed a total of 0 transformations.
+
+15.25.3. Executing OPT_MEM_FEEDBACK pass (finding memory read-to-write feedback paths).
+
+15.25.4. Executing MEMORY_BMUX2ROM pass (converting muxes to ROMs).
+
+15.25.5. Executing MEMORY_DFF pass (merging $dff cells to $memrd).
+Checking read port `$flatten\ws2812.\timer.\timer_control.$auto$proc_rom.cc:150:do_switch$261'[0] in module `\send_LEDS': no output FF found.
+Checking read port `$flatten\send_LEDS_control.$auto$proc_rom.cc:150:do_switch$265'[0] in module `\send_LEDS': no output FF found.
+Checking read port address `$flatten\ws2812.\timer.\timer_control.$auto$proc_rom.cc:150:do_switch$261'[0] in module `\send_LEDS': merged address FF to cell.
+Checking read port address `$flatten\send_LEDS_control.$auto$proc_rom.cc:150:do_switch$265'[0] in module `\send_LEDS': merged address FF to cell.
+
+15.25.6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \send_LEDS..
+Removed 0 unused cells and 1 unused wires.
+
+15.25.7. Executing MEMORY_SHARE pass (consolidating $memrd/$memwr cells).
+
+15.25.8. Executing OPT_MEM_WIDEN pass (optimize memories where all ports are wide).
+Performed a total of 0 transformations.
+
+15.25.9. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \send_LEDS..
+
+15.25.10. Executing MEMORY_COLLECT pass (generating $mem cells).
+
+15.26. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \send_LEDS..
+
+15.27. Executing MEMORY_LIBMAP pass (mapping memories to cells).
+using FF mapping for memory send_LEDS.$flatten\send_LEDS_control.$auto$proc_rom.cc:150:do_switch$265
+using FF mapping for memory send_LEDS.$flatten\ws2812.\timer.\timer_control.$auto$proc_rom.cc:150:do_switch$261
+
+15.28. Executing TECHMAP pass (map to technology primitives).
+
+15.28.1. Executing Verilog-2005 frontend: /home/marute/miniconda3/envs/digital/bin/../share/yosys/ecp5/lutrams_map.v
+Parsing Verilog input from `/home/marute/miniconda3/envs/digital/bin/../share/yosys/ecp5/lutrams_map.v' to AST representation.
+Generating RTLIL representation for module `\$__TRELLIS_DPR16X4_'.
+Successfully finished Verilog frontend.
+
+15.28.2. Executing Verilog-2005 frontend: /home/marute/miniconda3/envs/digital/bin/../share/yosys/ecp5/brams_map.v
+Parsing Verilog input from `/home/marute/miniconda3/envs/digital/bin/../share/yosys/ecp5/brams_map.v' to AST representation.
+Generating RTLIL representation for module `\$__ECP5_DP16KD_'.
+Generating RTLIL representation for module `\$__ECP5_PDPW16KD_'.
+Successfully finished Verilog frontend.
+
+15.28.3. Continuing TECHMAP pass.
+No more expansions possible.
+
+15.29. Executing OPT pass (performing simple optimizations).
+
+15.29.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module send_LEDS.
+
+15.29.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\send_LEDS'.
+Removed a total of 0 cells.
+
+15.29.3. Executing OPT_DFF pass (perform DFF optimizations).
+Adding SRST signal on $auto$ff.cc:266:slice$741 ($dffe) from module send_LEDS (D = $auto$wreduce.cc:461:run$788 [4:0], Q = \ws2812.ws2812_control.count, rval = 5'00000).
+Adding SRST signal on $auto$ff.cc:266:slice$750 ($dffe) from module send_LEDS (D = $auto$wreduce.cc:461:run$787 [4:0], Q = \ws2812.timer.timer_control.count, rval = 5'00000).
+Adding SRST signal on $auto$ff.cc:266:slice$766 ($dffe) from module send_LEDS (D = $auto$wreduce.cc:461:run$781 [4:0], Q = \send_LEDS_control.count, rval = 5'00000).
+Setting constant 0-bit at position 0 on $flatten\led_mem0.$procdff$670 ($dff) from module send_LEDS.
+Setting constant 0-bit at position 1 on $flatten\led_mem0.$procdff$670 ($dff) from module send_LEDS.
+Setting constant 0-bit at position 2 on $flatten\led_mem0.$procdff$670 ($dff) from module send_LEDS.
+Setting constant 0-bit at position 3 on $flatten\led_mem0.$procdff$670 ($dff) from module send_LEDS.
+Setting constant 0-bit at position 4 on $flatten\led_mem0.$procdff$670 ($dff) from module send_LEDS.
+Setting constant 0-bit at position 5 on $flatten\led_mem0.$procdff$670 ($dff) from module send_LEDS.
+Setting constant 0-bit at position 6 on $flatten\led_mem0.$procdff$670 ($dff) from module send_LEDS.
+Setting constant 0-bit at position 7 on $flatten\led_mem0.$procdff$670 ($dff) from module send_LEDS.
+Setting constant 1-bit at position 8 on $flatten\led_mem0.$procdff$670 ($dff) from module send_LEDS.
+Setting constant 1-bit at position 9 on $flatten\led_mem0.$procdff$670 ($dff) from module send_LEDS.
+Setting constant 1-bit at position 10 on $flatten\led_mem0.$procdff$670 ($dff) from module send_LEDS.
+Setting constant 1-bit at position 11 on $flatten\led_mem0.$procdff$670 ($dff) from module send_LEDS.
+Setting constant 1-bit at position 12 on $flatten\led_mem0.$procdff$670 ($dff) from module send_LEDS.
+Setting constant 1-bit at position 13 on $flatten\led_mem0.$procdff$670 ($dff) from module send_LEDS.
+Setting constant 1-bit at position 14 on $flatten\led_mem0.$procdff$670 ($dff) from module send_LEDS.
+Setting constant 1-bit at position 15 on $flatten\led_mem0.$procdff$670 ($dff) from module send_LEDS.
+Setting constant 0-bit at position 16 on $flatten\led_mem0.$procdff$670 ($dff) from module send_LEDS.
+Setting constant 0-bit at position 17 on $flatten\led_mem0.$procdff$670 ($dff) from module send_LEDS.
+Setting constant 0-bit at position 18 on $flatten\led_mem0.$procdff$670 ($dff) from module send_LEDS.
+Setting constant 0-bit at position 19 on $flatten\led_mem0.$procdff$670 ($dff) from module send_LEDS.
+Setting constant 0-bit at position 20 on $flatten\led_mem0.$procdff$670 ($dff) from module send_LEDS.
+Setting constant 0-bit at position 21 on $flatten\led_mem0.$procdff$670 ($dff) from module send_LEDS.
+Setting constant 0-bit at position 22 on $flatten\led_mem0.$procdff$670 ($dff) from module send_LEDS.
+Setting constant 0-bit at position 23 on $flatten\led_mem0.$procdff$670 ($dff) from module send_LEDS.
+
+15.29.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \send_LEDS..
+Removed 5 unused cells and 13 unused wires.
+
+15.29.5. Rerunning OPT passes. (Removed registers in this run.)
+
+15.29.6. Executing OPT_EXPR pass (perform const folding).
+Optimizing module send_LEDS.
+
+15.29.7. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\send_LEDS'.
+Removed a total of 0 cells.
+
+15.29.8. Executing OPT_DFF pass (perform DFF optimizations).
+Adding SRST signal on $auto$ff.cc:266:slice$762 ($dffe) from module send_LEDS (D = 1'x, Q = \ws2812.grb_lsr.GRB_aux [0], rval = 1'0).
+Adding SRST signal on $auto$ff.cc:266:slice$762 ($dffe) from module send_LEDS (D = $flatten\ws2812.\grb_lsr.$2\GRB_aux[23:0] [22:1], Q = \ws2812.grb_lsr.GRB_aux [22:1], rval = 22'0000000111111110000000).
+Setting constant 0-bit at position 0 on $auto$ff.cc:266:slice$963 ($sdffce) from module send_LEDS.
+
+15.29.9. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \send_LEDS..
+Removed 1 unused cells and 1 unused wires.
+
+15.29.10. Rerunning OPT passes. (Removed registers in this run.)
+
+15.29.11. Executing OPT_EXPR pass (perform const folding).
+Optimizing module send_LEDS.
+
+15.29.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\send_LEDS'.
+Removed a total of 0 cells.
+
+15.29.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+15.29.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \send_LEDS..
+
+15.29.15. Finished fast OPT passes.
+
+15.30. Executing MEMORY_MAP pass (converting memories to logic and flip-flops).
+Mapping memory $flatten\send_LEDS_control.$auto$proc_rom.cc:150:do_switch$265 in module \send_LEDS:
+  created 8 $dff cells and 0 static cells of width 4.
+Extracted data FF from read port 0 of send_LEDS.$flatten\send_LEDS_control.$auto$proc_rom.cc:150:do_switch$265: $$flatten\send_LEDS_control.$auto$proc_rom.cc:150:do_switch$265$rdreg[0]
+  read interface: 1 $dff and 7 $mux cells.
+  write interface: 0 write mux blocks.
+Mapping memory $flatten\ws2812.\timer.\timer_control.$auto$proc_rom.cc:150:do_switch$261 in module \send_LEDS:
+  created 8 $dff cells and 0 static cells of width 6.
+Extracted data FF from read port 0 of send_LEDS.$flatten\ws2812.\timer.\timer_control.$auto$proc_rom.cc:150:do_switch$261: $$flatten\ws2812.\timer.\timer_control.$auto$proc_rom.cc:150:do_switch$261$rdreg[0]
+  read interface: 1 $dff and 7 $mux cells.
+  write interface: 0 write mux blocks.
+
+15.31. Executing OPT pass (performing simple optimizations).
+
+15.31.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module send_LEDS.
+
+15.31.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\send_LEDS'.
+Removed a total of 0 cells.
+
+15.31.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \send_LEDS..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+
+15.31.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \send_LEDS.
+    Consolidated identical input bits for $mux cell $memory$flatten\ws2812.\timer.\timer_control.$auto$proc_rom.cc:150:do_switch$261$rdmux[0][2][2]$1003:
+      Old ports: A=6'001101, B=6'010100, Y=$memory$flatten\ws2812.\timer.\timer_control.$auto$proc_rom.cc:150:do_switch$261$rdmux[0][1][1]$a$995
+      New ports: A=2'01, B=2'10, Y={ $memory$flatten\ws2812.\timer.\timer_control.$auto$proc_rom.cc:150:do_switch$261$rdmux[0][1][1]$a$995 [4] $memory$flatten\ws2812.\timer.\timer_control.$auto$proc_rom.cc:150:do_switch$261$rdmux[0][1][1]$a$995 [0] }
+      New connections: { $memory$flatten\ws2812.\timer.\timer_control.$auto$proc_rom.cc:150:do_switch$261$rdmux[0][1][1]$a$995 [5] $memory$flatten\ws2812.\timer.\timer_control.$auto$proc_rom.cc:150:do_switch$261$rdmux[0][1][1]$a$995 [3:1] } = { 1'0 $memory$flatten\ws2812.\timer.\timer_control.$auto$proc_rom.cc:150:do_switch$261$rdmux[0][1][1]$a$995 [0] 2'10 }
+    Consolidated identical input bits for $mux cell $memory$flatten\ws2812.\timer.\timer_control.$auto$proc_rom.cc:150:do_switch$261$rdmux[0][2][1]$1000:
+      Old ports: A=6'000000, B=6'000101, Y=$memory$flatten\ws2812.\timer.\timer_control.$auto$proc_rom.cc:150:do_switch$261$rdmux[0][1][0]$b$993
+      New ports: A=1'0, B=1'1, Y=$memory$flatten\ws2812.\timer.\timer_control.$auto$proc_rom.cc:150:do_switch$261$rdmux[0][1][0]$b$993 [0]
+      New connections: $memory$flatten\ws2812.\timer.\timer_control.$auto$proc_rom.cc:150:do_switch$261$rdmux[0][1][0]$b$993 [5:1] = { 3'000 $memory$flatten\ws2812.\timer.\timer_control.$auto$proc_rom.cc:150:do_switch$261$rdmux[0][1][0]$b$993 [0] 1'0 }
+    Consolidated identical input bits for $mux cell $memory$flatten\ws2812.\timer.\timer_control.$auto$proc_rom.cc:150:do_switch$261$rdmux[0][2][0]$997:
+      Old ports: A=6'000000, B=6'000010, Y=$memory$flatten\ws2812.\timer.\timer_control.$auto$proc_rom.cc:150:do_switch$261$rdmux[0][1][0]$a$992
+      New ports: A=1'0, B=1'1, Y=$memory$flatten\ws2812.\timer.\timer_control.$auto$proc_rom.cc:150:do_switch$261$rdmux[0][1][0]$a$992 [1]
+      New connections: { $memory$flatten\ws2812.\timer.\timer_control.$auto$proc_rom.cc:150:do_switch$261$rdmux[0][1][0]$a$992 [5:2] $memory$flatten\ws2812.\timer.\timer_control.$auto$proc_rom.cc:150:do_switch$261$rdmux[0][1][0]$a$992 [0] } = 5'00000
+    Consolidated identical input bits for $mux cell $memory$flatten\send_LEDS_control.$auto$proc_rom.cc:150:do_switch$265$rdmux[0][2][2]$982:
+      Old ports: A=4'0000, B=4'0100, Y=$memory$flatten\send_LEDS_control.$auto$proc_rom.cc:150:do_switch$265$rdmux[0][1][1]$a$974
+      New ports: A=1'0, B=1'1, Y=$memory$flatten\send_LEDS_control.$auto$proc_rom.cc:150:do_switch$265$rdmux[0][1][1]$a$974 [2]
+      New connections: { $memory$flatten\send_LEDS_control.$auto$proc_rom.cc:150:do_switch$265$rdmux[0][1][1]$a$974 [3] $memory$flatten\send_LEDS_control.$auto$proc_rom.cc:150:do_switch$265$rdmux[0][1][1]$a$974 [1:0] } = 3'000
+    Consolidated identical input bits for $mux cell $memory$flatten\send_LEDS_control.$auto$proc_rom.cc:150:do_switch$265$rdmux[0][2][1]$979:
+      Old ports: A=4'0001, B=4'0000, Y=$memory$flatten\send_LEDS_control.$auto$proc_rom.cc:150:do_switch$265$rdmux[0][1][0]$b$972
+      New ports: A=1'1, B=1'0, Y=$memory$flatten\send_LEDS_control.$auto$proc_rom.cc:150:do_switch$265$rdmux[0][1][0]$b$972 [0]
+      New connections: $memory$flatten\send_LEDS_control.$auto$proc_rom.cc:150:do_switch$265$rdmux[0][1][0]$b$972 [3:1] = 3'000
+    Consolidated identical input bits for $mux cell $memory$flatten\send_LEDS_control.$auto$proc_rom.cc:150:do_switch$265$rdmux[0][2][0]$976:
+      Old ports: A=4'0010, B=4'0000, Y=$memory$flatten\send_LEDS_control.$auto$proc_rom.cc:150:do_switch$265$rdmux[0][1][0]$a$971
+      New ports: A=1'1, B=1'0, Y=$memory$flatten\send_LEDS_control.$auto$proc_rom.cc:150:do_switch$265$rdmux[0][1][0]$a$971 [1]
+      New connections: { $memory$flatten\send_LEDS_control.$auto$proc_rom.cc:150:do_switch$265$rdmux[0][1][0]$a$971 [3:2] $memory$flatten\send_LEDS_control.$auto$proc_rom.cc:150:do_switch$265$rdmux[0][1][0]$a$971 [0] } = 3'000
+    Consolidated identical input bits for $mux cell $memory$flatten\send_LEDS_control.$auto$proc_rom.cc:150:do_switch$265$rdmux[0][2][3]$985:
+      Old ports: A=4'0000, B=4'1000, Y=$memory$flatten\send_LEDS_control.$auto$proc_rom.cc:150:do_switch$265$rdmux[0][1][1]$b$975
+      New ports: A=1'0, B=1'1, Y=$memory$flatten\send_LEDS_control.$auto$proc_rom.cc:150:do_switch$265$rdmux[0][1][1]$b$975 [3]
+      New connections: $memory$flatten\send_LEDS_control.$auto$proc_rom.cc:150:do_switch$265$rdmux[0][1][1]$b$975 [2:0] = 3'000
+    Consolidated identical input bits for $mux cell $flatten\send_LEDS_control.$procmux$578:
+      Old ports: A=3'010, B=3'111, Y=$flatten\send_LEDS_control.$5\current_state[2:0]
+      New ports: A=1'0, B=1'1, Y=$flatten\send_LEDS_control.$5\current_state[2:0] [0]
+      New connections: $flatten\send_LEDS_control.$5\current_state[2:0] [2:1] = { $flatten\send_LEDS_control.$5\current_state[2:0] [0] 1'1 }
+    Consolidated identical input bits for $mux cell $flatten\send_LEDS_control.$ternary$send_LEDS_control.v:86$230:
+      Old ports: A=3'000, B=3'111, Y=$flatten\send_LEDS_control.$ternary$send_LEDS_control.v:86$230_Y
+      New ports: A=1'0, B=1'1, Y=$flatten\send_LEDS_control.$ternary$send_LEDS_control.v:86$230_Y [0]
+      New connections: $flatten\send_LEDS_control.$ternary$send_LEDS_control.v:86$230_Y [2:1] = { $flatten\send_LEDS_control.$ternary$send_LEDS_control.v:86$230_Y [0] $flatten\send_LEDS_control.$ternary$send_LEDS_control.v:86$230_Y [0] }
+    Consolidated identical input bits for $mux cell $flatten\ws2812.\grb_lsr.$procmux$441:
+      Old ports: A={ \ws2812.grb_lsr.GRB_aux [23] 23'x }, B={ \ws2812.grb_lsr.GRB_aux [22:1] 2'00 }, Y=$flatten\ws2812.\grb_lsr.$2\GRB_aux[23:0]
+      New ports: A={ \ws2812.grb_lsr.GRB_aux [23] 22'x }, B={ \ws2812.grb_lsr.GRB_aux [22:1] 1'0 }, Y={ $flatten\ws2812.\grb_lsr.$2\GRB_aux[23:0] [23:2] $flatten\ws2812.\grb_lsr.$2\GRB_aux[23:0] [0] }
+      New connections: $flatten\ws2812.\grb_lsr.$2\GRB_aux[23:0] [1] = $flatten\ws2812.\grb_lsr.$2\GRB_aux[23:0] [0]
+    Consolidated identical input bits for $pmux cell $flatten\ws2812.\timer.\mux0.$procmux$300:
+      Old ports: A=13'0000000001010, B=39'000000001010000000000111110010011100010, Y=\ws2812.timer.comp_timer.data2transfer
+      New ports: A=5'01010, B=15'001000111110010, Y={ \ws2812.timer.comp_timer.data2transfer [5] \ws2812.timer.comp_timer.data2transfer [3:0] }
+      New connections: { \ws2812.timer.comp_timer.data2transfer [12:6] \ws2812.timer.comp_timer.data2transfer [4] } = { 2'00 \ws2812.timer.comp_timer.data2transfer [5] 2'00 \ws2812.timer.comp_timer.data2transfer [5] \ws2812.timer.comp_timer.data2transfer [5] \ws2812.timer.comp_timer.data2transfer [2] }
+    Consolidated identical input bits for $mux cell $memory$flatten\ws2812.\timer.\timer_control.$auto$proc_rom.cc:150:do_switch$261$rdmux[0][2][3]$1006:
+      Old ports: A=6'011100, B=6'100000, Y=$memory$flatten\ws2812.\timer.\timer_control.$auto$proc_rom.cc:150:do_switch$261$rdmux[0][1][1]$b$996
+      New ports: A=2'01, B=2'10, Y={ $memory$flatten\ws2812.\timer.\timer_control.$auto$proc_rom.cc:150:do_switch$261$rdmux[0][1][1]$b$996 [5] $memory$flatten\ws2812.\timer.\timer_control.$auto$proc_rom.cc:150:do_switch$261$rdmux[0][1][1]$b$996 [2] }
+      New connections: { $memory$flatten\ws2812.\timer.\timer_control.$auto$proc_rom.cc:150:do_switch$261$rdmux[0][1][1]$b$996 [4:3] $memory$flatten\ws2812.\timer.\timer_control.$auto$proc_rom.cc:150:do_switch$261$rdmux[0][1][1]$b$996 [1:0] } = { $memory$flatten\ws2812.\timer.\timer_control.$auto$proc_rom.cc:150:do_switch$261$rdmux[0][1][1]$b$996 [2] $memory$flatten\ws2812.\timer.\timer_control.$auto$proc_rom.cc:150:do_switch$261$rdmux[0][1][1]$b$996 [2] 2'00 }
+    Consolidated identical input bits for $mux cell $flatten\ws2812.\timer.\timer_control.$procmux$321:
+      Old ports: A=2'00, B=2'10, Y=$auto$wreduce.cc:461:run$786 [1:0]
+      New ports: A=1'0, B=1'1, Y=$auto$wreduce.cc:461:run$786 [1]
+      New connections: $auto$wreduce.cc:461:run$786 [0] = 1'0
+    Consolidated identical input bits for $mux cell $flatten\ws2812.\timer.\timer_control.$procmux$332:
+      Old ports: A=3'011, B=3'110, Y=$flatten\ws2812.\timer.\timer_control.$7\current_state[2:0]
+      New ports: A=2'01, B=2'10, Y={ $flatten\ws2812.\timer.\timer_control.$7\current_state[2:0] [2] $flatten\ws2812.\timer.\timer_control.$7\current_state[2:0] [0] }
+      New connections: $flatten\ws2812.\timer.\timer_control.$7\current_state[2:0] [1] = 1'1
+    Consolidated identical input bits for $mux cell $flatten\ws2812.\timer.\timer_control.$procmux$344:
+      Old ports: A=2'01, B=2'11, Y=$auto$wreduce.cc:461:run$785 [1:0]
+      New ports: A=1'0, B=1'1, Y=$auto$wreduce.cc:461:run$785 [1]
+      New connections: $auto$wreduce.cc:461:run$785 [0] = 1'1
+    Consolidated identical input bits for $mux cell $flatten\ws2812.\timer.\timer_control.$procmux$357:
+      Old ports: A=3'011, B=3'100, Y=$flatten\ws2812.\timer.\timer_control.$4\current_state[2:0]
+      New ports: A=2'01, B=2'10, Y={ $flatten\ws2812.\timer.\timer_control.$4\current_state[2:0] [2] $flatten\ws2812.\timer.\timer_control.$4\current_state[2:0] [0] }
+      New connections: $flatten\ws2812.\timer.\timer_control.$4\current_state[2:0] [1] = $flatten\ws2812.\timer.\timer_control.$4\current_state[2:0] [0]
+    Consolidated identical input bits for $mux cell $flatten\ws2812.\timer.\timer_control.$ternary$timer_control.v:105$253:
+      Old ports: A=3'111, B=3'000, Y=$flatten\ws2812.\timer.\timer_control.$ternary$timer_control.v:105$253_Y
+      New ports: A=1'1, B=1'0, Y=$flatten\ws2812.\timer.\timer_control.$ternary$timer_control.v:105$253_Y [0]
+      New connections: $flatten\ws2812.\timer.\timer_control.$ternary$timer_control.v:105$253_Y [2:1] = { $flatten\ws2812.\timer.\timer_control.$ternary$timer_control.v:105$253_Y [0] $flatten\ws2812.\timer.\timer_control.$ternary$timer_control.v:105$253_Y [0] }
+  Optimizing cells in module \send_LEDS.
+    Consolidated identical input bits for $mux cell $memory$flatten\ws2812.\timer.\timer_control.$auto$proc_rom.cc:150:do_switch$261$rdmux[0][1][1]$994:
+      Old ports: A=$memory$flatten\ws2812.\timer.\timer_control.$auto$proc_rom.cc:150:do_switch$261$rdmux[0][1][1]$a$995, B=$memory$flatten\ws2812.\timer.\timer_control.$auto$proc_rom.cc:150:do_switch$261$rdmux[0][1][1]$b$996, Y=$memory$flatten\ws2812.\timer.\timer_control.$auto$proc_rom.cc:150:do_switch$261$rdmux[0][0][0]$b$990
+      New ports: A={ 1'0 $memory$flatten\ws2812.\timer.\timer_control.$auto$proc_rom.cc:150:do_switch$261$rdmux[0][1][1]$a$995 [4] $memory$flatten\ws2812.\timer.\timer_control.$auto$proc_rom.cc:150:do_switch$261$rdmux[0][1][1]$a$995 [0] 1'1 $memory$flatten\ws2812.\timer.\timer_control.$auto$proc_rom.cc:150:do_switch$261$rdmux[0][1][1]$a$995 [0] }, B={ $memory$flatten\ws2812.\timer.\timer_control.$auto$proc_rom.cc:150:do_switch$261$rdmux[0][1][1]$b$996 [5] $memory$flatten\ws2812.\timer.\timer_control.$auto$proc_rom.cc:150:do_switch$261$rdmux[0][1][1]$b$996 [2] $memory$flatten\ws2812.\timer.\timer_control.$auto$proc_rom.cc:150:do_switch$261$rdmux[0][1][1]$b$996 [2] $memory$flatten\ws2812.\timer.\timer_control.$auto$proc_rom.cc:150:do_switch$261$rdmux[0][1][1]$b$996 [2] 1'0 }, Y={ $memory$flatten\ws2812.\timer.\timer_control.$auto$proc_rom.cc:150:do_switch$261$rdmux[0][0][0]$b$990 [5:2] $memory$flatten\ws2812.\timer.\timer_control.$auto$proc_rom.cc:150:do_switch$261$rdmux[0][0][0]$b$990 [0] }
+      New connections: $memory$flatten\ws2812.\timer.\timer_control.$auto$proc_rom.cc:150:do_switch$261$rdmux[0][0][0]$b$990 [1] = 1'0
+    Consolidated identical input bits for $mux cell $memory$flatten\ws2812.\timer.\timer_control.$auto$proc_rom.cc:150:do_switch$261$rdmux[0][1][0]$991:
+      Old ports: A=$memory$flatten\ws2812.\timer.\timer_control.$auto$proc_rom.cc:150:do_switch$261$rdmux[0][1][0]$a$992, B=$memory$flatten\ws2812.\timer.\timer_control.$auto$proc_rom.cc:150:do_switch$261$rdmux[0][1][0]$b$993, Y=$memory$flatten\ws2812.\timer.\timer_control.$auto$proc_rom.cc:150:do_switch$261$rdmux[0][0][0]$a$989
+      New ports: A={ $memory$flatten\ws2812.\timer.\timer_control.$auto$proc_rom.cc:150:do_switch$261$rdmux[0][1][0]$a$992 [1] 1'0 }, B={ 1'0 $memory$flatten\ws2812.\timer.\timer_control.$auto$proc_rom.cc:150:do_switch$261$rdmux[0][1][0]$b$993 [0] }, Y=$memory$flatten\ws2812.\timer.\timer_control.$auto$proc_rom.cc:150:do_switch$261$rdmux[0][0][0]$a$989 [1:0]
+      New connections: $memory$flatten\ws2812.\timer.\timer_control.$auto$proc_rom.cc:150:do_switch$261$rdmux[0][0][0]$a$989 [5:2] = { 3'000 $memory$flatten\ws2812.\timer.\timer_control.$auto$proc_rom.cc:150:do_switch$261$rdmux[0][0][0]$a$989 [0] }
+    Consolidated identical input bits for $mux cell $memory$flatten\send_LEDS_control.$auto$proc_rom.cc:150:do_switch$265$rdmux[0][1][1]$973:
+      Old ports: A=$memory$flatten\send_LEDS_control.$auto$proc_rom.cc:150:do_switch$265$rdmux[0][1][1]$a$974, B=$memory$flatten\send_LEDS_control.$auto$proc_rom.cc:150:do_switch$265$rdmux[0][1][1]$b$975, Y=$memory$flatten\send_LEDS_control.$auto$proc_rom.cc:150:do_switch$265$rdmux[0][0][0]$b$969
+      New ports: A={ 1'0 $memory$flatten\send_LEDS_control.$auto$proc_rom.cc:150:do_switch$265$rdmux[0][1][1]$a$974 [2] }, B={ $memory$flatten\send_LEDS_control.$auto$proc_rom.cc:150:do_switch$265$rdmux[0][1][1]$b$975 [3] 1'0 }, Y=$memory$flatten\send_LEDS_control.$auto$proc_rom.cc:150:do_switch$265$rdmux[0][0][0]$b$969 [3:2]
+      New connections: $memory$flatten\send_LEDS_control.$auto$proc_rom.cc:150:do_switch$265$rdmux[0][0][0]$b$969 [1:0] = 2'00
+    Consolidated identical input bits for $mux cell $memory$flatten\send_LEDS_control.$auto$proc_rom.cc:150:do_switch$265$rdmux[0][1][0]$970:
+      Old ports: A=$memory$flatten\send_LEDS_control.$auto$proc_rom.cc:150:do_switch$265$rdmux[0][1][0]$a$971, B=$memory$flatten\send_LEDS_control.$auto$proc_rom.cc:150:do_switch$265$rdmux[0][1][0]$b$972, Y=$memory$flatten\send_LEDS_control.$auto$proc_rom.cc:150:do_switch$265$rdmux[0][0][0]$a$968
+      New ports: A={ $memory$flatten\send_LEDS_control.$auto$proc_rom.cc:150:do_switch$265$rdmux[0][1][0]$a$971 [1] 1'0 }, B={ 1'0 $memory$flatten\send_LEDS_control.$auto$proc_rom.cc:150:do_switch$265$rdmux[0][1][0]$b$972 [0] }, Y=$memory$flatten\send_LEDS_control.$auto$proc_rom.cc:150:do_switch$265$rdmux[0][0][0]$a$968 [1:0]
+      New connections: $memory$flatten\send_LEDS_control.$auto$proc_rom.cc:150:do_switch$265$rdmux[0][0][0]$a$968 [3:2] = 2'00
+    Consolidated identical input bits for $mux cell $flatten\ws2812.\grb_lsr.$procmux$447:
+      Old ports: A=$flatten\ws2812.\grb_lsr.$2\GRB_aux[23:0], B=24'000000001111111100000000, Y=$flatten\ws2812.\grb_lsr.$0\GRB_aux[23:0]
+      New ports: A={ $flatten\ws2812.\grb_lsr.$2\GRB_aux[23:0] [23:2] $flatten\ws2812.\grb_lsr.$2\GRB_aux[23:0] [0] }, B=23'00000000111111110000000, Y={ $flatten\ws2812.\grb_lsr.$0\GRB_aux[23:0] [23:2] $flatten\ws2812.\grb_lsr.$0\GRB_aux[23:0] [0] }
+      New connections: $flatten\ws2812.\grb_lsr.$0\GRB_aux[23:0] [1] = $flatten\ws2812.\grb_lsr.$0\GRB_aux[23:0] [0]
+  Optimizing cells in module \send_LEDS.
+Performed a total of 22 changes.
+
+15.31.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\send_LEDS'.
+Removed a total of 5 cells.
+
+15.31.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+15.31.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \send_LEDS..
+Removed 0 unused cells and 21 unused wires.
+
+15.31.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module send_LEDS.
+
+15.31.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+15.31.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \send_LEDS..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+
+15.31.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \send_LEDS.
+    Consolidated identical input bits for $mux cell $memory$flatten\ws2812.\timer.\timer_control.$auto$proc_rom.cc:150:do_switch$261$rdmux[0][1][1]$994:
+      Old ports: A={ 1'0 $memory$flatten\ws2812.\timer.\timer_control.$auto$proc_rom.cc:150:do_switch$261$rdmux[0][1][1]$a$995 [4:3] 1'1 $memory$flatten\ws2812.\timer.\timer_control.$auto$proc_rom.cc:150:do_switch$261$rdmux[0][1][1]$a$995 [3] }, B={ $memory$flatten\ws2812.\timer.\timer_control.$auto$proc_rom.cc:150:do_switch$261$rdmux[0][1][1]$a$995 [4:3] $memory$flatten\ws2812.\timer.\timer_control.$auto$proc_rom.cc:150:do_switch$261$rdmux[0][1][1]$a$995 [3] $memory$flatten\ws2812.\timer.\timer_control.$auto$proc_rom.cc:150:do_switch$261$rdmux[0][1][1]$a$995 [3] 1'0 }, Y={ $memory$flatten\ws2812.\timer.\timer_control.$auto$proc_rom.cc:150:do_switch$261$rdmux[0][0][0]$b$990 [5:2] $memory$flatten\ws2812.\timer.\timer_control.$auto$proc_rom.cc:150:do_switch$261$rdmux[0][0][0]$b$990 [0] }
+      New ports: A={ 1'0 $memory$flatten\ws2812.\timer.\timer_control.$auto$proc_rom.cc:150:do_switch$261$rdmux[0][1][1]$a$995 [4] 1'1 $memory$flatten\ws2812.\timer.\timer_control.$auto$proc_rom.cc:150:do_switch$261$rdmux[0][1][1]$a$995 [3] }, B={ $memory$flatten\ws2812.\timer.\timer_control.$auto$proc_rom.cc:150:do_switch$261$rdmux[0][1][1]$a$995 [4:3] $memory$flatten\ws2812.\timer.\timer_control.$auto$proc_rom.cc:150:do_switch$261$rdmux[0][1][1]$a$995 [3] 1'0 }, Y={ $memory$flatten\ws2812.\timer.\timer_control.$auto$proc_rom.cc:150:do_switch$261$rdmux[0][0][0]$b$990 [5:4] $memory$flatten\ws2812.\timer.\timer_control.$auto$proc_rom.cc:150:do_switch$261$rdmux[0][0][0]$b$990 [2] $memory$flatten\ws2812.\timer.\timer_control.$auto$proc_rom.cc:150:do_switch$261$rdmux[0][0][0]$b$990 [0] }
+      New connections: $memory$flatten\ws2812.\timer.\timer_control.$auto$proc_rom.cc:150:do_switch$261$rdmux[0][0][0]$b$990 [3] = $memory$flatten\ws2812.\timer.\timer_control.$auto$proc_rom.cc:150:do_switch$261$rdmux[0][1][1]$a$995 [3]
+  Optimizing cells in module \send_LEDS.
+Performed a total of 1 changes.
+
+15.31.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\send_LEDS'.
+Removed a total of 0 cells.
+
+15.31.13. Executing OPT_DFF pass (perform DFF optimizations).
+Adding SRST signal on $$flatten\ws2812.\timer.\timer_control.$auto$proc_rom.cc:150:do_switch$261$rdreg[0] ($dff) from module send_LEDS (D = $memory$flatten\ws2812.\timer.\timer_control.$auto$proc_rom.cc:150:do_switch$261$rdmux[0][1][1]$a$995 [4], Q = \ws2812.DONE_T, rval = 1'0).
+Adding SRST signal on $$flatten\ws2812.\timer.\timer_control.$auto$proc_rom.cc:150:do_switch$261$rdreg[0] ($dff) from module send_LEDS (D = $memory$flatten\ws2812.\timer.\timer_control.$auto$proc_rom.cc:150:do_switch$261$rdmux[0][1][0]$a$992 [1], Q = \ws2812.timer.RST, rval = 1'0).
+Adding SRST signal on $$flatten\ws2812.\timer.\timer_control.$auto$proc_rom.cc:150:do_switch$261$rdreg[0] ($dff) from module send_LEDS (D = $memory$flatten\ws2812.\timer.\timer_control.$auto$proc_rom.cc:150:do_switch$261$rdmux[0][0][0]$b$990 [4:3], Q = \ws2812.timer.mux0.SEL_TIM, rval = 2'00).
+Adding SRST signal on $$flatten\send_LEDS_control.$auto$proc_rom.cc:150:do_switch$265$rdreg[0] ($dff) from module send_LEDS (D = $memory$flatten\send_LEDS_control.$auto$proc_rom.cc:150:do_switch$265$rdmux[0][1][1]$a$974 [2], Q = \DONE_M, rval = 1'0).
+Adding SRST signal on $$flatten\send_LEDS_control.$auto$proc_rom.cc:150:do_switch$265$rdreg[0] ($dff) from module send_LEDS (D = $memory$flatten\send_LEDS_control.$auto$proc_rom.cc:150:do_switch$265$rdmux[0][1][0]$a$971 [1], Q = \send_LEDS_control.INIT_LED, rval = 1'0).
+Adding SRST signal on $$flatten\send_LEDS_control.$auto$proc_rom.cc:150:do_switch$265$rdreg[0] ($dff) from module send_LEDS (D = $memory$flatten\send_LEDS_control.$auto$proc_rom.cc:150:do_switch$265$rdmux[0][1][1]$a$974 [2], Q = \count_addr0.INC, rval = 1'0).
+Adding SRST signal on $$flatten\send_LEDS_control.$auto$proc_rom.cc:150:do_switch$265$rdreg[0] ($dff) from module send_LEDS (D = $memory$flatten\send_LEDS_control.$auto$proc_rom.cc:150:do_switch$265$rdmux[0][1][0]$a$971 [1], Q = \count_addr0.RST, rval = 1'0).
+
+15.31.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \send_LEDS..
+Removed 3 unused cells and 3 unused wires.
+
+15.31.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module send_LEDS.
+
+15.31.16. Rerunning OPT passes. (Maybe there is more to do..)
+
+15.31.17. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \send_LEDS..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+
+15.31.18. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \send_LEDS.
+Performed a total of 0 changes.
+
+15.31.19. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\send_LEDS'.
+Removed a total of 0 cells.
+
+15.31.20. Executing OPT_DFF pass (perform DFF optimizations).
+
+15.31.21. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \send_LEDS..
+
+15.31.22. Executing OPT_EXPR pass (perform const folding).
+Optimizing module send_LEDS.
+
+15.31.23. Finished OPT passes. (There is nothing left to do.)
+
+15.32. Executing TECHMAP pass (map to technology primitives).
+
+15.32.1. Executing Verilog-2005 frontend: /home/marute/miniconda3/envs/digital/bin/../share/yosys/techmap.v
+Parsing Verilog input from `/home/marute/miniconda3/envs/digital/bin/../share/yosys/techmap.v' to AST representation.
+Generating RTLIL representation for module `\_90_simplemap_bool_ops'.
+Generating RTLIL representation for module `\_90_simplemap_reduce_ops'.
+Generating RTLIL representation for module `\_90_simplemap_logic_ops'.
+Generating RTLIL representation for module `\_90_simplemap_compare_ops'.
+Generating RTLIL representation for module `\_90_simplemap_various'.
+Generating RTLIL representation for module `\_90_simplemap_registers'.
+Generating RTLIL representation for module `\_90_shift_ops_shr_shl_sshl_sshr'.
+Generating RTLIL representation for module `\_90_shift_shiftx'.
+Generating RTLIL representation for module `\_90_fa'.
+Generating RTLIL representation for module `\_90_lcu'.
+Generating RTLIL representation for module `\_90_alu'.
+Generating RTLIL representation for module `\_90_macc'.
+Generating RTLIL representation for module `\_90_alumacc'.
+Generating RTLIL representation for module `\$__div_mod_u'.
+Generating RTLIL representation for module `\$__div_mod_trunc'.
+Generating RTLIL representation for module `\_90_div'.
+Generating RTLIL representation for module `\_90_mod'.
+Generating RTLIL representation for module `\$__div_mod_floor'.
+Generating RTLIL representation for module `\_90_divfloor'.
+Generating RTLIL representation for module `\_90_modfloor'.
+Generating RTLIL representation for module `\_90_pow'.
+Generating RTLIL representation for module `\_90_pmux'.
+Generating RTLIL representation for module `\_90_demux'.
+Generating RTLIL representation for module `\_90_lut'.
+Successfully finished Verilog frontend.
+
+15.32.2. Executing Verilog-2005 frontend: /home/marute/miniconda3/envs/digital/bin/../share/yosys/ecp5/arith_map.v
+Parsing Verilog input from `/home/marute/miniconda3/envs/digital/bin/../share/yosys/ecp5/arith_map.v' to AST representation.
+Generating RTLIL representation for module `\_80_ecp5_alu'.
+Successfully finished Verilog frontend.
+
+15.32.3. Continuing TECHMAP pass.
+Using extmapper simplemap for cells of type $mux.
+Using extmapper simplemap for cells of type $sdff.
+Using extmapper simplemap for cells of type $sdffce.
+Using extmapper simplemap for cells of type $sdffe.
+Using template $paramod$672a140277c71df8314410f22acc08d55222c3c7\_80_ecp5_alu for cells of type $alu.
+Using extmapper simplemap for cells of type $eq.
+Using extmapper simplemap for cells of type $logic_not.
+Using extmapper simplemap for cells of type $and.
+Using extmapper simplemap for cells of type $dff.
+Using extmapper simplemap for cells of type $reduce_or.
+Using extmapper simplemap for cells of type $reduce_and.
+Using extmapper simplemap for cells of type $not.
+Using extmapper simplemap for cells of type $ne.
+Using extmapper simplemap for cells of type $reduce_bool.
+Using template $paramod$b18e16801adf491a64caa0542270798e5d4ac6b6\_80_ecp5_alu for cells of type $alu.
+Using template $paramod$fedb90247e1daaa8b0af86a595f377181f141d27\_90_pmux for cells of type $pmux.
+Using template $paramod$a285b5a57fe61eabc57c91b8c412748ee1151a85\_90_pmux for cells of type $pmux.
+Using template $paramod$215440792383f7884e57d9c95f84e9552d0bf4ac\_80_ecp5_alu for cells of type $alu.
+Using template $paramod$6b90a16b6f3b57b9c9d958838204f952a01dc262\_90_alu for cells of type $alu.
+Using template $paramod$754650b284649a026620fc6856e5b6886cbfe794\_80_ecp5_alu for cells of type $alu.
+Using template $paramod$dc04b7d98e503a7bab16fce2df70e6e2c5ca34d6\_80_ecp5_alu for cells of type $alu.
+Using extmapper simplemap for cells of type $logic_or.
+Using extmapper simplemap for cells of type $logic_and.
+Using extmapper simplemap for cells of type $pos.
+Using extmapper simplemap for cells of type $xor.
+Using template $paramod\_90_lcu\WIDTH=32'00000000000000000000000000000100 for cells of type $lcu.
+Using extmapper simplemap for cells of type $or.
+No more expansions possible.
+
+15.33. Executing OPT pass (performing simple optimizations).
+
+15.33.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module send_LEDS.
+
+15.33.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\send_LEDS'.
+Removed a total of 50 cells.
+
+15.33.3. Executing OPT_DFF pass (perform DFF optimizations).
+Adding SRST signal on $auto$ff.cc:266:slice$1232 ($_DFF_N_) from module send_LEDS (D = $flatten\ws2812.\grb_lsr.$2\GRB_aux[23:0] [23], Q = \ws2812.grb_lsr.GRB_aux [23], rval = 1'0).
+Adding EN signal on $auto$ff.cc:266:slice$2490 ($_SDFF_NP0_) from module send_LEDS (D = \ws2812.grb_lsr.GRB_aux [22], Q = \ws2812.grb_lsr.GRB_aux [23]).
+
+15.33.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \send_LEDS..
+Removed 100 unused cells and 497 unused wires.
+
+15.33.5. Rerunning OPT passes. (Removed registers in this run.)
+
+15.33.6. Executing OPT_EXPR pass (perform const folding).
+Optimizing module send_LEDS.
+
+15.33.7. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\send_LEDS'.
+Removed a total of 0 cells.
+
+15.33.8. Executing OPT_DFF pass (perform DFF optimizations).
+Adding SRST signal on $auto$ff.cc:266:slice$1126 ($_SDFFCE_NP0P_) from module send_LEDS (D = 1'x, Q = \ws2812.grb_lsr.GRB_aux [1], rval = 1'0).
+Setting constant 0-bit at position 0 on $auto$ff.cc:266:slice$2492 ($_SDFFCE_NP0P_) from module send_LEDS.
+
+15.33.9. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \send_LEDS..
+Removed 2 unused cells and 2 unused wires.
+
+15.33.10. Rerunning OPT passes. (Removed registers in this run.)
+
+15.33.11. Executing OPT_EXPR pass (perform const folding).
+Optimizing module send_LEDS.
+
+15.33.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\send_LEDS'.
+Removed a total of 0 cells.
+
+15.33.13. Executing OPT_DFF pass (perform DFF optimizations).
+Adding SRST signal on $auto$ff.cc:266:slice$1127 ($_SDFFCE_NP0P_) from module send_LEDS (D = 1'x, Q = \ws2812.grb_lsr.GRB_aux [2], rval = 1'0).
+Setting constant 0-bit at position 0 on $auto$ff.cc:266:slice$2497 ($_SDFFCE_NP0P_) from module send_LEDS.
+
+15.33.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \send_LEDS..
+Removed 2 unused cells and 2 unused wires.
+
+15.33.15. Rerunning OPT passes. (Removed registers in this run.)
+
+15.33.16. Executing OPT_EXPR pass (perform const folding).
+Optimizing module send_LEDS.
+
+15.33.17. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\send_LEDS'.
+Removed a total of 0 cells.
+
+15.33.18. Executing OPT_DFF pass (perform DFF optimizations).
+Adding SRST signal on $auto$ff.cc:266:slice$1128 ($_SDFFCE_NP0P_) from module send_LEDS (D = 1'x, Q = \ws2812.grb_lsr.GRB_aux [3], rval = 1'0).
+Setting constant 0-bit at position 0 on $auto$ff.cc:266:slice$2502 ($_SDFFCE_NP0P_) from module send_LEDS.
+
+15.33.19. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \send_LEDS..
+Removed 2 unused cells and 2 unused wires.
+
+15.33.20. Rerunning OPT passes. (Removed registers in this run.)
+
+15.33.21. Executing OPT_EXPR pass (perform const folding).
+Optimizing module send_LEDS.
+
+15.33.22. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\send_LEDS'.
+Removed a total of 0 cells.
+
+15.33.23. Executing OPT_DFF pass (perform DFF optimizations).
+Adding SRST signal on $auto$ff.cc:266:slice$1129 ($_SDFFCE_NP0P_) from module send_LEDS (D = 1'x, Q = \ws2812.grb_lsr.GRB_aux [4], rval = 1'0).
+Setting constant 0-bit at position 0 on $auto$ff.cc:266:slice$2507 ($_SDFFCE_NP0P_) from module send_LEDS.
+
+15.33.24. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \send_LEDS..
+Removed 2 unused cells and 2 unused wires.
+
+15.33.25. Rerunning OPT passes. (Removed registers in this run.)
+
+15.33.26. Executing OPT_EXPR pass (perform const folding).
+Optimizing module send_LEDS.
+
+15.33.27. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\send_LEDS'.
+Removed a total of 0 cells.
+
+15.33.28. Executing OPT_DFF pass (perform DFF optimizations).
+Adding SRST signal on $auto$ff.cc:266:slice$1130 ($_SDFFCE_NP0P_) from module send_LEDS (D = 1'x, Q = \ws2812.grb_lsr.GRB_aux [5], rval = 1'0).
+Setting constant 0-bit at position 0 on $auto$ff.cc:266:slice$2512 ($_SDFFCE_NP0P_) from module send_LEDS.
+
+15.33.29. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \send_LEDS..
+Removed 2 unused cells and 2 unused wires.
+
+15.33.30. Rerunning OPT passes. (Removed registers in this run.)
+
+15.33.31. Executing OPT_EXPR pass (perform const folding).
+Optimizing module send_LEDS.
+
+15.33.32. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\send_LEDS'.
+Removed a total of 0 cells.
+
+15.33.33. Executing OPT_DFF pass (perform DFF optimizations).
+Adding SRST signal on $auto$ff.cc:266:slice$1131 ($_SDFFCE_NP0P_) from module send_LEDS (D = 1'x, Q = \ws2812.grb_lsr.GRB_aux [6], rval = 1'0).
+Setting constant 0-bit at position 0 on $auto$ff.cc:266:slice$2517 ($_SDFFCE_NP0P_) from module send_LEDS.
+
+15.33.34. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \send_LEDS..
+Removed 2 unused cells and 2 unused wires.
+
+15.33.35. Rerunning OPT passes. (Removed registers in this run.)
+
+15.33.36. Executing OPT_EXPR pass (perform const folding).
+Optimizing module send_LEDS.
+
+15.33.37. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\send_LEDS'.
+Removed a total of 0 cells.
+
+15.33.38. Executing OPT_DFF pass (perform DFF optimizations).
+Adding SRST signal on $auto$ff.cc:266:slice$1132 ($_SDFFCE_NP0P_) from module send_LEDS (D = 1'x, Q = \ws2812.grb_lsr.GRB_aux [7], rval = 1'0).
+Setting constant 0-bit at position 0 on $auto$ff.cc:266:slice$2522 ($_SDFFCE_NP0P_) from module send_LEDS.
+
+15.33.39. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \send_LEDS..
+Removed 2 unused cells and 2 unused wires.
+
+15.33.40. Rerunning OPT passes. (Removed registers in this run.)
+
+15.33.41. Executing OPT_EXPR pass (perform const folding).
+Optimizing module send_LEDS.
+
+15.33.42. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\send_LEDS'.
+Removed a total of 0 cells.
+
+15.33.43. Executing OPT_DFF pass (perform DFF optimizations).
+
+15.33.44. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \send_LEDS..
+
+15.33.45. Finished fast OPT passes.
+
+15.34. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \send_LEDS..
+
+15.35. Executing DFFLEGALIZE pass (convert FFs to types supported by the target).
+
+15.36. Executing TECHMAP pass (map to technology primitives).
+
+15.36.1. Executing Verilog-2005 frontend: /home/marute/miniconda3/envs/digital/bin/../share/yosys/ecp5/cells_map.v
+Parsing Verilog input from `/home/marute/miniconda3/envs/digital/bin/../share/yosys/ecp5/cells_map.v' to AST representation.
+Generating RTLIL representation for module `\$_DFF_N_'.
+Generating RTLIL representation for module `\$_DFF_P_'.
+Generating RTLIL representation for module `\$_DFFE_NN_'.
+Generating RTLIL representation for module `\$_DFFE_PN_'.
+Generating RTLIL representation for module `\$_DFFE_NP_'.
+Generating RTLIL representation for module `\$_DFFE_PP_'.
+Generating RTLIL representation for module `\$_DFF_NP0_'.
+Generating RTLIL representation for module `\$_DFF_NP1_'.
+Generating RTLIL representation for module `\$_DFF_PP0_'.
+Generating RTLIL representation for module `\$_DFF_PP1_'.
+Generating RTLIL representation for module `\$_SDFF_NP0_'.
+Generating RTLIL representation for module `\$_SDFF_NP1_'.
+Generating RTLIL representation for module `\$_SDFF_PP0_'.
+Generating RTLIL representation for module `\$_SDFF_PP1_'.
+Generating RTLIL representation for module `\$_DFFE_NP0P_'.
+Generating RTLIL representation for module `\$_DFFE_NP1P_'.
+Generating RTLIL representation for module `\$_DFFE_PP0P_'.
+Generating RTLIL representation for module `\$_DFFE_PP1P_'.
+Generating RTLIL representation for module `\$_DFFE_NP0N_'.
+Generating RTLIL representation for module `\$_DFFE_NP1N_'.
+Generating RTLIL representation for module `\$_DFFE_PP0N_'.
+Generating RTLIL representation for module `\$_DFFE_PP1N_'.
+Generating RTLIL representation for module `\$_SDFFE_NP0P_'.
+Generating RTLIL representation for module `\$_SDFFE_NP1P_'.
+Generating RTLIL representation for module `\$_SDFFE_PP0P_'.
+Generating RTLIL representation for module `\$_SDFFE_PP1P_'.
+Generating RTLIL representation for module `\$_SDFFE_NP0N_'.
+Generating RTLIL representation for module `\$_SDFFE_NP1N_'.
+Generating RTLIL representation for module `\$_SDFFE_PP0N_'.
+Generating RTLIL representation for module `\$_SDFFE_PP1N_'.
+Generating RTLIL representation for module `\$_ALDFF_NP_'.
+Generating RTLIL representation for module `\$_ALDFF_PP_'.
+Generating RTLIL representation for module `\$_ALDFFE_NPN_'.
+Generating RTLIL representation for module `\$_ALDFFE_NPP_'.
+Generating RTLIL representation for module `\$_ALDFFE_PPN_'.
+Generating RTLIL representation for module `\$_ALDFFE_PPP_'.
+Generating RTLIL representation for module `\FD1P3AX'.
+Generating RTLIL representation for module `\FD1P3AY'.
+Generating RTLIL representation for module `\FD1P3BX'.
+Generating RTLIL representation for module `\FD1P3DX'.
+Generating RTLIL representation for module `\FD1P3IX'.
+Generating RTLIL representation for module `\FD1P3JX'.
+Generating RTLIL representation for module `\FD1S3AX'.
+Generating RTLIL representation for module `\FD1S3AY'.
+Generating RTLIL representation for module `\FD1S3BX'.
+Generating RTLIL representation for module `\FD1S3DX'.
+Generating RTLIL representation for module `\FD1S3IX'.
+Generating RTLIL representation for module `\FD1S3JX'.
+Generating RTLIL representation for module `\IFS1P3BX'.
+Generating RTLIL representation for module `\IFS1P3DX'.
+Generating RTLIL representation for module `\IFS1P3IX'.
+Generating RTLIL representation for module `\IFS1P3JX'.
+Generating RTLIL representation for module `\OFS1P3BX'.
+Generating RTLIL representation for module `\OFS1P3DX'.
+Generating RTLIL representation for module `\OFS1P3IX'.
+Generating RTLIL representation for module `\OFS1P3JX'.
+Generating RTLIL representation for module `\IB'.
+Generating RTLIL representation for module `\IBPU'.
+Generating RTLIL representation for module `\IBPD'.
+Generating RTLIL representation for module `\OB'.
+Generating RTLIL representation for module `\OBZ'.
+Generating RTLIL representation for module `\OBZPU'.
+Generating RTLIL representation for module `\OBZPD'.
+Generating RTLIL representation for module `\OBCO'.
+Generating RTLIL representation for module `\BB'.
+Generating RTLIL representation for module `\BBPU'.
+Generating RTLIL representation for module `\BBPD'.
+Generating RTLIL representation for module `\ILVDS'.
+Generating RTLIL representation for module `\OLVDS'.
+Successfully finished Verilog frontend.
+
+15.36.2. Continuing TECHMAP pass.
+Using template \$_SDFF_PP0_ for cells of type $_SDFF_PP0_.
+Using template \$_SDFFE_PP0P_ for cells of type $_SDFFE_PP0P_.
+Using template $paramod\$_DFF_N_\_TECHMAP_WIREINIT_Q_=1'x for cells of type $_DFF_N_.
+Using template $paramod\$_DFF_P_\_TECHMAP_WIREINIT_Q_=1'x for cells of type $_DFF_P_.
+Using template \$_SDFFE_NP0P_ for cells of type $_SDFFE_NP0P_.
+Using template \$_SDFFE_NP1P_ for cells of type $_SDFFE_NP1P_.
+No more expansions possible.
+
+15.37. Executing OPT_EXPR pass (perform const folding).
+Optimizing module send_LEDS.
+
+15.38. Executing SIMPLEMAP pass (map simple cells to gate primitives).
+
+15.39. Executing LATTICE_GSR pass (implement FF init values).
+Handling GSR in send_LEDS.
+
+15.40. Executing ATTRMVCP pass (move or copy attributes).
+
+15.41. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \send_LEDS..
+Removed 0 unused cells and 455 unused wires.
+
+15.42. Executing TECHMAP pass (map to technology primitives).
+
+15.42.1. Executing Verilog-2005 frontend: /home/marute/miniconda3/envs/digital/bin/../share/yosys/ecp5/latches_map.v
+Parsing Verilog input from `/home/marute/miniconda3/envs/digital/bin/../share/yosys/ecp5/latches_map.v' to AST representation.
+Generating RTLIL representation for module `\$_DLATCH_N_'.
+Generating RTLIL representation for module `\$_DLATCH_P_'.
+Successfully finished Verilog frontend.
+
+15.42.2. Continuing TECHMAP pass.
+No more expansions possible.
+
+15.43. Executing ABC pass (technology mapping using ABC).
+
+15.43.1. Extracting gate netlist of module `\send_LEDS' to `<abc-temp-dir>/input.blif'..
+Extracted 302 gates and 369 wires to a netlist network with 65 inputs and 68 outputs.
+
+15.43.1.1. Executing ABC.
+Running ABC command: "<yosys-exe-dir>/yosys-abc" -s -f <abc-temp-dir>/abc.script 2>&1
+ABC: ABC command line: "source <abc-temp-dir>/abc.script".
+ABC: 
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_lut <abc-temp-dir>/lutdefs.txt 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + strash 
+ABC: + dch -f 
+ABC: + if 
+ABC: + mfs2 
+ABC: + dress <abc-temp-dir>/input.blif 
+ABC: Total number of equiv classes                =      51.
+ABC: Participating nodes from both networks       =     178.
+ABC: Participating nodes from the first network   =      79. (  80.61 % of nodes)
+ABC: Participating nodes from the second network  =      99. ( 101.02 % of nodes)
+ABC: Node pairs (any polarity)                    =      79. (  80.61 % of names can be moved)
+ABC: Node pairs (same polarity)                   =      76. (  77.55 % of names can be moved)
+ABC: Total runtime =     0.05 sec
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+15.43.1.2. Re-integrating ABC results.
+ABC RESULTS:              $lut cells:       97
+ABC RESULTS:        internal signals:      236
+ABC RESULTS:           input signals:       65
+ABC RESULTS:          output signals:       68
+Removing temp directory.
+Removed 0 unused cells and 299 unused wires.
+
+15.44. Executing TECHMAP pass (map to technology primitives).
+
+15.44.1. Executing Verilog-2005 frontend: /home/marute/miniconda3/envs/digital/bin/../share/yosys/ecp5/cells_map.v
+Parsing Verilog input from `/home/marute/miniconda3/envs/digital/bin/../share/yosys/ecp5/cells_map.v' to AST representation.
+Generating RTLIL representation for module `\$_DFF_N_'.
+Generating RTLIL representation for module `\$_DFF_P_'.
+Generating RTLIL representation for module `\$_DFFE_NN_'.
+Generating RTLIL representation for module `\$_DFFE_PN_'.
+Generating RTLIL representation for module `\$_DFFE_NP_'.
+Generating RTLIL representation for module `\$_DFFE_PP_'.
+Generating RTLIL representation for module `\$_DFF_NP0_'.
+Generating RTLIL representation for module `\$_DFF_NP1_'.
+Generating RTLIL representation for module `\$_DFF_PP0_'.
+Generating RTLIL representation for module `\$_DFF_PP1_'.
+Generating RTLIL representation for module `\$_SDFF_NP0_'.
+Generating RTLIL representation for module `\$_SDFF_NP1_'.
+Generating RTLIL representation for module `\$_SDFF_PP0_'.
+Generating RTLIL representation for module `\$_SDFF_PP1_'.
+Generating RTLIL representation for module `\$_DFFE_NP0P_'.
+Generating RTLIL representation for module `\$_DFFE_NP1P_'.
+Generating RTLIL representation for module `\$_DFFE_PP0P_'.
+Generating RTLIL representation for module `\$_DFFE_PP1P_'.
+Generating RTLIL representation for module `\$_DFFE_NP0N_'.
+Generating RTLIL representation for module `\$_DFFE_NP1N_'.
+Generating RTLIL representation for module `\$_DFFE_PP0N_'.
+Generating RTLIL representation for module `\$_DFFE_PP1N_'.
+Generating RTLIL representation for module `\$_SDFFE_NP0P_'.
+Generating RTLIL representation for module `\$_SDFFE_NP1P_'.
+Generating RTLIL representation for module `\$_SDFFE_PP0P_'.
+Generating RTLIL representation for module `\$_SDFFE_PP1P_'.
+Generating RTLIL representation for module `\$_SDFFE_NP0N_'.
+Generating RTLIL representation for module `\$_SDFFE_NP1N_'.
+Generating RTLIL representation for module `\$_SDFFE_PP0N_'.
+Generating RTLIL representation for module `\$_SDFFE_PP1N_'.
+Generating RTLIL representation for module `\$_ALDFF_NP_'.
+Generating RTLIL representation for module `\$_ALDFF_PP_'.
+Generating RTLIL representation for module `\$_ALDFFE_NPN_'.
+Generating RTLIL representation for module `\$_ALDFFE_NPP_'.
+Generating RTLIL representation for module `\$_ALDFFE_PPN_'.
+Generating RTLIL representation for module `\$_ALDFFE_PPP_'.
+Generating RTLIL representation for module `\FD1P3AX'.
+Generating RTLIL representation for module `\FD1P3AY'.
+Generating RTLIL representation for module `\FD1P3BX'.
+Generating RTLIL representation for module `\FD1P3DX'.
+Generating RTLIL representation for module `\FD1P3IX'.
+Generating RTLIL representation for module `\FD1P3JX'.
+Generating RTLIL representation for module `\FD1S3AX'.
+Generating RTLIL representation for module `\FD1S3AY'.
+Generating RTLIL representation for module `\FD1S3BX'.
+Generating RTLIL representation for module `\FD1S3DX'.
+Generating RTLIL representation for module `\FD1S3IX'.
+Generating RTLIL representation for module `\FD1S3JX'.
+Generating RTLIL representation for module `\IFS1P3BX'.
+Generating RTLIL representation for module `\IFS1P3DX'.
+Generating RTLIL representation for module `\IFS1P3IX'.
+Generating RTLIL representation for module `\IFS1P3JX'.
+Generating RTLIL representation for module `\OFS1P3BX'.
+Generating RTLIL representation for module `\OFS1P3DX'.
+Generating RTLIL representation for module `\OFS1P3IX'.
+Generating RTLIL representation for module `\OFS1P3JX'.
+Generating RTLIL representation for module `\IB'.
+Generating RTLIL representation for module `\IBPU'.
+Generating RTLIL representation for module `\IBPD'.
+Generating RTLIL representation for module `\OB'.
+Generating RTLIL representation for module `\OBZ'.
+Generating RTLIL representation for module `\OBZPU'.
+Generating RTLIL representation for module `\OBZPD'.
+Generating RTLIL representation for module `\OBCO'.
+Generating RTLIL representation for module `\BB'.
+Generating RTLIL representation for module `\BBPU'.
+Generating RTLIL representation for module `\BBPD'.
+Generating RTLIL representation for module `\ILVDS'.
+Generating RTLIL representation for module `\OLVDS'.
+Generating RTLIL representation for module `\$lut'.
+Successfully finished Verilog frontend.
+
+15.44.2. Continuing TECHMAP pass.
+Using template $paramod$b637cf4714c2e93484bb499728e176a6ab69c910\$lut for cells of type $lut.
+Using template $paramod\$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'01000000 for cells of type $lut.
+Using template $paramod$eba7de026ff587370e320127e266317dae097a89\$lut for cells of type $lut.
+Using template $paramod$6299cb11badf512f78254cdf2e1d262a35877291\$lut for cells of type $lut.
+Using template $paramod\$lut\WIDTH=32'00000000000000000000000000000010\LUT=4'1011 for cells of type $lut.
+Using template $paramod$c6364c1c44c01bd533fa2efe3a700455891e44b1\$lut for cells of type $lut.
+Using template $paramod$e6a4aac14b366f7770f6afc50867b3b8176ebb96\$lut for cells of type $lut.
+Using template $paramod$f8ce6d1f1d026ba06a82d353df711b10e2b80d9b\$lut for cells of type $lut.
+Using template $paramod$5f976230004d06715bc33d761447e0dae594fd2c\$lut for cells of type $lut.
+Using template $paramod$658b9ed803f0d3d335616d3858b53e0a2522f1e8\$lut for cells of type $lut.
+Using template $paramod$a7bd353d45ccaa6325665766574a21b07181ca6a\$lut for cells of type $lut.
+Using template $paramod$9ae0f136c9ed34a2deb323e9b2a3a520eea61514\$lut for cells of type $lut.
+Using template $paramod$70b43c7b418942eb8bff82ba1f898deaa4b7a977\$lut for cells of type $lut.
+Using template $paramod$b2a8ba323d5f25b63fc8a768458e9483b25c450d\$lut for cells of type $lut.
+Using template $paramod\$lut\WIDTH=32'00000000000000000000000000000010\LUT=4'0100 for cells of type $lut.
+Using template $paramod$7e474ff0b6af87fb69cd19c3d2353152d26514f3\$lut for cells of type $lut.
+Using template $paramod$6e238df02989b317f10820a22773676e71120644\$lut for cells of type $lut.
+Using template $paramod$b488438fd100101de50ab6e102a5ec2149936641\$lut for cells of type $lut.
+Using template $paramod\$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'10000000 for cells of type $lut.
+Using template $paramod$f92b54e81d759c3b577f187ac5abee86c8ee08fd\$lut for cells of type $lut.
+Using template $paramod\$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'10000001 for cells of type $lut.
+Using template $paramod\$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'10000111 for cells of type $lut.
+Using template $paramod\$lut\WIDTH=32'00000000000000000000000000000001\LUT=2'01 for cells of type $lut.
+Using template $paramod$30caa5615ac52efdf43dfbf1b1a633232eb131b1\$lut for cells of type $lut.
+Using template $paramod\$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'00010000 for cells of type $lut.
+Using template $paramod$d8d2bd1da9be7196105e185058e35f3fba9fa611\$lut for cells of type $lut.
+Using template $paramod\$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'11010011 for cells of type $lut.
+Using template $paramod$82b4a585d1edcb5c6e755dc9bd3392228a1c1304\$lut for cells of type $lut.
+Using template $paramod$53ce561f80f32d4298a3beadc88b6c5c78293221\$lut for cells of type $lut.
+Using template $paramod$9fa3637caaf5c9448f782292003e8bc8176445a0\$lut for cells of type $lut.
+Using template $paramod$973818279bc95792902f3c09371fd2407d04a2a5\$lut for cells of type $lut.
+Using template $paramod\$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'00001110 for cells of type $lut.
+Using template $paramod\$lut\WIDTH=32'00000000000000000000000000000010\LUT=4'1110 for cells of type $lut.
+Using template $paramod$231cf45c2c424956aca6d1d68743dca0dae3ca9d\$lut for cells of type $lut.
+Using template $paramod$2ea69c779d6c1b79ac5a87b0d1523c67d5628dba\$lut for cells of type $lut.
+Using template $paramod$1843b3c15f2447d117e2d5de9b00f791ef5f9fa3\$lut for cells of type $lut.
+Using template $paramod\$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'00001101 for cells of type $lut.
+Using template $paramod$baa939b0bd5b3e0c8760492528669bd58f640542\$lut for cells of type $lut.
+Using template $paramod$fb5ee0bdef1c4e74aaf1fd8efae98b46a2f5e564\$lut for cells of type $lut.
+Using template $paramod\$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'11111110 for cells of type $lut.
+Using template $paramod$be7d169d7393fbdff15c35aef12161a7ee05c6f7\$lut for cells of type $lut.
+Using template $paramod$f9b715fbf1040e81e900b2461c2390d17ed5e988\$lut for cells of type $lut.
+Using template $paramod$b297295e19b03521716155b85537bbe86d6a9ae6\$lut for cells of type $lut.
+Using template $paramod$014e38c046a181841430b1cb6780038940f6ccf4\$lut for cells of type $lut.
+Using template $paramod\$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'00000111 for cells of type $lut.
+Using template $paramod$7bb6a37e65823eeb4b38c370fec30ab082759a14\$lut for cells of type $lut.
+Using template $paramod\$lut\WIDTH=32'00000000000000000000000000000010\LUT=4'0111 for cells of type $lut.
+Using template $paramod\$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'11111000 for cells of type $lut.
+Using template $paramod\$lut\WIDTH=32'00000000000000000000000000000010\LUT=4'0110 for cells of type $lut.
+No more expansions possible.
+
+15.45. Executing OPT_LUT_INS pass (discard unused LUT inputs).
+Optimizing LUTs in send_LEDS.
+  Optimizing lut $abc$2691$auto$blifparse.cc:525:parse_blif$2746.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut2 (4 -> 1)
+  Optimizing lut $abc$2691$auto$blifparse.cc:525:parse_blif$2746.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut3 (4 -> 1)
+  Optimizing lut $abc$2691$auto$blifparse.cc:525:parse_blif$2746.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut4 (4 -> 3)
+  Optimizing lut $abc$2691$auto$blifparse.cc:525:parse_blif$2746.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut5 (4 -> 1)
+  Optimizing lut $abc$2691$auto$blifparse.cc:525:parse_blif$2746.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut6 (4 -> 3)
+  Optimizing lut $abc$2691$auto$blifparse.cc:525:parse_blif$2746.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut7 (4 -> 1)
+  Optimizing lut $abc$2691$auto$blifparse.cc:525:parse_blif$2695.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1 (4 -> 0)
+  Optimizing lut $abc$2691$auto$blifparse.cc:525:parse_blif$2695.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut2 (4 -> 0)
+  Optimizing lut $abc$2691$auto$blifparse.cc:525:parse_blif$2698.genblk1.genblk1.genblk1.genblk1.genblk1.lut1 (4 -> 0)
+  Optimizing lut $abc$2691$auto$blifparse.cc:525:parse_blif$2699.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1 (4 -> 1)
+  Optimizing lut $abc$2691$auto$blifparse.cc:525:parse_blif$2699.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut2 (4 -> 1)
+  Optimizing lut $abc$2691$auto$blifparse.cc:525:parse_blif$2696.genblk1.genblk1.genblk1.genblk1.genblk1.lut1 (4 -> 0)
+  Optimizing lut $abc$2691$auto$blifparse.cc:525:parse_blif$2693.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 0)
+  Optimizing lut $abc$2691$auto$blifparse.cc:525:parse_blif$2694.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 0)
+  Optimizing lut $abc$2691$auto$blifparse.cc:525:parse_blif$2695.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 0)
+  Optimizing lut $abc$2691$auto$blifparse.cc:525:parse_blif$2697.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 0)
+  Optimizing lut $abc$2691$auto$blifparse.cc:525:parse_blif$2699.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 1)
+  Optimizing lut $abc$2691$auto$blifparse.cc:525:parse_blif$2701.genblk1.genblk1.genblk1.genblk1.genblk1.lut1 (4 -> 2)
+  Optimizing lut $abc$2691$auto$blifparse.cc:525:parse_blif$2708.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 0)
+  Optimizing lut $abc$2691$auto$blifparse.cc:525:parse_blif$2711.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 2)
+  Optimizing lut $abc$2691$auto$blifparse.cc:525:parse_blif$2715.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 0)
+  Optimizing lut $abc$2691$auto$blifparse.cc:525:parse_blif$2714.genblk1.genblk1.genblk1.genblk1.genblk1.lut1 (4 -> 0)
+  Optimizing lut $abc$2691$auto$blifparse.cc:525:parse_blif$2724.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 0)
+  Optimizing lut $abc$2691$auto$blifparse.cc:525:parse_blif$2730.genblk1.genblk1.genblk1.genblk1.genblk1.lut1 (4 -> 0)
+  Optimizing lut $abc$2691$auto$blifparse.cc:525:parse_blif$2692.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 1)
+  Optimizing lut $abc$2691$auto$blifparse.cc:525:parse_blif$2746.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 1)
+  Optimizing lut $abc$2691$auto$blifparse.cc:525:parse_blif$2732.genblk1.genblk1.genblk1.genblk1.genblk1.lut1 (4 -> 0)
+  Optimizing lut $abc$2691$auto$blifparse.cc:525:parse_blif$2750.genblk1.genblk1.genblk1.genblk1.genblk1.lut1 (4 -> 2)
+  Optimizing lut $abc$2691$auto$blifparse.cc:525:parse_blif$2740.genblk1.genblk1.genblk1.genblk1.genblk1.lut1 (4 -> 0)
+  Optimizing lut $abc$2691$auto$blifparse.cc:525:parse_blif$2746.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1 (4 -> 1)
+Removed 0 unused cells and 158 unused wires.
+
+15.46. Executing AUTONAME pass.
+Renamed 2926 objects in module send_LEDS (40 iterations).
+
+15.47. Executing HIERARCHY pass (managing design hierarchy).
+
+15.47.1. Analyzing design hierarchy..
+Top module:  \send_LEDS
+
+15.47.2. Analyzing design hierarchy..
+Top module:  \send_LEDS
+Removed 0 unused modules.
+
+15.48. Printing statistics.
+
+=== send_LEDS ===
+
+   Number of wires:                226
+   Number of wire bits:            711
+   Number of public wires:         226
+   Number of public wire bits:     711
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                236
+     CCU2C                          26
+     L6MUX21                         5
+     LUT4                           98
+     PFUMX                          24
+     TRELLIS_FF                     83
+
+15.49. Executing CHECK pass (checking for obvious problems).
+Checking module send_LEDS...
+Found and reported 0 problems.
+
+16. Executing JSON backend.
+
+End of script. Logfile hash: 1cd2741d8f, CPU: user 1.35s system 0.04s, MEM: 37.12 MB peak
+Yosys 0.33+6 (git sha1 41b34a193, x86_64-conda-linux-gnu-cc 11.2.0 -fvisibility-inlines-hidden -fmessage-length=0 -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -fdebug-prefix-map=/root/conda-eda/conda-eda/workdir/conda-env/conda-bld/yosys_1694128612374/work=/usr/local/src/conda/yosys-0.33_7_g41b34a193 -fdebug-prefix-map=/home/marute/miniconda3/envs/digital=/usr/local/src/conda-prefix -fPIC -Os -fno-merge-constants)
+Time spent: 31% 41x read_verilog (0 sec), 14% 1x abc (0 sec), ...

@@ -1,14 +1,12 @@
-TOP = mult_top
-TB = mult_TB
+TOP = bin2bcd_top
+TB = bin2bcd_TB
 
-OBJS = acumulador.v \
-       Areg.v \
-       comparador.v \
-       contador.v \
-       mult_control.v \
-       lsr_B.v \
-       multiplex.v \
-       mult_top.v
+OBJS = comp.v \
+       contador_dec.v \
+       sum_comp2.v \
+       lsr_A_res.v \
+       bin2bcd_control.v \
+       bin2bcd_top.v 
 
 ECP5_SIM_CELLS=../lattice_sim/cells_sim_ecp5.v
 

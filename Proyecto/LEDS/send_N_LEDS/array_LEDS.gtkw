@@ -1,0 +1,74 @@
+[*]
+[*] GTKWave Analyzer v3.3.117 (w)1999-2023 BSI
+[*] Tue Jun  9 18:10:21 2026
+[*]
+[dumpfile] "/home/marute/Electr-nica-Digital-I/Proyecto/LEDS/send_N_LEDS/send_LEDS_TB.vcd"
+[dumpfile_mtime] "Tue Jun  9 18:05:07 2026"
+[dumpfile_size] 16024670
+[savefile] "/home/marute/Electr-nica-Digital-I/Proyecto/LEDS/send_N_LEDS/array_LEDS.gtkw"
+[timestart] 45900
+[size] 1920 1052
+[pos] -51 -51
+*-10.000000 2 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] send_LEDS_TB.
+[treeopen] send_LEDS_TB.uut.
+[sst_width] 209
+[signals_width] 228
+[sst_expanded] 1
+[sst_vpaned_height] 309
+@200
+-Funcionamiento General
+-
+@820
+send_LEDS_TB.uut.send_LEDS_control.state_name[95:1]
+@28
+send_LEDS_TB.clk
+send_LEDS_TB.INIT_M
+send_LEDS_TB.RST_CMD
+send_LEDS_TB.DOUT
+send_LEDS_TB.DONE_M
+@200
+-
+-señales de control
+-
+@28
+send_LEDS_TB.uut.send_LEDS_control.DONE_LED
+send_LEDS_TB.uut.send_LEDS_control.INC
+send_LEDS_TB.uut.send_LEDS_control.RST
+@200
+-
+-ws2812
+-
+@29
+send_LEDS_TB.uut.ws2812.INIT_T
+@28
+send_LEDS_TB.uut.ws2812.w_MSB
+send_LEDS_TB.uut.ws2812.w_Z
+send_LEDS_TB.uut.ws2812.DONE_T
+send_LEDS_TB.uut.ws2812.DONE
+@200
+-
+-led_mem
+-
+@22
+send_LEDS_TB.uut.led_mem0.GRB[23:0]
+@24
+send_LEDS_TB.uut.led_mem0.addr[9:0]
+@200
+-
+-count_addr
+-
+@22
+send_LEDS_TB.uut.count_addr0.addr[9:0]
+@200
+-
+-comp_array
+-
+@22
+send_LEDS_TB.uut.comp0.addr[9:0]
+@28
+send_LEDS_TB.uut.comp0.Z
+@200
+-
+[pattern_trace] 1
+[pattern_trace] 0

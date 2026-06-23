@@ -27,7 +27,7 @@ module mult_control #(
 // Maquina de estados: lógica de transición
 
     reg [2:0] current_state;
-    reg [3:0] count;
+    reg [4:0] count;
 
 
     always @(posedge clk) begin
@@ -40,17 +40,18 @@ module mult_control #(
             case (current_state)
                 START: begin
                     if (init) begin
-                        current_state <= CHECK;
+                        current_state = CHECK;
+                        count = 0;
                     end else begin
-                        current_state <= START;
+                        current_state = START;
                     end
                 end
 
                 CHECK: begin
                     if(A_i) begin
-                        current_state <= ACCUMULATE;
+                        current_state = ACCUMULATE;
                     end else begin 
-                        current_state <= INC_SHIFT;
+                        current_state = INC_SHIFT;
                     end
                 end
 
@@ -71,7 +72,8 @@ module mult_control #(
                 end
 
                 FINISH: begin
-                    current_state = (count>14) ? START : FINISH ;
+                    count = count + 1;
+                    current_state = (count>28) ? START : FINISH ;
                 end
 
 
@@ -84,11 +86,6 @@ module mult_control #(
 // Salidas según el estado
 
 always @(*) begin
-    LD   = 1'b0;
-    SH   = 1'b0;
-    ADDI = 1'b0;
-    ADDB = 1'b0;
-    done = 1'b0;
 
     case (current_state)
 
@@ -98,7 +95,6 @@ always @(*) begin
             ADDB <= 0;
             ADDI <= 0;
             done <= 0;
-            count <= 0;
         end
 
         CHECK: begin
@@ -139,8 +135,15 @@ always @(*) begin
             ADDB <= 0;
             ADDI <= 0;
             done <= 1;
-            count <= count + 1;
         end
+
+    default: begin
+        LD   = 0;
+        SH   = 0;
+        ADDI = 0;
+        ADDB = 0;
+        done = 0;
+       end
 
     endcase
 end

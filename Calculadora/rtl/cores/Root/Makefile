@@ -1,14 +1,13 @@
-TOP = mult_top
-TB = mult_TB
+TOP = root_top
+TB = root_TB
 
-OBJS = acumulador.v \
-       Areg.v \
-       comparador.v \
-       contador.v \
-       mult_control.v \
-       lsr_B.v \
-       multiplex.v \
-       mult_top.v
+OBJS = sum_res_comp2.v \
+       lsr_raiz.v \
+       lsr2_rParcial.v \
+       contador_dec.v \
+       root_control.v \
+       lsr2_vAux_A.v \
+       root_top.v
 
 ECP5_SIM_CELLS=../lattice_sim/cells_sim_ecp5.v
 
