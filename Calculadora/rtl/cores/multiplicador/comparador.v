@@ -1,7 +1,6 @@
 module comparador #(
     parameter width = 4
 ) (
-    input clk,
     input [width:0] in_i,
     
     output reg z
