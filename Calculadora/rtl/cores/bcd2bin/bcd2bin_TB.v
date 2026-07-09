@@ -14,7 +14,7 @@ wire done;
 
 // Inicialización del modulo
 
-bcd2bin_top uut ( //Unit under test
+bcd2bin uut ( //Unit under test
     .clk (clk), .init (init), .rst (rst), .A_bcd (A_bcd), // Entradas
 
     .A_bin (A_bin), .done (done) // Salidas

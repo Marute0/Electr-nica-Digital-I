@@ -1,4 +1,4 @@
-module bcd2bin_top (
+module bcd2bin (
     input clk,
     input init,
     input rst,
@@ -8,7 +8,6 @@ module bcd2bin_top (
     output done
 );
 
-wire [7:0] w_Abin;
 wire [3:0] w_bcd_ones;
 wire [3:0] w_bcd_tens;
 wire [3:0] w_bcd_hundreds;
@@ -70,7 +69,7 @@ sum_comp2 sum_comp2_ones ( .in_bcd (w_bcd_ones), //Entrada
     .out_bcd (w_ones_comp2) //Entrada
 );
 
-bin2bcd_control control ( .clk (clk), .init (init), .rst (rst) , .O (w_O), .T (w_T), .H (w_H), .Z (w_Z), //Entradas
+bcd2bin_control control ( .clk (clk), .init (init), .rst (rst) , .O (w_O), .T (w_T), .H (w_H), .Z (w_Z), //Entradas
 
     .LD0 (load_reset), .LD1 (load_ones), .LD2 (load_tens), .LD3 (load_hundreds), .SH (shift), .DEC (DEC), .done(done) //Salidas
 );

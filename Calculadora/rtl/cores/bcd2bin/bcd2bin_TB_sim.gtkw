@@ -1,0 +1,120 @@
+[*]
+[*] GTKWave Analyzer v3.3.117 (w)1999-2023 BSI
+[*] Thu Jul  9 06:49:11 2026
+[*]
+[dumpfile] "/home/marute/Electr-nica-Digital-I/Calculadora/rtl/cores/bcd2bin/bcd2bin_TB.vcd"
+[dumpfile_mtime] "Thu Jul  9 06:29:36 2026"
+[dumpfile_size] 16063
+[savefile] "/home/marute/Electr-nica-Digital-I/Calculadora/rtl/cores/bcd2bin/bcd2bin_TB_sim.gtkw"
+[timestart] 0
+[size] 1920 1052
+[pos] -66 -66
+*-7.000000 107 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] bcd2bin_TB.
+[treeopen] bcd2bin_TB.uut.
+[sst_width] 209
+[signals_width] 312
+[sst_expanded] 1
+[sst_vpaned_height] 309
+@200
+-BCD2BIN
+-
+@28
+bcd2bin_TB.clk
+bcd2bin_TB.init
+bcd2bin_TB.rst
+[color] 7
+bcd2bin_TB.A_bcd[11:0]
+[color] 3
+bcd2bin_TB.A_bin[7:0]
+bcd2bin_TB.done
+@200
+-
+-CONTROL
+-
+@820
+bcd2bin_TB.uut.control.state_name[320:1]
+@28
+bcd2bin_TB.uut.control.O
+bcd2bin_TB.uut.control.T
+bcd2bin_TB.uut.control.H
+bcd2bin_TB.uut.control.Z
+bcd2bin_TB.uut.control.LD0
+bcd2bin_TB.uut.control.LD1
+bcd2bin_TB.uut.control.LD2
+bcd2bin_TB.uut.control.LD3
+bcd2bin_TB.uut.control.SH
+@200
+-
+-COMP_ONES
+-
+@22
+bcd2bin_TB.uut.comp_ones.bcd[3:0]
+@28
+bcd2bin_TB.uut.comp_ones.Y
+@200
+-
+-COMP_HUNDREDS
+-
+@22
+bcd2bin_TB.uut.comp_hundreds.bcd[3:0]
+@28
+bcd2bin_TB.uut.comp_hundreds.Y
+@200
+-
+-COMP_TENS
+-
+@22
+bcd2bin_TB.uut.comp_tens.bcd[3:0]
+@28
+bcd2bin_TB.uut.comp_tens.Y
+@200
+-
+-CONT0
+-
+@28
+[color] 1
+bcd2bin_TB.uut.cont0.LD0
+@22
+bcd2bin_TB.uut.cont0.out[7:0]
+@200
+-
+-LSR0
+-
+@22
+bcd2bin_TB.uut.lsr0.bcd_ones[3:0]
+bcd2bin_TB.uut.lsr0.bcd_tens[3:0]
+bcd2bin_TB.uut.lsr0.bcd_hundreds[3:0]
+@200
+-
+@22
+bcd2bin_TB.uut.lsr0.temp_A_bcd[11:0]
+bcd2bin_TB.uut.lsr0.ones_comp2[3:0]
+bcd2bin_TB.uut.lsr0.tens_comp2[3:0]
+bcd2bin_TB.uut.lsr0.hundreds_comp2[3:0]
+@200
+-
+-sum_comp2_ones
+-
+@22
+bcd2bin_TB.uut.sum_comp2_ones.in_bcd[3:0]
+bcd2bin_TB.uut.sum_comp2_ones.out_bcd[3:0]
+@201
+-
+@200
+-sum_comp2_tens
+-
+@22
+bcd2bin_TB.uut.sum_comp2_tens.in_bcd[3:0]
+bcd2bin_TB.uut.sum_comp2_tens.out_bcd[3:0]
+@200
+-
+-sum_comp2_hundreds
+-
+@22
+bcd2bin_TB.uut.sum_comp2_hundreds.in_bcd[3:0]
+bcd2bin_TB.uut.sum_comp2_hundreds.out_bcd[3:0]
+@200
+-
+[pattern_trace] 1
+[pattern_trace] 0

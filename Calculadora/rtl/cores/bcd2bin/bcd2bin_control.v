@@ -1,4 +1,4 @@
-module bin2bcd_control #(
+module bcd2bin_control #(
 
 // Establecimiento de los estados como parámetros
 
