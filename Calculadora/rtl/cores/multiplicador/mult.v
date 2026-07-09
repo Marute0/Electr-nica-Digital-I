@@ -1,4 +1,4 @@
-module mult_top
+module mult
  #(
     parameter width = 4
 ) (
@@ -62,7 +62,7 @@ acumulador acc0 (
     );
 
 comparador comp0 ( 
-    .clk (clk), .in_i (w_out_i), // Entradas
+    .in_i (w_out_i), // Entradas
     .z (w_z) //Salidas
     
     );

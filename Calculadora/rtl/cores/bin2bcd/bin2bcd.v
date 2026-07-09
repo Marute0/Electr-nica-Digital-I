@@ -1,4 +1,4 @@
-module bin2bcd_top (
+module bin2bcd (
     input clk,
     input init,
     input rst,

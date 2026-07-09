@@ -1,4 +1,4 @@
-module div_top (
+module div (
 
     input clk,
     input init,

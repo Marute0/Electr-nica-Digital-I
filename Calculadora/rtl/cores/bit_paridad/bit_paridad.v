@@ -8,7 +8,6 @@ module bit_paridad (
     output done
 );
 
-wire w_out_i;
 
 wire w_LSB_A;
 wire w_Z;
@@ -28,7 +27,7 @@ rsr_A rsr_A (
 
 contador count0 ( 
     .clk (clk), .LD (load), .ADDI (ADDI), // Entradas
-    .i_0 (w_out_i) //Salidas
+    .i_0 (i_0) //Salidas
     
     );
 

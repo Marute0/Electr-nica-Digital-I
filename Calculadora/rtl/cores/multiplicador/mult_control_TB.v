@@ -1,25 +1,27 @@
 `timescale 10ns / 10ns
 `define SIMULATION
 
-module bit_paridad_control_TB;
-
+module mult_control_TB;
 
 reg clk;
 reg init; 
 reg rst;
-reg LSB_A;
-reg z;  
+reg A_i;
+reg z;
 
-wire load;
-wire shift;
+
+wire LD;
+wire SH;
 wire ADDI;
+wire ADDB;
 wire done;
 
 // Inicialización del modulo
 
-bit_paridad_control uut ( 
-    .clk (clk), .init (init), .LSB_A (LSB_A), .z (z), .rst (rst), // Entradas
-    .done (done), .LD (load), .SH (shift), .ADDI (ADDI) //Salidas
+
+mult_control uut ( 
+    .clk (clk), .init (init), .A_i (A_i), .z (z), .rst (rst), // Entradas
+    .done (done), .LD (LD), .SH (SH), .ADDI (ADDI), .ADDB (ADDB) //Salidas
     
     );
 
@@ -29,10 +31,10 @@ always #1 clk = ~clk;
 
 
 initial begin
-    $dumpfile("bit_paridad_TB.vcd");
-    $dumpvars(-1, bit_paridad_TB);
+    $dumpfile("mult_control_TB.vcd");
+    $dumpvars(-1, mult_control_TB);
 
-    $monitor("t=%0t LSB_A=%b z=%b load=%b shift=%b ADDI=%b done=%b", $time, LSB_A, z, load, shift, ADDI, done);
+    $monitor("t=%0t A_i=%b z=%b LD=%b SH=%b ADDI=%b ADDB=%b done=%b", $time, A_i, z, LD, SH, ADDI, ADDB, done);
 end
 
 
@@ -43,15 +45,16 @@ initial begin
 
     init = 0;
     rst = 0;
-    LSB_A = 0;
+    A_i = 0;
     z = 0;
+
 
     @(negedge clk);
     @(posedge clk);
 
     init = 1;
     rst = 0;
-    LSB_A = 0;
+    A_i = 0;
     z = 0;
 
     @(negedge clk);
@@ -59,7 +62,15 @@ initial begin
 
     init = 0;
     rst = 0;
-    LSB_A = 1;
+    A_i = 0;
+    z = 0;
+
+    @(negedge clk);
+    @(posedge clk);
+
+    init = 0;
+    rst = 0;
+    A_i = 1;
     z = 0;
 
     @(negedge clk);
@@ -70,7 +81,7 @@ initial begin
     
     init = 0;
     rst = 0;
-    LSB_A = 0;
+    A_i = 0;
     z = 0;
 
     @(negedge clk);
@@ -78,7 +89,7 @@ initial begin
 
     init = 0;
     rst = 0;
-    LSB_A = 0;
+    A_i = 0;
     z = 1;
 
     @(negedge clk);
@@ -89,7 +100,7 @@ initial begin
 
     init = 0;
     rst = 0;
-    LSB_A = 0;
+    A_i = 0;
     z = 0;
 
     wait(done == 1);

@@ -1,0 +1,57 @@
+[*]
+[*] GTKWave Analyzer v3.3.117 (w)1999-2023 BSI
+[*] Wed Jul  8 22:46:20 2026
+[*]
+[dumpfile] "/home/marute/Electr-nica-Digital-I/Calculadora/rtl/cores/bit_paridad/bit_paridad_TB.vcd"
+[dumpfile_mtime] "Wed Jul  8 22:40:02 2026"
+[dumpfile_size] 12146
+[savefile] "/home/marute/Electr-nica-Digital-I/Calculadora/rtl/cores/bit_paridad/bit_paridad_TB_sim.gtkw"
+[timestart] 0
+[size] 1920 1052
+[pos] -66 -66
+*-6.000000 2 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] bit_paridad_TB.
+[treeopen] bit_paridad_TB.uut.
+[sst_width] 209
+[signals_width] 326
+[sst_expanded] 1
+[sst_vpaned_height] 309
+@200
+-TOP
+-
+@28
+bit_paridad_TB.uut.rsr_A.clk
+bit_paridad_TB.init
+bit_paridad_TB.rst
+@22
+bit_paridad_TB.A[7:0]
+@28
+bit_paridad_TB.i_0
+bit_paridad_TB.done
+@200
+-
+-CONTROL
+-
+@820
+bit_paridad_TB.uut.control.state_name[320:1]
+@28
+bit_paridad_TB.uut.control.LD
+bit_paridad_TB.uut.control.z
+bit_paridad_TB.uut.control.LSB_A
+@200
+-
+-CONTADOR
+-
+@28
+bit_paridad_TB.uut.control.ADDI
+@24
+bit_paridad_TB.uut.count0.count[2:0]
+@200
+-
+-RSR_A
+-
+@28
+bit_paridad_TB.uut.control.SH
+bit_paridad_TB.uut.rsr_A.out_A[7:0]
+[pattern_trace] 1
+[pattern_trace] 0

@@ -1,6 +1,4 @@
-module contador_dec #(
-    parameter width = 4
-) (
+module contador_dec (
 
     input clk,
     input LD0,

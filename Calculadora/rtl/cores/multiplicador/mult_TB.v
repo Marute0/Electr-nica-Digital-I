@@ -15,15 +15,12 @@ wire done;
 
 // Inicialización del modulo
 
-mult_top uut ( //Unit under test
+mult uut ( //Unit under test
     .clk (clk), .init (init), .rst (rst), .A (A), .B (B), // Entradas
 
     .resultado (resultado), .done (done) // Salidas
     
     );
-
-
-
 
 
 initial clk = 0; 

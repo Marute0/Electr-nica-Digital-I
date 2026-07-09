@@ -1,4 +1,4 @@
-module root_top (
+module root (
 
     input clk,
     input init,
@@ -9,6 +9,7 @@ module root_top (
     output done
 
 );
+
 wire [7:0] w_raiz;
 wire [7:0] w_vAux;
 wire [7:0] w_rParcial;

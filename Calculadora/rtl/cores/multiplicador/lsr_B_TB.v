@@ -1,23 +1,20 @@
 `timescale 10ns / 10ns
 `define SIMULATION
 
-module rsr_A_TB;
-
+module lsr_B_TB;
 
 reg clk;
-reg load;
-reg shift;
-reg [7:0] A;
+reg LD;
+reg SH;
+reg [15:0] B;
 
-wire z;
-wire LSB_A;
+wire [31:0] out_sh_B;
 
 // Inicialización del modulo
 
-rsr_A uut ( 
-    .clk (clk), .SH(shift), .LD (load), .A (A), // Entradas
-    .z (z), .LSB_A (LSB_A)//Salidas
-    
+lsr_B uut ( 
+    .clk (clk), .SH (SH), .LD (LD), .B (B), // Entradas
+    .out_sh_B (out_sh_B)//Salidas
     );
 
 
@@ -26,10 +23,10 @@ always #1 clk = ~clk;
 
 
 initial begin
-    $dumpfile("rsr_A_TB.vcd");
-    $dumpvars(-1, rsr_A_TB);
+    $dumpfile("lsr_B_TB.vcd");
+    $dumpvars(-1, lsr_B_TB);
 
-    $monitor("t=%0t load=0x%h shift=0x%h A=0x%h z=0x%h LSB_A=0x%h", $time, load, shift, A, z, LSB_A);
+    $monitor("t=%0t LD=0x%h SH=0x%h B=0x%h out_sh_B=0x%h", $time, LD, SH, B, out_sh_B);
 end
 
 
@@ -38,9 +35,9 @@ initial begin
     @(negedge clk);
     @(posedge clk);
 
-    load = 0;
-    shift = 0;
-    A = 8'b01000011;
+    LD = 0;
+    SH = 0;
+    B = 16'b01000011;
 
     @(negedge clk);
     @(posedge clk);
@@ -48,8 +45,8 @@ initial begin
     @(negedge clk);
     @(posedge clk);
 
-    load = 1;
-    shift = 0;
+    LD = 1;
+    SH = 0;
 
     @(negedge clk);
     @(posedge clk);
@@ -57,8 +54,8 @@ initial begin
     @(negedge clk);
     @(posedge clk);
     
-    load = 0;
-    shift = 1;
+    LD = 0;
+    SH = 1;
 
     @(negedge clk);
     @(posedge clk);
@@ -66,8 +63,8 @@ initial begin
     @(negedge clk);
     @(posedge clk);
 
-    load = 0;
-    shift = 0;
+    LD = 0;
+    SH = 0;
 
     #1000;
 

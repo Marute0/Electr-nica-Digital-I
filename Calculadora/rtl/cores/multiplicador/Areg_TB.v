@@ -1,20 +1,20 @@
 `timescale 10ns / 10ns
 `define SIMULATION
 
-module contador_TB;
+module Areg_TB;
 
 
 reg clk;
-reg load;
-reg ADDI;
+reg LD;
+reg [15:0] A;
 
-wire i_0;
+wire [15:0] out_A;
 
 // Inicialización del modulo
 
-contador uut ( 
-    .clk (clk), .LD (load), .ADDI (ADDI), // Entradas
-    .i_0 (i_0) //Salidas
+Areg uut ( 
+    .clk (clk), .LD (LD), .A (A), // Entradas
+    .out_A (out_A) //Salidas
     
     );
 
@@ -24,10 +24,10 @@ always #1 clk = ~clk;
 
 
 initial begin
-    $dumpfile("contador_TB.vcd");
-    $dumpvars(-1, contador_TB);
+    $dumpfile("Areg_TB.vcd");
+    $dumpvars(-1, Areg_TB);
 
-    $monitor("t=%0t load=0x%h ADDI=0x%h i_0=0x%h ", $time, load, ADDI, i_0);
+    $monitor("t=%0t LD=0x%h A=0x%h out_A=0x%h ", $time, LD, A, out_A);
 end
 
 
@@ -36,8 +36,8 @@ initial begin
     @(negedge clk);
     @(posedge clk);
 
-    load = 0;
-    ADDI = 0;
+    LD = 0;
+    A = 16'd255;
 
     @(negedge clk);
     @(posedge clk);
@@ -45,8 +45,15 @@ initial begin
     @(negedge clk);
     @(posedge clk);
 
-    load = 1;
-    ADDI = 0;
+    LD = 1;
+
+    @(negedge clk);
+    @(posedge clk);
+
+    @(negedge clk);
+    @(posedge clk);
+
+    A = 16'd1;
 
     @(negedge clk);
     @(posedge clk);
@@ -54,8 +61,7 @@ initial begin
     @(negedge clk);
     @(posedge clk);
     
-    load = 0;
-    ADDI = 1;
+    LD = 1;
 
     @(negedge clk);
     @(posedge clk);
@@ -63,8 +69,8 @@ initial begin
     @(negedge clk);
     @(posedge clk);
 
-    load = 0;
-    ADDI = 0;
+    LD = 0;
+    A = 16'd0;
 
     #100;
 

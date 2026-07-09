@@ -14,7 +14,7 @@ wire done;
 
 // Inicialización del modulo
 
-root_top uut ( //Unit under test
+root uut ( //Unit under test
     .clk (clk), .init (init), .rst (rst), .A (A), // Entradas
 
     .raiz (raiz), .done (done) // Salidas

@@ -1,4 +1,4 @@
-module mult_control #(
+module bit_paridad_control #(
 
 // Establecimiento de los estados como parámetros
 
@@ -19,7 +19,7 @@ module mult_control #(
     output reg done,
     output reg LD,
     output reg SH,
-    output reg ADDI,
+    output reg ADDI
 );
 
 
@@ -46,7 +46,7 @@ module mult_control #(
                     end
                 end
 
-                CHECK: begin
+                CHECK1: begin
                     if(LSB_A) begin
                         current_state = ADDER;
                     end else begin 

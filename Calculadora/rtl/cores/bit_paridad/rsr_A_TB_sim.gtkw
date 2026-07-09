@@ -1,0 +1,40 @@
+[*]
+[*] GTKWave Analyzer v3.3.117 (w)1999-2023 BSI
+[*] Wed Jul  8 22:57:25 2026
+[*]
+[dumpfile] "/home/marute/Electr-nica-Digital-I/Calculadora/rtl/cores/bit_paridad/rsr_A_TB.vcd"
+[dumpfile_mtime] "Wed Jul  8 22:53:19 2026"
+[dumpfile_size] 8708
+[savefile] "/home/marute/Electr-nica-Digital-I/Calculadora/rtl/cores/bit_paridad/rsr_A_TB_sim.gtkw"
+[timestart] 0
+[size] 1920 1052
+[pos] -66 -66
+*-8.000000 536 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] rsr_A_TB.
+[sst_width] 209
+[signals_width] 347
+[sst_expanded] 1
+[sst_vpaned_height] 309
+@200
+-Entradas y Salidas
+-
+@28
+rsr_A_TB.clk
+rsr_A_TB.A[7:0]
+rsr_A_TB.LSB_A
+rsr_A_TB.z
+@200
+-
+-Señales de Control
+-
+@28
+rsr_A_TB.load
+rsr_A_TB.shift
+@200
+-
+-Variables Auxiliares
+-
+@28
+rsr_A_TB.uut.out_A[7:0]
+[pattern_trace] 1
+[pattern_trace] 0

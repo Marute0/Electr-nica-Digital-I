@@ -1,0 +1,33 @@
+[*]
+[*] GTKWave Analyzer v3.3.117 (w)1999-2023 BSI
+[*] Wed Jul  8 22:52:26 2026
+[*]
+[dumpfile] "/home/marute/Electr-nica-Digital-I/Calculadora/rtl/cores/bit_paridad/contador_TB.vcd"
+[dumpfile_mtime] "Wed Jul  8 22:48:00 2026"
+[dumpfile_size] 8565
+[savefile] "/home/marute/Electr-nica-Digital-I/Calculadora/rtl/cores/bit_paridad/contador_TB_sim.gtkw"
+[timestart] 0
+[size] 1920 1052
+[pos] -1 -1
+*-8.000000 209 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] contador_TB.
+[sst_width] 209
+[signals_width] 201
+[sst_expanded] 1
+[sst_vpaned_height] 309
+@200
+-
+-Entradas y salidas
+-
+@28
+contador_TB.clk
+contador_TB.i_0
+@200
+-
+-Señales de control
+-
+@28
+contador_TB.load
+contador_TB.ADDI
+[pattern_trace] 1
+[pattern_trace] 0

@@ -16,7 +16,7 @@ wire done;
 
 // Inicialización del modulo
 
-div_top uut ( //Unit under test
+div uut ( //Unit under test
     .clk (clk), .init (init), .rst (rst), .A (A), .B (B), // Entradas
 
     .residuo (residuo), .cociente (cociente), .done (done) // Salidas

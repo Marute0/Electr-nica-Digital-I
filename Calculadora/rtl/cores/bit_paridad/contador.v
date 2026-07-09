@@ -1,4 +1,4 @@
-module acc (
+module contador (
     input clk,
     input LD,
     input ADDI,
@@ -13,7 +13,8 @@ reg [2:0] count;
             count <= 3'b0;
         end else if (ADDI) begin
             count <= count + 1; 
-        end 
+        end
+        i_0 = count[0];
     end
 
 endmodule
