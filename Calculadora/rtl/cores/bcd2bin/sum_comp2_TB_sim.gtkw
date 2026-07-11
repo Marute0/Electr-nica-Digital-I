@@ -1,0 +1,24 @@
+[*]
+[*] GTKWave Analyzer v3.3.117 (w)1999-2023 BSI
+[*] Sat Jul 11 20:11:34 2026
+[*]
+[dumpfile] "/home/marute/Electr-nica-Digital-I/Calculadora/rtl/cores/bcd2bin/sum_comp2_TB.vcd"
+[dumpfile_mtime] "Sat Jul 11 20:11:02 2026"
+[dumpfile_size] 425
+[savefile] "/home/marute/Electr-nica-Digital-I/Calculadora/rtl/cores/bcd2bin/sum_comp2_TB_sim.gtkw"
+[timestart] 0
+[size] 1920 1052
+[pos] -66 -66
+*0.000000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] sum_comp2_TB.
+[sst_width] 209
+[signals_width] 138
+[sst_expanded] 1
+[sst_vpaned_height] 309
+@200
+-
+@22
+sum_comp2_TB.in_bcd[3:0]
+sum_comp2_TB.out_bcd[3:0]
+[pattern_trace] 1
+[pattern_trace] 0
