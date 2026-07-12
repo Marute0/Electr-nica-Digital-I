@@ -29,8 +29,8 @@ always #1 clk = ~clk;
 
 
 initial begin
-    $dumpfile("bit_paridad_TB.vcd");
-    $dumpvars(-1, bit_paridad_TB);
+    $dumpfile("bit_paridad_control_TB.vcd");
+    $dumpvars(-1, bit_paridad_control_TB);
 
     $monitor("t=%0t LSB_A=%b z=%b load=%b shift=%b ADDI=%b done=%b", $time, LSB_A, z, load, shift, ADDI, done);
 end

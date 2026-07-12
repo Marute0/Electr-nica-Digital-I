@@ -1,0 +1,35 @@
+[*]
+[*] GTKWave Analyzer v3.3.117 (w)1999-2023 BSI
+[*] Sun Jul 12 04:25:30 2026
+[*]
+[dumpfile] "/home/marute/Electr-nica-Digital-I/Calculadora/rtl/cores/Divisor/lsr_cociente_TB.vcd"
+[dumpfile_mtime] "Sun Jul 12 04:24:50 2026"
+[dumpfile_size] 8701
+[savefile] "/home/marute/Electr-nica-Digital-I/Calculadora/rtl/cores/Divisor/lsr_cociente_TB_sim.gtkw"
+[timestart] 0
+[size] 1920 1052
+[pos] -51 -51
+*0.000000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[sst_width] 209
+[signals_width] 183
+[sst_expanded] 1
+[sst_vpaned_height] 309
+@200
+-LSR_COCIENTE
+-
+@28
+lsr_cociente_TB.clk
+@22
+lsr_cociente_TB.out_cociente[7:0]
+@200
+-
+-CONTROL
+-
+@28
+lsr_cociente_TB.LD0
+lsr_cociente_TB.LD1
+lsr_cociente_TB.SH1
+@200
+-
+[pattern_trace] 1
+[pattern_trace] 0

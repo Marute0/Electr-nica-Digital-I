@@ -1,0 +1,41 @@
+[*]
+[*] GTKWave Analyzer v3.3.117 (w)1999-2023 BSI
+[*] Sun Jul 12 03:15:49 2026
+[*]
+[dumpfile] "/home/marute/Electr-nica-Digital-I/Calculadora/rtl/cores/bit_paridad/bit_paridad_control_TB.vcd"
+[dumpfile_mtime] "Sun Jul 12 03:13:33 2026"
+[dumpfile_size] 9783
+[savefile] "/home/marute/Electr-nica-Digital-I/Calculadora/rtl/cores/bit_paridad/bit_paridad_control_TB_sim.gtkw"
+[timestart] 0
+[size] 1920 1052
+[pos] -51 -51
+*-7.000000 260 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[sst_width] 209
+[signals_width] 201
+[sst_expanded] 1
+[sst_vpaned_height] 309
+@200
+-Entradas
+-
+@28
+bit_paridad_control_TB.clk
+[color] 3
+bit_paridad_control_TB.init
+bit_paridad_control_TB.rst
+bit_paridad_control_TB.LSB_A
+bit_paridad_control_TB.z
+@200
+-
+-Señales de control
+-
+@28
+bit_paridad_control_TB.load
+bit_paridad_control_TB.ADDI
+bit_paridad_control_TB.shift
+@29
+[color] 3
+bit_paridad_control_TB.done
+@200
+-
+[pattern_trace] 1
+[pattern_trace] 0
