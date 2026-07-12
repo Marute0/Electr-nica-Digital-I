@@ -1,0 +1,36 @@
+[*]
+[*] GTKWave Analyzer v3.3.117 (w)1999-2023 BSI
+[*] Sun Jul 12 04:33:57 2026
+[*]
+[dumpfile] "/home/marute/Electr-nica-Digital-I/Calculadora/rtl/cores/multiplicador/acumulador_TB.vcd"
+[dumpfile_mtime] "Sun Jul 12 04:32:17 2026"
+[dumpfile_size] 1607
+[savefile] "/home/marute/Electr-nica-Digital-I/Calculadora/rtl/cores/multiplicador/acumulador_TB_sim.gtkw"
+[timestart] 0
+[size] 1000 600
+[pos] -1 -1
+*-8.000000 544 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[sst_width] 209
+[signals_width] 271
+[sst_expanded] 1
+[sst_vpaned_height] 150
+@200
+-ACUMULADOR
+-
+@28
+acumulador_TB.clk
+@23
+acumulador_TB.in_sh_B[31:0]
+@22
+acumulador_TB.resultado[31:0]
+@200
+-
+-CONTROL
+-
+@28
+acumulador_TB.LD
+acumulador_TB.ADDB
+@200
+-
+[pattern_trace] 1
+[pattern_trace] 0

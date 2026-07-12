@@ -1,0 +1,55 @@
+[*]
+[*] GTKWave Analyzer v3.3.117 (w)1999-2023 BSI
+[*] Sun Jul 12 04:52:06 2026
+[*]
+[dumpfile] "/home/marute/Electr-nica-Digital-I/Calculadora/rtl/cores/multiplicador/mult_TB.vcd"
+[dumpfile_mtime] "Sun Jul 12 04:49:42 2026"
+[dumpfile_size] 18583
+[savefile] "/home/marute/Electr-nica-Digital-I/Calculadora/rtl/cores/multiplicador/mult_TB_sim.gtkw"
+[timestart] 0
+[size] 1920 1052
+[pos] -51 -51
+*-8.000000 490 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] mult_TB.
+[treeopen] mult_TB.uut.
+[sst_width] 209
+[signals_width] 183
+[sst_expanded] 1
+[sst_vpaned_height] 309
+@200
+-MULT
+-
+@28
+[color] 3
+mult_TB.init
+mult_TB.rst
+@22
+mult_TB.A[15:0]
+mult_TB.B[15:0]
+@200
+-
+@22
+mult_TB.resultado[31:0]
+@200
+-
+-CONTROL
+-
+@820
+mult_TB.uut.control.state_name[320:1]
+@28
+mult_TB.uut.control.A_i
+mult_TB.uut.control.z
+@200
+-
+@28
+mult_TB.uut.control.LD
+mult_TB.uut.control.SH
+mult_TB.uut.control.ADDB
+mult_TB.uut.control.ADDI
+@200
+-
+@28
+[color] 3
+mult_TB.uut.control.done
+[pattern_trace] 1
+[pattern_trace] 0

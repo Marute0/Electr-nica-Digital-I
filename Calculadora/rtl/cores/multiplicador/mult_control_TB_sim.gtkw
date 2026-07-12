@@ -1,0 +1,43 @@
+[*]
+[*] GTKWave Analyzer v3.3.117 (w)1999-2023 BSI
+[*] Sun Jul 12 04:49:23 2026
+[*]
+[dumpfile] "/home/marute/Electr-nica-Digital-I/Calculadora/rtl/cores/multiplicador/mult_control_TB.vcd"
+[dumpfile_mtime] "Sun Jul 12 04:47:59 2026"
+[dumpfile_size] 10011
+[savefile] "/home/marute/Electr-nica-Digital-I/Calculadora/rtl/cores/multiplicador/mult_control_TB_sim.gtkw"
+[timestart] 0
+[size] 1920 1052
+[pos] -51 -51
+*-7.000000 241 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[sst_width] 209
+[signals_width] 339
+[sst_expanded] 1
+[sst_vpaned_height] 309
+@200
+-ENTRADA
+-
+@28
+mult_control_TB.clk
+@29
+[color] 3
+mult_control_TB.init
+@28
+mult_control_TB.rst
+mult_control_TB.A_i
+mult_control_TB.z
+@200
+-
+-SALIDA
+-
+@28
+mult_control_TB.LD
+mult_control_TB.SH
+mult_control_TB.ADDI
+mult_control_TB.ADDB
+[color] 3
+mult_control_TB.done
+@200
+-
+[pattern_trace] 1
+[pattern_trace] 0

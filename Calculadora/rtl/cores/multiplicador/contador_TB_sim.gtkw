@@ -1,0 +1,34 @@
+[*]
+[*] GTKWave Analyzer v3.3.117 (w)1999-2023 BSI
+[*] Sun Jul 12 04:46:03 2026
+[*]
+[dumpfile] "/home/marute/Electr-nica-Digital-I/Calculadora/rtl/cores/multiplicador/contador_TB.vcd"
+[dumpfile_mtime] "Sun Jul 12 04:44:58 2026"
+[dumpfile_size] 1380
+[savefile] "/home/marute/Electr-nica-Digital-I/Calculadora/rtl/cores/multiplicador/contador_TB_sim.gtkw"
+[timestart] 0
+[size] 1920 1052
+[pos] -51 -51
+*0.000000 2 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[sst_width] 209
+[signals_width] 120
+[sst_expanded] 1
+[sst_vpaned_height] 309
+@200
+-CONTADOR
+-
+@28
+contador_TB.clk
+@22
+contador_TB.out_i[4:0]
+@200
+-
+-CONTROL
+-
+@28
+contador_TB.LD
+contador_TB.ADDI
+@200
+-
+[pattern_trace] 1
+[pattern_trace] 0
