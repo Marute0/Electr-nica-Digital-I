@@ -1,0 +1,49 @@
+[*]
+[*] GTKWave Analyzer v3.3.117 (w)1999-2023 BSI
+[*] Sun Jul 12 05:01:12 2026
+[*]
+[dumpfile] "/home/marute/Electr-nica-Digital-I/Calculadora/rtl/cores/Root/root_control_TB.vcd"
+[dumpfile_mtime] "Sun Jul 12 04:59:19 2026"
+[dumpfile_size] 10032
+[savefile] "/home/marute/Electr-nica-Digital-I/Calculadora/rtl/cores/Root/root_control_TB_sim.gtkw"
+[timestart] 0
+[size] 1920 1052
+[pos] -51 -51
+*-6.000000 97 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] root_control_TB.
+[sst_width] 209
+[signals_width] 325
+[sst_expanded] 1
+[sst_vpaned_height] 309
+@200
+-ENTRADA
+-
+@28
+root_control_TB.clk
+root_control_TB.init
+root_control_TB.rst
+@200
+-
+@28
+root_control_TB.residuo_MSB
+root_control_TB.zero
+@200
+-
+-SALIDA
+-
+@820
+root_control_TB.uut.state_name[95:1]
+@201
+-
+@28
+root_control_TB.LD
+root_control_TB.LDRes
+root_control_TB.SH0
+root_control_TB.SH1
+root_control_TB.DEC
+@200
+-
+@28
+root_control_TB.done
+[pattern_trace] 1
+[pattern_trace] 0

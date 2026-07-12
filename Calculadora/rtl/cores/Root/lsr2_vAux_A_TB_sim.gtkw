@@ -1,0 +1,41 @@
+[*]
+[*] GTKWave Analyzer v3.3.117 (w)1999-2023 BSI
+[*] Sun Jul 12 05:07:15 2026
+[*]
+[dumpfile] "/home/marute/Electr-nica-Digital-I/Calculadora/rtl/cores/Root/lsr2_vAux_A_TB.vcd"
+[dumpfile_mtime] "Sun Jul 12 05:06:04 2026"
+[dumpfile_size] 8937
+[savefile] "/home/marute/Electr-nica-Digital-I/Calculadora/rtl/cores/Root/lsr2_vAux_A_TB_sim.gtkw"
+[timestart] 0
+[size] 1920 1052
+[pos] -51 -51
+*0.000000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[sst_width] 209
+[signals_width] 138
+[sst_expanded] 1
+[sst_vpaned_height] 309
+@200
+-LSR2_vAux_A
+-
+@28
+lsr2_vAux_A_TB.clk
+@200
+-
+@22
+lsr2_vAux_A_TB.in_A[7:0]
+lsr2_vAux_A_TB.A_shift[7:0]
+@200
+-
+@22
+lsr2_vAux_A_TB.v_Aux[7:0]
+lsr2_vAux_A_TB.residuo[7:0]
+@200
+-
+-CONTROL
+-
+@28
+lsr2_vAux_A_TB.LD
+lsr2_vAux_A_TB.LDRes
+lsr2_vAux_A_TB.SH0
+[pattern_trace] 1
+[pattern_trace] 0
