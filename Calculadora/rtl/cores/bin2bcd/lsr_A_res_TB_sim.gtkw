@@ -1,0 +1,62 @@
+[*]
+[*] GTKWave Analyzer v3.3.117 (w)1999-2023 BSI
+[*] Sat Jul 11 20:08:40 2026
+[*]
+[dumpfile] "/home/marute/Electr-nica-Digital-I/Calculadora/rtl/cores/bcd2bin/lsr_A_res_TB.vcd"
+[dumpfile_mtime] "Sat Jul 11 20:03:10 2026"
+[dumpfile_size] 9708
+[savefile] "/home/marute/Electr-nica-Digital-I/Calculadora/rtl/cores/bcd2bin/lsr_A_res_TB_sim.gtkw"
+[timestart] 0
+[size] 1920 1052
+[pos] -66 -66
+*-8.000000 2 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] lsr_A_res_TB.
+[sst_width] 209
+[signals_width] 201
+[sst_expanded] 1
+[sst_vpaned_height] 309
+@200
+-BCD2BIN
+-
+@28
+lsr_A_res_TB.clk
+@22
+lsr_A_res_TB.A_bcd[11:0]
+lsr_A_res_TB.A_bin[7:0]
+@200
+-
+-Control
+-
+@28
+lsr_A_res_TB.LD0
+lsr_A_res_TB.LD1
+@29
+lsr_A_res_TB.LD2
+@28
+lsr_A_res_TB.LD3
+lsr_A_res_TB.SH
+@200
+-
+-bcd_ones
+-
+@22
+lsr_A_res_TB.bcd_ones[3:0]
+lsr_A_res_TB.ones_comp2[3:0]
+@200
+-
+-bcd_tens
+-
+@22
+lsr_A_res_TB.bcd_tens[3:0]
+lsr_A_res_TB.tens_comp2[3:0]
+@200
+-
+-bcd_hundreds
+-
+@22
+lsr_A_res_TB.hundreds_comp2[3:0]
+lsr_A_res_TB.bcd_hundreds[3:0]
+@200
+-
+[pattern_trace] 1
+[pattern_trace] 0

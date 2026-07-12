@@ -1,0 +1,34 @@
+[*]
+[*] GTKWave Analyzer v3.3.117 (w)1999-2023 BSI
+[*] Sat Jul 11 20:02:41 2026
+[*]
+[dumpfile] "/home/marute/Electr-nica-Digital-I/Calculadora/rtl/cores/bcd2bin/contador_dec_TB.vcd"
+[dumpfile_mtime] "Sat Jul 11 20:00:49 2026"
+[dumpfile_size] 2038
+[savefile] "/home/marute/Electr-nica-Digital-I/Calculadora/rtl/cores/bcd2bin/contador_dec_TB_sim.gtkw"
+[timestart] 0
+[size] 1920 1052
+[pos] -66 -66
+*-6.000000 2 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] contador_dec_TB.
+[sst_width] 209
+[signals_width] 205
+[sst_expanded] 1
+[sst_vpaned_height] 309
+@200
+-Entrada
+-
+@28
+contador_dec_TB.clk
+contador_dec_TB.DECI
+contador_dec_TB.LD0
+@200
+-
+-Salida
+-
+@28
+contador_dec_TB.Z
+@200
+-
+[pattern_trace] 1
+[pattern_trace] 0
